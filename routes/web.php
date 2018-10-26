@@ -17,4 +17,4 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/conference', 'ConferenceController@index')->name('conference.home');
+Route::get('/conferences', 'ConferenceController@index')->name('conferences.home');

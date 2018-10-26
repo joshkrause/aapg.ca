@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>AAPG</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
@@ -85,7 +85,7 @@
                 </div>
 
                 <div class="links">
-                    <a href="/conference">Conference</a>
+                    <a href="/conferences">Conference</a>
                     <a href="/">Home</a>
                     <a href="/admin">Admin</a>
                 </div>
