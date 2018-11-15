@@ -1,5 +1,5 @@
 <div class="h7-nav-bar">
-    <div class="logo-box"><a href="javascript:void(0)" class="navbar-brand"><img src="/public/images/logos/nav-logo.png" alt="wrapkit"/></a></div>
+    <div class="logo-box"><a href="javascript:void(0)" class="navbar-brand"><img src="/public/images/logos/nav-logo.png" alt="AAPG"/></a></div>
     <button class="btn btn-success btn-circle hidden-md-up op-clo"><i class="ti-menu"></i></button>
     <nav class="h7-nav-box">
         <div class="h7-mini-bar">

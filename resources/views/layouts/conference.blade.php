@@ -52,7 +52,7 @@
                   <div class="row">
                      <div class="col-md-2">
                         <a class="scroll logo" href="#wrapper">
-                           <h2>AAPG</h2>
+                            <img src="/public/images/logos/nav-logo.png" alt="AAPG"/>
                         </a>
                      </div>
                      <div class="col-md-10 text-right">
@@ -89,7 +89,7 @@
                      <div class="col-sm-12 text-center">
                         <h3 class="mb-10">AAPG</h3>
                         <h1 class="large mb-10">Annual Conference</h1>
-                        <p class="uppercase ">27 to 31 April 2018 with over ## sessions - Medicine Hat, Alberta </p>
+                        <p class="uppercase ">April 4th - 6th 2019 with over ## sessions - Medicine Hat, Alberta </p>
                         <a href="#register" class="but scroll "> Register Now</a>
                      </div>
                   </div>
@@ -107,8 +107,8 @@
                <!--Row-->
                <div class="row">
                   <div class="col-sm-8 col-sm-offset-2 mb-100 text-center">
-                     <h1 class="title">AAPG Annual Conference 2018</h1>
-                     <p class="title-lead mt-20">Nihilne te nocturnum praesidium Palati, nihil urbis vigilae, nihil timor populi, nihil concursus velit omnium, nihil hic muntissimus habendi senatus locus, nihil horum ora vultusque moverunt, patere tua consilia non sentis constrictam nihil hic muntissimus.</p>
+                     <h1 class="title">AAPG Annual Conference 2019</h1>
+                     <p class="title-lead mt-20">Supporting excellence in civilian governance and oversight of police services in Alberta by providing our members, and potential members, with an enjoyable opportunity to learn, network, and connect with government. We invite all those participating in community policing oversight to attend. </p>
                   </div>
                </div>
                <!--End row-->
@@ -168,7 +168,7 @@
                         </svg>
                         <p>
                            <strong>DATE</strong>
-                           <span>April 1 - 4 2019</span>
+                           <span>April 4 - 6 2019</span>
                         </p>
                      </div>
                   </div>
@@ -361,7 +361,7 @@
                <div class="row">
                   <div class="col-sm-8 col-sm-offset-2 mb-100 text-center">
                      <h1 class="title">Topics Covered</h1>
-                     <p class="title-lead mt-10">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos molestiae asperiores tempore ut aperiam id sint eaque! <br>Sunt esse saepe sit odit cumque ad quidem quae eaque, necessitatibus ullam perferendis. </p>
+                     <p class="title-lead mt-10">Our conference has many unique presentaions on various topics, as well as the AAPG annual general meeting.</p>
                   </div>
                </div>
                <!--End row-->
@@ -373,24 +373,18 @@
                      <div class="col-md-12">
                         <h3 class="sub-title-0  mb-20"><span class="gradient-text">Topics</span></h3>
                      </div>
-                     <div class="col-md-6">
+                     <div class="col-md-12">
                         <ul class="block-topic">
-                           <li>Policy Development</li>
-                           <li>Safety & Security</li>
-                           <li>Topic 3</li>
-                           <li>Topic 4</li>
-                           <li>Topic 5</li>
+                           <li>Public Relations & Social Media Impact</li>
+                           <li>Strategic Planning & Budget Oversight</li>
+                           <li>Establishment of Oversight in RCMP Jurisdictions</li>
+                           <li>Commission & Committee Internal Organization</li>
+                           <li>First Nations Board Collaboration</li>
+                           <li>Poice Act Engagement</li>
+                           <li>Public Complaints Director Role</li>
                         </ul>
                      </div>
-                     <div class="col-md-6">
-                        <ul class="block-topic">
-                           <li>Team Building</li>
-                           <li>Community Inolvement</li>
-                           <li>Topic 6</li>
-                           <li>Topic 7</li>
-                           <li>Topic 8</li>
-                        </ul>
-                     </div>
+
                   </div>
                   <div class="col-md-6 col-sm-6">
                      <div class="block-video">
@@ -434,9 +428,9 @@
                   <div class="col-sm-4 ">
                      <!--Tabs-->
                      <ul class="block-tabs">
-                        <li class="active"><i class="far fa-calendar-alt"></i> <strong>Day 1</strong>  <span>- April 1 2019</span></li>
-                        <li class=""><i class="far fa-calendar-alt"></i> <strong>Day 2</strong>  <span>- April 2 2019</span></li>
-                        <li class=""><i class="far fa-calendar-alt"></i> <strong>Day 3</strong>  <span>- April 3 2019</span></li>
+                        <li class="active"><i class="far fa-calendar-alt"></i> <strong>Thursday</strong>  <span>- April 4 2019</span></li>
+                        <li class=""><i class="far fa-calendar-alt"></i> <strong>Friday</strong>  <span>- April 5 2019</span></li>
+                        <li class=""><i class="far fa-calendar-alt"></i> <strong>Saturday</strong>  <span>- April 6 2019</span></li>
                      </ul>
                      <a class="link mt-20 gradient-text scroll" href="#accom">Accommodation</a>
                   </div>
@@ -444,135 +438,193 @@
                      <ul class="block-tab">
                         <!--Tab-->
                         <li class="active ">
-                           <div class="block-date"><i class="far fa-calendar-alt"></i> <strong>Day 1</strong>  <span>- April 1 2019</span></div>
+                           <div class="block-date"><i class="far fa-calendar-alt"></i> <strong>Thursday</strong>  <span>- April 4 2019</span></div>
                            <div class="block-detail">
-                              <span class="time">08:00 - 10:00</span>
-                              <span class="topic">Conference Opening</span>
+                              <span class="time">6:00PM - 7:30PM</span>
+                              <span class="topic">Early Registration</span>
                               <div class="block-text">
-                                 <p>Nihilne te nocturnum praesidium Palati, nihil urbis vigilae, nihil timor populi, nihil concursus velit omnium, nihil hic muntissimus habendi senatus locus, nihil horum ora vultusque moverunt, patere tua consilia non sentis constrictam nihil hic muntissimus.</p>
-                                 <span class="speaker"> <strong >Speaker</strong> : <a href="#" class="gradient-text ">Speaker Name</a> </span>
+                                 <p>Early registration takes place in the Medicine Hat Lodge Saamis Ballroom Lobby, just beyond the hotel registration desk</p>
                               </div>
                            </div>
                            <div class="block-detail">
-                              <span class="time">10:30 - 12:30</span>
-                              <span class="topic">Session Title</span>
+                              <span class="time">5:30PM - 7:30PM (Optional Event)</span>
+                              <span class="topic">Esplanade Arts & Heritage Centre Private Tour</span>
                               <div class="block-text">
-                                 <p>Nihilne te nocturnum praesidium Palati, nihil urbis vigilae, nihil timor populi, nihil concursus velit omnium, nihil hic muntissimus habendi senatus locus, nihil horum ora vultusque moverunt, patere tua consilia non sentis constrictam nihil hic muntissimus.</p>
-                                 <span class="speaker"> <strong >Speaker</strong> : <a href="#" class="gradient-text ">Speaker name</a> </span>
-                              </div>
-                           </div>
-                           <div class="block-detail">
-                              <span class="time">13:00</span>
-                              <span class="topic">Lunch Time</span>
-                           </div>
-                           <div class="block-detail">
-                              <span class="time">15:00 - 16:30</span>
-                              <span class="topic">Session Name</span>
-                              <div class="block-text">
-                                 <p>Nihilne te nocturnum praesidium Palati, nihil urbis vigilae, nihil timor populi, nihil concursus velit omnium, nihil hic muntissimus habendi senatus locus, nihil horum ora vultusque moverunt, patere tua consilia non sentis constrictam nihil hic muntissimus.</p>
-                                 <span class="speaker"> <strong >Speaker</strong> : <a href="#" class="gradient-text "> Speaker Name </a> </span>
-                              </div>
-                           </div>
-                           <div class="block-detail">
-                              <span class="time">17:00</span>
-                              <span class="topic">Coffee Break</span>
-                           </div>
-                           <div class="block-detail">
-                              <span class="time">17:30 - 18:00</span>
-                              <span class="topic">Session Name</span>
-                              <div class="block-text">
-                                 <p>Nihilne te nocturnum praesidium Palati, nihil urbis vigilae, nihil timor populi, nihil concursus velit omnium, nihil hic muntissimus habendi senatus locus, nihil horum ora vultusque moverunt, patere tua consilia non sentis constrictam nihil hic muntissimus.</p>
-                                 <span class="speaker"> <strong >Speaker</strong> : <a href="#" class="gradient-text "> Speaker Name </a> </span>
+                                <p>401 First St. SE, Medicine Hat</p>
+                                <p>Planning on arriving early?  Add-on this PRIVATE evening tour of The Esplanade, where visitors are delighted to discover a vibrant art gallery, a prized museum, expansive public archives and the Ewart Duggan House - the oldest brick home in Alberta.</p>
+                                <p>www.esplanade.ca</p>
                               </div>
                            </div>
                         </li>
                         <!--Tab-->
                         <li>
-                           <div class="block-date"><i class="far fa-calendar-alt"></i> <strong>Day 2</strong>  <span>- April 2 2019</span></div>
+                           <div class="block-date"><i class="far fa-calendar-alt"></i> <strong>Friday</strong>  <span>- April 5 2019</span></div>
                            <div class="block-detail">
-                            <span class="time">08:00 - 10:00</span>
-                            <span class="topic">Conference Opening</span>
+                            <span class="time">6:30AM - 9:00AM</span>
+                            <span class="topic">Breakfast</span>
                             <div class="block-text">
-                               <p>Nihilne te nocturnum praesidium Palati, nihil urbis vigilae, nihil timor populi, nihil concursus velit omnium, nihil hic muntissimus habendi senatus locus, nihil horum ora vultusque moverunt, patere tua consilia non sentis constrictam nihil hic muntissimus.</p>
-                               <span class="speaker"> <strong >Speaker</strong> : <a href="#" class="gradient-text ">Speaker Name</a> </span>
+                               <p>Breakfast onsite in the Eatalion Restaurant (for all hotel room occupants)</p>
                             </div>
                          </div>
                          <div class="block-detail">
-                            <span class="time">10:30 - 12:30</span>
-                            <span class="topic">Session Title</span>
+                            <span class="time">7:30AM - 4:30PM</span>
+                            <span class="topic">Registration</span>
                             <div class="block-text">
-                               <p>Nihilne te nocturnum praesidium Palati, nihil urbis vigilae, nihil timor populi, nihil concursus velit omnium, nihil hic muntissimus habendi senatus locus, nihil horum ora vultusque moverunt, patere tua consilia non sentis constrictam nihil hic muntissimus.</p>
-                               <span class="speaker"> <strong >Speaker</strong> : <a href="#" class="gradient-text ">Speaker name</a> </span>
+                               <p>Medicine Hat Lodge Saamis Ballroom Lobby (just beyond hotel registration desk)</p>
+                               <p>Silent Auction Opens</p>
                             </div>
                          </div>
                          <div class="block-detail">
-                            <span class="time">13:00</span>
-                            <span class="topic">Lunch Time</span>
-                         </div>
-                         <div class="block-detail">
-                            <span class="time">15:00 - 16:30</span>
-                            <span class="topic">Session Name</span>
+                            <span class="time">8:30AM - 10:00AM</span>
+                            <span class="topic">New Commission Member Orientation</span>
                             <div class="block-text">
-                               <p>Nihilne te nocturnum praesidium Palati, nihil urbis vigilae, nihil timor populi, nihil concursus velit omnium, nihil hic muntissimus habendi senatus locus, nihil horum ora vultusque moverunt, patere tua consilia non sentis constrictam nihil hic muntissimus.</p>
-                               <span class="speaker"> <strong >Speaker</strong> : <a href="#" class="gradient-text "> Speaker Name </a> </span>
+                                <p>This is an attendee directed session that will discuss the role of a Police Commission, the basics of police oversight and governance, the structure of the municipal police service, board basics, and FOIP legislation.</p>
+                                <span class="speaker"> <strong >Speaker</strong> : <a href="#" class="gradient-text "> Randy Pick, Medicine Hat Police Service Q.C. </a> </span>
                             </div>
                          </div>
                          <div class="block-detail">
-                            <span class="time">17:00</span>
-                            <span class="topic">Coffee Break</span>
-                         </div>
+                                <span class="time">8:30AM - 10:00AM</span>
+                                <span class="topic">New Member Committee & Policy Advisory Orientation</span>
+                                <div class="block-text">
+                                    <p>This is an attendee directed session that will discuss the role of Policing Committees, the basics of police oversight and governance, the structure of the RCMP, board basics, and FOIP legislation.</p>
+                                    <span class="speaker"> <strong >Speaker</strong> : <a href="#" class="gradient-text "> Terry Coleman, Chair, AAPG </a> </span>
+                                </div>
+                             </div>
                          <div class="block-detail">
-                            <span class="time">17:30 - 18:00</span>
-                            <span class="topic">Session Name</span>
+                            <span class="time">10:00AM - 10:20AM</span>
+                            <span class="topic">Break</span>
                             <div class="block-text">
-                               <p>Nihilne te nocturnum praesidium Palati, nihil urbis vigilae, nihil timor populi, nihil concursus velit omnium, nihil hic muntissimus habendi senatus locus, nihil horum ora vultusque moverunt, patere tua consilia non sentis constrictam nihil hic muntissimus.</p>
-                               <span class="speaker"> <strong >Speaker</strong> : <a href="#" class="gradient-text "> Speaker Name </a> </span>
+                               <p>Coffee & Tea (served in Saamis Ballroom Lobby)</p>
                             </div>
                          </div>
+                         <div class="block-detail">
+                            <span class="time">10:20AM - 11:30AM</span>
+                            <span class="topic">Public Relations 101 & Impacts of Social Media</span>
+                            <div class="block-text">
+                                <p>Avoid reactionary and pursue proactive service promotion.  Open discussion on how Social Media has changed public perceptions.</p>
+                                <span class="speaker"> <strong >Speaker</strong> : <a href="#" class="gradient-text "> Karyn Popplestone </a> </span>
+                            </div>
+                         </div>
+                         <div class="block-detail">
+                            <span class="time">11:30AM - 12:30PM</span>
+                            <span class="topic">Lunch Buffet</span>
+                            <div class="block-text">
+                               <p>Salad, Soup & Sandwiches  (served in Saamis Ballroom Lobby)</p>
+                            </div>
+                         </div>
+                            <div class="block-detail">
+                                <span class="time">12:30PM - 1:30PM</span>
+                                <span class="topic">K-9 Unit Demonstration and up-close with Armored Vehicle</span>
+                                <div class="block-text">
+                                    <p>This demonstration will take place in the west parking lot.</p>
+                                    <span class="speaker"> <strong >Presenter</strong> : <a href="#" class="gradient-text "> Medicine Hat Police </a> </span>
+                                </div>
+                            </div>
+                            <div class="block-detail">
+                                <span class="time">1:30PM - 2:30PM</span>
+                                <span class="topic">Strategic Planning & Budget Oversight</span>
+                                <div class="block-text">
+                                    <p>The role of the Commission in Strategic Planning goals & vision for the service; who is driving the boat?  How Strategic Planning differs from the Business Plan action items & targets. Budget oversight; what should you know about operations and who should be involved.</p>
+                                    <span class="speaker"> <strong >Presenter</strong> : <a href="#" class="gradient-text "> TBA </a> </span>
+                                </div>
+                            </div>
+                            <div class="block-detail">
+                                <span class="time">1:30PM - 2:30PM</span>
+                                <span class="topic">Establishment of Ovesight in RCMP Jurisdictions</span>
+                                <div class="block-text">
+                                    <p>Looking to improve RCMP oversight in your community or considering a Policy Advisory Committee?  We will talk helpful bylaw amendments, benefits of community-driven standards and policing community goals collaboration, costs related to increasing the level of your oversight.</p>
+                                    <span class="speaker"> <strong >Presenter</strong> : <a href="#" class="gradient-text "> TBA </a> </span>
+                                </div>
+                            </div>
+                            <div class="block-detail">
+                                <span class="time">2:30PM - 2:50PM</span>
+                                <span class="topic">Break</span>
+                                <div class="block-text">
+                                    <p>Coffee & Tea with Decadent Delights (served in Saamis Ballroom Lobby)</p>
+                                </div>
+                            </div>
+                            <div class="block-detail">
+                                <span class="time">2:50PM - 4:00PM</span>
+                                <span class="topic">Cannabis Update</span>
+                                <div class="block-text">
+                                    <p>An update on the Federal, Provincial and Municipal governments’ framework relating to Cannabis and its impacts </p>
+                                    <span class="speaker"> <strong >Presenter</strong> : <a href="#" class="gradient-text "> Robert Palser B.A. LL.B Q.C., Senior Policy Counsel & Traffic Safety Coordinator of Alberta </a> </span>
+                                </div>
+                            </div>
+                            <div class="block-detail">
+                                <span class="time">4:30PM - 8:30PM</span>
+                                <span class="topic">Shuttles to & from Medalta Poteries</span>
+                                <div class="block-text">
+                                    <p>SHUTTLE DEPARTURE & RETURN TIMES (limit of 35 per shuttle – be early!)</p>
+                                    <p>Pick-up outside of Lodge entrance.<br/>
+                                            Arrive at the Medalta for PRIVATE TOUR - followed by Networking Reception (drink ticket provided)<br/>
+                                            6:30 Blessing and DINNER (wine provided at each table, Business casual attire)
+                                            </p>
+
+                                </div>
+                            </div>
                         </li>
                         <!--Tab-->
                         <li>
-                           <div class="block-date"><i class="far fa-calendar-alt"></i> <strong>Day 3</strong>  <span>- April 3 2019</span></div>
+                           <div class="block-date"><i class="far fa-calendar-alt"></i> <strong>Saturday</strong>  <span>- April 6 2019</span></div>
+                           <div class="block-date"><i class="far fa-calendar-alt"></i> <strong>Friday</strong>  <span>- April 5 2019</span></div>
                            <div class="block-detail">
-                            <span class="time">08:00 - 10:00</span>
-                            <span class="topic">Conference Opening</span>
+                            <span class="time">6:30AM - 9:00AM</span>
+                            <span class="topic">Breakfast</span>
                             <div class="block-text">
-                               <p>Nihilne te nocturnum praesidium Palati, nihil urbis vigilae, nihil timor populi, nihil concursus velit omnium, nihil hic muntissimus habendi senatus locus, nihil horum ora vultusque moverunt, patere tua consilia non sentis constrictam nihil hic muntissimus.</p>
-                               <span class="speaker"> <strong >Speaker</strong> : <a href="#" class="gradient-text ">Speaker Name</a> </span>
+                               <p>Breakfast onsite in the Eatalion Restaurant (for all hotel room occupants)</p>
                             </div>
                          </div>
                          <div class="block-detail">
-                            <span class="time">10:30 - 12:30</span>
-                            <span class="topic">Session Title</span>
+                            <span class="time">7:30AM - 8:30AM</span>
+                            <span class="topic">Registration</span>
                             <div class="block-text">
-                               <p>Nihilne te nocturnum praesidium Palati, nihil urbis vigilae, nihil timor populi, nihil concursus velit omnium, nihil hic muntissimus habendi senatus locus, nihil horum ora vultusque moverunt, patere tua consilia non sentis constrictam nihil hic muntissimus.</p>
-                               <span class="speaker"> <strong >Speaker</strong> : <a href="#" class="gradient-text ">Speaker name</a> </span>
+                               <p>Medicine Hat Lodge Saamis Ballroom Lobby (just beyond hotel registration desk)</p>
+                               <p>Silent Auction Opens</p>
                             </div>
                          </div>
                          <div class="block-detail">
-                            <span class="time">13:00</span>
-                            <span class="topic">Lunch Time</span>
-                         </div>
-                         <div class="block-detail">
-                            <span class="time">15:00 - 16:30</span>
-                            <span class="topic">Session Name</span>
+                            <span class="time">7:30AM - 8:30AM</span>
+                            <span class="topic">Annual General Meeting</span>
                             <div class="block-text">
-                               <p>Nihilne te nocturnum praesidium Palati, nihil urbis vigilae, nihil timor populi, nihil concursus velit omnium, nihil hic muntissimus habendi senatus locus, nihil horum ora vultusque moverunt, patere tua consilia non sentis constrictam nihil hic muntissimus.</p>
-                               <span class="speaker"> <strong >Speaker</strong> : <a href="#" class="gradient-text "> Speaker Name </a> </span>
+                                <p>All AAPG members should attend.</p>
+                                <span class="speaker"> <strong >Speaker</strong> : <a href="#" class="gradient-text "> Terry Coleman, Chair of AAPG </a> </span>
                             </div>
                          </div>
                          <div class="block-detail">
-                            <span class="time">17:00</span>
-                            <span class="topic">Coffee Break</span>
-                         </div>
-                         <div class="block-detail">
-                            <span class="time">17:30 - 18:00</span>
-                            <span class="topic">Session Name</span>
+                            <span class="time">8:30AM - 9:40AM</span>
+                            <span class="topic">Opening Ceremonies</span>
                             <div class="block-text">
-                               <p>Nihilne te nocturnum praesidium Palati, nihil urbis vigilae, nihil timor populi, nihil concursus velit omnium, nihil hic muntissimus habendi senatus locus, nihil horum ora vultusque moverunt, patere tua consilia non sentis constrictam nihil hic muntissimus.</p>
-                               <span class="speaker"> <strong >Speaker</strong> : <a href="#" class="gradient-text "> Speaker Name </a> </span>
+                                <p>Piper Entrance VIPs & Board, Rise for introduction of the Lieutenant Governor & O’Canada</p>
+                                <p>First Nations Elder Blessing</p>
+                                <p>Welcome Address and Greeting:  City of Medicine Hat and VIP’s</p>
+                                <p>Mayor, M.H. Commission Chair, M.H.P.S. Chief, M.H. Detachment Commander,  M.H.P.A. President, AB Minister of Justice & Solicitor General, CAN Minister of Public Safety, Assistant Deputy Minister AB Justice & Solicitor General, RCMP Assistant Commissioner, and AAPG Board recognition.</p>
                             </div>
                          </div>
+                         <div class="block-detail">
+                            <span class="time">9:40AM - 10:00AM</span>
+                            <span class="topic">Break</span>
+                            <div class="block-text">
+                                <p>Coffee & Tea (served in Saamis Ballroom Lobby)  **New Board Member & Group Picture</p>
+                            </div>
+                         </div>
+                         <div class="block-detail">
+                            <span class="time">10:00AM - 11:30AM</span>
+                            <span class="topic">Commission & Committee Internal Organization</span>
+                            <div class="block-text">
+                                <p>Policy Manual Process/Procedure development; succession planning, continuing education, annual Board performance assessment, new member on-boarding; what should it look like, document management/destruction, use of personal email, minutes in closed meetings.</p>
+                                <span class="speaker"> <strong >Speaker</strong> : <a href="#" class="gradient-text "> Justin Krikler, Edmonton Police Commission Executive Director & Legal Council </a> </span>
+                            </div>
+                            </div>
+                            <div class="block-detail">
+                            <span class="time">11:30AM - 12:30PM</span>
+                            <span class="topic">Hot Lunch Buffet</span>
+                            <div class="block-text">
+                                <p>Salad, Lasagna and Honey-garlic Chicken  (served in Saamis Ballroom Lobby)</p>
+                                <p>SILENT AUCTION CLOSES</p>
+                            </div>
+                        </div>
+
                         </li>
                      </ul>
                   </div>
