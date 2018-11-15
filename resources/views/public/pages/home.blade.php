@@ -409,7 +409,8 @@ $(".carousel .carousel-inner").swipe({
 });
 // This is for counter
 $('.counter').counterUp({
-    delay: 10
+    delay: 10,
+    time: 1000
 });
 // This is for the testimonial
 $('.testi9').owlCarousel({
