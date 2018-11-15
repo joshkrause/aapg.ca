@@ -139,7 +139,7 @@
                 <!-- Column -->
                 <div class="col-md-4">
                     <div class="card card-shadow" data-aos="flip-left" data-aos-duration="1200">
-                        <a href="#" class="img-ho"><img class="card-img-top" src="{{asset('images/board/Greg-Keen.jpg')}}" alt="Greg Keen" /></a>
+                        <a href="#" class="img-ho"><img class="card-img-top" src="{{asset('storage/images/board/Greg-Keen.jpg')}}" alt="Greg Keen" /></a>
                         <div class="card-body">
                             <h5 class="font-medium m-b-0">Greg Keen</h5>
                             <p class="m-b-0 font-14">Member Position</p>
@@ -149,7 +149,7 @@
                 <!-- Column -->
                 <div class="col-md-4">
                     <div class="card card-shadow" data-aos="flip-left" data-aos-duration="1200">
-                        <a href="#" class="img-ho"><img class="card-img-top" src="{{asset('images/board/Al-Bohachyk.jpg')}}" alt="Al Bohachyk" /></a>
+                        <a href="#" class="img-ho"><img class="card-img-top" src="{{asset('storage/images/board/Al-Bohachyk.jpg')}}" alt="Al Bohachyk" /></a>
                         <div class="card-body">
                             <h5 class="font-medium m-b-0">Al Bohachyk</h5>
                             <p class="m-b-0 font-14">Member Position</p>
@@ -159,7 +159,7 @@
                 <!-- Column -->
                 <div class="col-md-4">
                     <div class="card card-shadow" data-aos="flip-left" data-aos-duration="1200">
-                        <a href="#" class="img-ho"><img class="card-img-top" src="{{asset('images/board/John-Liu.jpg')}}" alt="John Liu" /></a>
+                        <a href="#" class="img-ho"><img class="card-img-top" src="{{asset('storage/images/board/John-Liu.jpg')}}" alt="John Liu" /></a>
                         <div class="card-body">
                             <h5 class="font-medium m-b-0">John Liu</h5>
                             <p class="m-b-0 font-14">Member Position</p>
@@ -168,7 +168,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="card card-shadow" data-aos="flip-left" data-aos-duration="1200">
-                        <a href="#" class="img-ho"><img class="card-img-top" src="{{asset('images/board/John-McDougall.jpg')}}" alt="John McDougall" /></a>
+                        <a href="#" class="img-ho"><img class="card-img-top" src="{{asset('storage/images/board/John-McDougall.jpg')}}" alt="John McDougall" /></a>
                         <div class="card-body">
                             <h5 class="font-medium m-b-0">John McDougall</h5>
                             <p class="m-b-0 font-14">Member Position</p>
@@ -177,7 +177,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="card card-shadow" data-aos="flip-left" data-aos-duration="1200">
-                        <a href="#" class="img-ho"><img class="card-img-top" src="{{asset('images/board/Mark-Schneider.jpg')}}" alt="Mark Schneider" /></a>
+                        <a href="#" class="img-ho"><img class="card-img-top" src="{{asset('storage/images/board/Mark-Schneider.jpg')}}" alt="Mark Schneider" /></a>
                         <div class="card-body">
                             <h5 class="font-medium m-b-0">Mark Schneider</h5>
                             <p class="m-b-0 font-14">Member Position</p>
@@ -186,7 +186,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="card card-shadow" data-aos="flip-left" data-aos-duration="1200">
-                        <a href="#" class="img-ho"><img class="card-img-top" src="{{asset('images/board/Nick-Servos.jpg')}}" alt="Nick Servox" /></a>
+                        <a href="#" class="img-ho"><img class="card-img-top" src="{{asset('storage/images/board/Nick-Servos.jpg')}}" alt="Nick Servox" /></a>
                         <div class="card-body">
                             <h5 class="font-medium m-b-0">Nick Servox</h5>
                             <p class="m-b-0 font-14">Member Position</p>
@@ -195,7 +195,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="card card-shadow" data-aos="flip-left" data-aos-duration="1200">
-                        <a href="#" class="img-ho"><img class="card-img-top" src="{{asset('images/board/Perry-Brooks.jpg')}}" alt="Perry Brooks" /></a>
+                        <a href="#" class="img-ho"><img class="card-img-top" src="{{asset('storage/images/board/Perry-Brooks.jpg')}}" alt="Perry Brooks" /></a>
                         <div class="card-body">
                             <h5 class="font-medium m-b-0">Perry Brooks</h5>
                             <p class="m-b-0 font-14">Member Position</p>
@@ -204,7 +204,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="card card-shadow" data-aos="flip-left" data-aos-duration="1200">
-                        <a href="#" class="img-ho"><img class="card-img-top" src="{{asset('images/board/Terry-Coleman.jpg')}}" alt="Terry Coleman" /></a>
+                        <a href="#" class="img-ho"><img class="card-img-top" src="{{asset('storage/images/board/Terry-Coleman.jpg')}}" alt="Terry Coleman" /></a>
                         <div class="card-body">
                             <h5 class="font-medium m-b-0">Terry Coleman</h5>
                             <p class="m-b-0 font-14">Member Position</p>
@@ -213,7 +213,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="card card-shadow" data-aos="flip-left" data-aos-duration="1200">
-                        <a href="#" class="img-ho"><img class="card-img-top" src="{{asset('images/board/Victoria-Chester.jpg')}}" alt="Victoria Chester" /></a>
+                        <a href="#" class="img-ho"><img class="card-img-top" src="{{asset('storage/images/board/Victoria-Chester.jpg')}}" alt="Victoria Chester" /></a>
                         <div class="card-body">
                             <h5 class="font-medium m-b-0">Victoria Chester</h5>
                             <p class="m-b-0 font-14">Member Position</p>
