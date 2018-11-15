@@ -186,9 +186,9 @@
                 </div>
                 <div class="col-md-4">
                     <div class="card card-shadow" data-aos="flip-left" data-aos-duration="1200">
-                        <a href="#" class="img-ho"><img class="card-img-top" src="{{asset('storage/images/board/Nick-Servos.jpg')}}" alt="Nick Servox" /></a>
+                        <a href="#" class="img-ho"><img class="card-img-top" src="{{asset('storage/images/board/Nick-Servos.jpg')}}" alt="Nick Servos" /></a>
                         <div class="card-body">
-                            <h5 class="font-medium m-b-0">Nick Servox</h5>
+                            <h5 class="font-medium m-b-0">Nick Servos</h5>
                             <p class="m-b-0 font-14">Member Position</p>
                         </div>
                     </div>

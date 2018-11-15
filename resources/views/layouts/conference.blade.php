@@ -553,7 +553,7 @@
                             </div>
                             <div class="block-detail">
                                 <span class="time">4:30PM - 8:30PM</span>
-                                <span class="topic">Shuttles to & from Medalta Poteries</span>
+                                <span class="topic">Shuttles to & from Medalta Potteries</span>
                                 <div class="block-text">
                                     <p>SHUTTLE DEPARTURE & RETURN TIMES (limit of 35 per shuttle – be early!)</p>
                                     <p>Pick-up outside of Lodge entrance.<br/>
