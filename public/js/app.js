@@ -72854,7 +72854,7 @@ var staticRenderFns = [
                 ]),
                 _vm._v(" "),
                 _c("li", { staticClass: "breadcrumb-item active" }, [
-                  _vm._v("Dashboard v2")
+                  _vm._v("Dashboard")
                 ])
               ])
             ])
