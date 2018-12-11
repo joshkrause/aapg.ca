@@ -16,3 +16,11 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::apiResources([
+    'user'=>'API\UserController',
+    'conference'=>'API\ConferenceController',
+    'schedule'=>'API\ScheduleController',
+]);
+Route::get('profile', 'API\UserController@profile');
+

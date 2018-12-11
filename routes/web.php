@@ -1,5 +1,7 @@
 <?php
 
+use Laravel\Passport\Passport;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,7 +14,12 @@
  */
 
 Route::get('/', 'PagesController@home');
+Route::get('/conferences', 'ConferenceController@index')->name('conferences.home');
 
+Route::group(['prefix'=>'admin', 'middleware'=>'auth'], function() {
+    Route::get('/', 'Admin\PagesController@spa');
+    Route::get( '/{any}', 'Admin\PagesController@spa')->where('any', '.*' );
+});
 Auth::routes();
 
-Route::get('/conferences', 'ConferenceController@index')->name('conferences.home');
+
