@@ -19,7 +19,7 @@
                         <div class="slide-text slide_style_left">
                             <h2 data-animation="animated zoomInRight" class="bg-success-gradiant title">Alberta Association of Police Governance</h2>
                             <p data-animation="animated fadeInLeft">
-                                <a class="bg-white btn btn-md btn-arrow" data-toggle="collapse" href="#"> <span>Supporting Law Enforcement Departments Province Wide <i class="ti-arrow-right"></i></span> </a>
+                                <a class="bg-white btn btn-md btn-arrow" data-toggle="collapse" href="#"> <span> Supporting excellence in civilian governance <i class="ti-arrow-right"></i></span> </a>
                             </p>
                         </div>
                     </div>
@@ -57,18 +57,17 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-5" data-aos="fade-right" data-aos-duration="1200">
-                    <h3 class="title">Who Is The Alberta Association of Police Governance?</h3>
-                    <h6 class="subtitle">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque, vero impedit expedita nobis accusantium dicta! Totam quas cum nostrum ex sed doloremque non eum placeat adipisci, eos nobis beatae et.</h6> <a class="btn btn-success-gradiant btn-md btn-arrow m-t-20"
-                        data-toggle="collapse" href="#f43"><span>Learn About Membership <i class="ti-arrow-right"></i></span></a>                                </div>
+                    <h3 class="title">2019 Annual AAPG Conference</h3>
+                    <h6 class="subtitle">Our Annual Conference is being hosted this April in Medicine Hat, AB. We have an incredible 2 days planned of learning and discussion, as well as some unique activities in the evenings.</h6> <a class="btn btn-success-gradiant btn-md btn-arrow m-t-20" href="/conferences"><span>2019 Conference Details <i class="ti-arrow-right"></i></span></a>
+                </div>
                 <div class="col-lg-6 ml-auto">
-                    <h3 class="title">Where Did We Come From?</h3>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel accusamus et itaque id doloribus nam magni, obcaecati excepturi voluptatibus ea dolore fuga facere iusto similique magnam nobis tempora sint in!</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure dolore suscipit omnis. Ea ducimus et corporis delectus ut atque quis aliquam. Praesentium provident ducimus veritatis minus? Quam accusantium aut eius. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque tenetur magni earum nam, obcaecati, at similique, asperiores quos adipisci praesentium officia. In, sequi! Reiciendis voluptas laboriosam recusandae aut ratione sunt.</p>
+                    <h3 class="title">What Is The Alberta Association of Police Governance?</h3>
+                    <p>The AAPG supports excellence in civilian governance and oversight of police services in Alberta. Through AAPG, members are provided with educational opportunities, access to best practices, forums for liaison with related agencies, and proactive representation in order that police oversight in Alberta speaks with one voice when advocating for change to law or policy.</p>
                 </div>
             </div>
         </div>
     </div>
-
+{{--
     <div class="spacer feature2 bg-light">
         <div class="container">
             <!-- Row  -->
@@ -387,7 +386,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
 @stop
 
 @section('js')

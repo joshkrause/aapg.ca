@@ -205,8 +205,8 @@
                     });
             },
             loadConferences(){
-
-                axios.get('/api/conference').then(({data})=> (this.conferences = data.data));
+                axios.get('/api/conference').then(({data})=> (this.conferences = data));
+                // axios.get('/api/conference').then(({data})=> (console.log(data)));
             },
             newModal() {
                 this.editMode = false;

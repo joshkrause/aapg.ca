@@ -90,7 +90,7 @@
 
     // Count down setup
 
-    $('.countdown').countdown('2019/4/1 8:00', function(event) {
+    $('.countdown').countdown('2019/4/5 6:30', function(event) {
         $(this).html(event.strftime('%D days %H:%M:%S'));
     });
 
@@ -135,18 +135,16 @@
         numeratio: true
     });
 
-
-
-    // Instagram feed setup
-
-    var instaFeed = new Instafeed({
-        get: 'user',
-        userId: '305801553',
-        accessToken: '305801553.1677ed0.3d872300c10c4ff687868875ee8abc5d',
-        limit: 6,
-        template: '<li class="col-sm-4"><a href="{{link}}"><img src="{{image}}"/></a></li>'
+    $('.register-modal').venobox({
+        border: '10px',             // default: '0'
+        bgcolor: '#000',         // default: '#fff'
+        titleattr: 'data-title',    // default: 'title'
+        overlayClose: false, // prevent auto close
     });
-    instaFeed.run();
+
+
+
+
 
 
     // Form validation

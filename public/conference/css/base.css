@@ -5,10 +5,7 @@
 	3.Typography and Common style
 	4.Links
 	5.Misc
-
-
-/* Reset & Basics (Inspired by E. Meyers) */
-
+*/
 *,
 *:before,
 *:after {
@@ -325,27 +322,27 @@ section,
 }
 input[type]:-moz-placeholder {
     color: #ffffff;
-    opacity: .4;
+    opacity: .7;
     font-size: 14px;
 }
 :-moz-placeholder {
     color: #ffffff;
-    opacity: .4;
+    opacity: .7;
     font-size: 14px;
 }
 ::-moz-placeholder {
     color: #ffffff;
-    opacity: .4;
+    opacity: .7;
     font-size: 14px;
 }
 :-ms-input-placeholder {
     color: #ffffff;
-    opacity: .4;
+    opacity: .7;
     font-size: 14px;
 }
 ::-webkit-input-placeholder {
     color: #ffffff;
-    opacity: .4;
+    opacity: .7;
     font-size: 14px;
 }
 /* End typography and common style*/
@@ -709,5 +706,9 @@ a[href^="https://maps.google.com/maps"] {
 }
 .gmnoprint div {
     background: none !important;
+}
+
+#register-modal {
+    display: none;
 }
 /*End misc */

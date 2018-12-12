@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\API;
 
+use App\Attendant;
 use Carbon\Carbon;
 use App\Conference;
 use Illuminate\Http\Request;
@@ -16,22 +17,11 @@ class ConferenceController extends Controller
 
     protected $dates = ['start', 'end', 'live'];
 
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
         return Conference::latest()->get();
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
         try {
@@ -77,26 +67,6 @@ class ConferenceController extends Controller
         }
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, $id)
     {
         $conference = Conference::findOrFail($id);
@@ -141,12 +111,6 @@ class ConferenceController extends Controller
         }
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
         $conference = Conference::findOrFail($id);
@@ -157,5 +121,15 @@ class ConferenceController extends Controller
             'status' => 'success',
             'msg'    => 'User Deleted',
         ], 201);
+    }
+
+    public function upcoming()
+    {
+        return Conference::upcoming()->get();
+    }
+
+    public function attendants($id)
+    {
+        return Attendant::with('customers')->where('conference_id', $id)->latest()->get();
     }
 }

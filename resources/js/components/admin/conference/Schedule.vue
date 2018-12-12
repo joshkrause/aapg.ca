@@ -108,14 +108,7 @@
                             <textarea v-model="form.description" type="text" class="form-control" :class="{'is-invalid': form.errors.has('description') }" placeholder="Description"></textarea>
                             <has-error :form="form" field="description"></has-error>
                         </div>
-                        <div class="input-group form-group">
-                            <datepicker v-model="form.start" name="start" :bootstrap-styling="true" :class="{'is-invalid': form.errors.has('start') }" :format="format" placeholder="Start Date"></datepicker>
-                            <has-error :form="form" field="start"></has-error>
-                        </div>
-                        <div class="input-group form-group">
-                            <datepicker v-model="form.end" name="end" :bootstrap-styling="true" :class="{'is-invalid': form.errors.has('end') }" :format="format" placeholder="End Date" ></datepicker>
-                            <has-error :form="form" field="end"></has-error>
-                        </div>
+
                         <div class="input-group form-group">
                             <input v-model="form.speaker" type="text" class="form-control" :class="{'is-invalid': form.errors.has('speaker') }" placeholder="Speaker / Speakers">
                             <has-error :form="form" field="speaker"></has-error>
@@ -134,8 +127,8 @@
 </template>
 
 <script>
-    import Datepicker from 'vuejs-datepicker';
-    import vSelect from 'vue-select'
+
+
     export default {
 
         data() {
@@ -152,14 +145,15 @@
                     end: '',
                     description: '',
                     speaker: '',
+                    startTime: '',
+                    endTime: '',
                     remember: false
                 }),
-                format: "yyyy-MM-dd",
+                dateFormat: "yyyy-MM-dd",
             }
         },
         components: {
-            Datepicker,
-            'v-select': vSelect,
+            // 'vue-ctk-date-time-picker': VueCtkDateTimePicker,
         },
         methods: {
             updateSchedule() {
@@ -190,7 +184,7 @@
             deleteSchedule(id) {
                 swal({
                     title: 'Are you sure?',
-                    text: "This even will be removed from the admin area.",
+                    text: "This event will be removed from the admin area.",
                     type: 'warning',
                     showCancelButton: true,
                     confirmButtonColor: '#3085d6',
@@ -248,8 +242,11 @@
                 ));
             },
             chooseConference(conference) {
-                this.form.conference_id = conference.value;
-                this.loadSchedules(conference.value);
+                if(conference)
+                {
+                    this.form.conference_id = conference.value;
+                    this.loadSchedules(conference.value);
+                }
             },
             newModal() {
                 this.editMode = false;

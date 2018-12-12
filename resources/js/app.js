@@ -44,6 +44,10 @@ Vue.use(VueProgressBar, {
     height: '3px'
 });
 
+// Vue Date Time Picker
+// import VueCtkDateTimePicker from 'vue-ctk-date-time-picker';
+// Vue.component('vue-ctk-date-time-picker', VueCtkDateTimePicker);
+
 // Vue Select2
 import vSelect from 'vue-select'
 Vue.component('v-select', vSelect);
@@ -56,8 +60,9 @@ let routes = [
     { path: '/admin/profile', component: require('./components/admin/Profile.vue') },
     { path: '/admin/users', component: require('./components/admin/Users.vue') },
     { path: '/admin/developers', component: require('./components/admin/Developer.vue') },
-    { path: '/admin/conferences', component: require('./components/admin/Conferences.vue') },
-    { path: '/admin/schedules', component: require('./components/admin/Schedule.vue') },
+    { path: '/admin/conferences', component: require('./components/admin/conference/Conferences.vue') },
+    { path: '/admin/conferences/schedules', component: require('./components/admin/conference/Schedule.vue') },
+    { path: '/admin/conferences/registration', component: require('./components/admin/conference/Registration.vue') },
 ]
 const router = new VueRouter({
     mode: 'history',

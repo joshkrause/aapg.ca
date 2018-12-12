@@ -20,6 +20,7 @@ class CreateConferencesTable extends Migration
             $table->date('live')->nullable();
             $table->date('start')->nullable();
             $table->date('end')->nullable();
+            $table->softDeletes();
             $table->timestamps();
         });
     }

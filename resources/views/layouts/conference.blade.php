@@ -3,7 +3,7 @@
    <head>
       <!-- Metas -->
       <meta charset="utf-8">
-      <title>AAPG Conference Title</title>
+      <title>AAPG Annual Conference</title>
       <meta name="description" content="">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <!-- Css -->
@@ -16,6 +16,7 @@
       <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,700" rel="stylesheet">
       <script defer src="https://use.fontawesome.com/releases/v5.4.1/js/all.js" integrity="sha384-L469/ELG4Bg9sDQbl0hvjMq8pOcqFgkSpwhwnslzvVVGpDjYJ6wJJyYjvG3u8XW7" crossorigin="anonymous"></script>
+      <script src="https://js.stripe.com/v3/"></script>
    </head>
    <body>
       <!-- Preloader -->
@@ -51,7 +52,7 @@
                   <!--Row-->
                   <div class="row">
                      <div class="col-md-2">
-                        <a class="scroll logo" href="#wrapper">
+                        <a class="scroll logo" href="/">
                             <img src="/public/images/logos/nav-logo.png" alt="AAPG"/>
                         </a>
                      </div>
@@ -63,14 +64,13 @@
                               </a>
                            </div>
                            <ul>
-                              <li><a class="scroll" href="#wrapper">Home</a></li>
+                              <li><a class="scroll" href="/">Home</a></li>
                               <li><a class="scroll" href="#about">About</a></li>
                               <li><a class="scroll" href="#speakers">Speakers</a></li>
                               <li><a class="scroll" href="#topics">Topics</a></li>
                               <li><a class="scroll" href="#schedule">Schedule</a></li>
                               <li><a class="scroll" href="#tickets">Tickets</a></li>
                               <li><a class="scroll" href="#location">Location</a></li>
-                              <li><a class="scroll" href="#faq">FAQ</a></li>
                            </ul>
                         </nav>
                      </div>
@@ -89,8 +89,8 @@
                      <div class="col-sm-12 text-center">
                         <h3 class="mb-10">AAPG</h3>
                         <h1 class="large mb-10">Annual Conference</h1>
-                        <p class="uppercase ">April 4th - 6th 2019 with over ## sessions - Medicine Hat, Alberta </p>
-                        <a href="#register" class="but scroll "> Register Now</a>
+                        <p class="uppercase ">April 5th - 6th 2019 with 16 different sessions - Medicine Hat, Alberta </p>
+                        <a href="#tickets" class="but scroll "> Register Now</a>
                      </div>
                   </div>
                   <!--End row-->
@@ -168,7 +168,7 @@
                         </svg>
                         <p>
                            <strong>DATE</strong>
-                           <span>April 4 - 6 2019</span>
+                           <span>April 5 - 6 2019</span>
                         </p>
                      </div>
                   </div>
@@ -206,7 +206,7 @@
                         </svg>
                         <p>
                            <strong>LOCATION</strong>
-                           <span>Medalta Potteries<br/>
+                           <span>Medicine Hat Lodge<br/>
                            Medicine Hat, AB </span>
                         </p>
                      </div>
@@ -244,7 +244,7 @@
                         </svg>
                         <p>
                            <strong>SPEAKERS</strong>
-                           <span>4 Professional Speakers </span>
+                           <span>6 Unique Speakers </span>
                         </p>
                      </div>
                   </div>
@@ -259,100 +259,7 @@
             <!--End container-->
          </section>
          <!--End about section-->
-         <!--Speakers section-->
-         <section id="speakers" class="speakers pt-120 brd-bottom">
-            <!--Container-->
-            <div class="container">
-               <!--Row-->
-               <div class="row">
-                  <div class="col-sm-8 col-sm-offset-2 mb-100 text-center">
-                     <h1 class="title">Speakers</h1>
-                     <p class="title-lead mt-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>Dolorem in magni esse commodi, nemo unde voluptate. Sapiente possimus laborum, beatae aliquid, nihil suscipit aperiam, in quia aliquam est animi. Facere!</p>
-                  </div>
-               </div>
-               <!--End row-->
-            </div>
-            <!--End container-->
-            <div class="block-content">
-               <div class="col-sm-3 pd-0">
-                  <div class="block-speaker">
-                     <div class="block-img overlay soft">
-                        <div class="background-img">
-                           <img src="/conference/img/2.jpg" alt="">
-                        </div>
-                        <div class="block-info-2">
-                           <p>
-                              <strong>Speaker 1</strong>
-                              <span>Police Chief </span>
-                           </p>
-                           <ul class="block-social">
-                              <li><a href="#"><i class="icon-twitter"></i></a></li>
-                              <li><a href="#"><i class="icon-linkedin"></i></a></li>
-                           </ul>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-sm-3 pd-0">
-                  <div class="block-speaker">
-                     <div class="block-img overlay soft">
-                        <div class="background-img">
-                           <img src="/conference/img/3.jpg" alt="">
-                        </div>
-                        <div class="block-info-2">
-                           <p>
-                              <strong>Speaker 2</strong>
-                              <span>Policy Developer </span>
-                           </p>
-                           <ul class="block-social ">
-                              <li><a href="#"><i class="icon-twitter"></i></a></li>
-                              <li><a href="#"><i class="icon-linkedin"></i></a></li>
-                           </ul>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-sm-3 pd-0">
-                  <div class="block-speaker">
-                     <div class="block-img overlay soft">
-                        <div class="background-img">
-                           <img src="/conference/img/4.jpg" alt="">
-                        </div>
-                        <div class="block-info-2">
-                           <p>
-                              <strong>Speaker 3</strong>
-                              <span>Job Title </span>
-                           </p>
-                           <ul class="block-social ">
-                              <li><a href="#"><i class="icon-twitter"></i></a></li>
-                              <li><a href="#"><i class="icon-linkedin"></i></a></li>
-                           </ul>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-sm-3 pd-0">
-                  <div class="block-speaker">
-                     <div class="block-img overlay soft">
-                        <div class="background-img">
-                           <img src="/conference/img/5.jpg" alt="">
-                        </div>
-                        <div class="block-info-2">
-                           <p>
-                              <strong>Speaker 4</strong>
-                              <span>Job Title </span>
-                           </p>
-                           <ul class="block-social ">
-                              <li><a href="#"><i class="icon-twitter"></i></a></li>
-                              <li><a href="#"><i class="icon-linkedin"></i></a></li>
-                           </ul>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </section>
-         <!--End speakers section-->
+
          <!--Topics section-->
          <section id="topics" class="topics pt-120 pb-120  brd-bottom">
             <!--Container-->
@@ -361,7 +268,7 @@
                <div class="row">
                   <div class="col-sm-8 col-sm-offset-2 mb-100 text-center">
                      <h1 class="title">Topics Covered</h1>
-                     <p class="title-lead mt-10">Our conference has many unique presentaions on various topics, as well as the AAPG annual general meeting.</p>
+                     <p class="title-lead mt-10">Our conference has many unique presentaions on various topics,<br/> as well as the AAPG annual general meeting.</p>
                   </div>
                </div>
                <!--End row-->
@@ -380,7 +287,7 @@
                            <li>Establishment of Oversight in RCMP Jurisdictions</li>
                            <li>Commission & Committee Internal Organization</li>
                            <li>First Nations Board Collaboration</li>
-                           <li>Poice Act Engagement</li>
+                           <li>Police Act Engagement</li>
                            <li>Public Complaints Director Role</li>
                         </ul>
                      </div>
@@ -388,7 +295,7 @@
                   </div>
                   <div class="col-md-6 col-sm-6">
                      <div class="block-video">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/aA3dHi_o7Yw" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+                        <img src="/conference/img/session.jpg" class="img-responsive" alt=""/>
                      </div>
                   </div>
                </div>
@@ -404,7 +311,7 @@
                <div class="row">
                   <div class="col-sm-8 col-sm-offset-2 mb-100 text-center">
                      <h1 class="title">Conference Schedule</h1>
-                     <p class="title-lead mt-10">We are very excited about the program being planned for AAPG Anual Conference <br> this spring in Medicine Hat, Alberta.</p>
+                     <p class="title-lead mt-10">We are very excited about the program being planned for AAPG Annual Conference <br> this spring in Medicine Hat, Alberta.</p>
                   </div>
                </div>
                <!--End row-->
@@ -428,146 +335,140 @@
                   <div class="col-sm-4 ">
                      <!--Tabs-->
                      <ul class="block-tabs">
-                        <li class="active"><i class="far fa-calendar-alt"></i> <strong>Thursday</strong>  <span>- April 4 2019</span></li>
-                        <li class=""><i class="far fa-calendar-alt"></i> <strong>Friday</strong>  <span>- April 5 2019</span></li>
+                        <li class=""><i class="far fa-calendar-alt"></i> <strong>Thursday</strong>  <span>- April 4 2019</span></li>
+                        <li class="active"><i class="far fa-calendar-alt"></i> <strong>Friday</strong>  <span>- April 5 2019</span></li>
                         <li class=""><i class="far fa-calendar-alt"></i> <strong>Saturday</strong>  <span>- April 6 2019</span></li>
                      </ul>
                      <a class="link mt-20 gradient-text scroll" href="#accom">Accommodation</a>
                   </div>
                   <div class="col-sm-8 ">
                      <ul class="block-tab">
-                        <!--Tab-->
-                        <li class="active ">
-                           <div class="block-date"><i class="far fa-calendar-alt"></i> <strong>Thursday</strong>  <span>- April 4 2019</span></div>
-                           <div class="block-detail">
-                              <span class="time">6:00PM - 7:30PM</span>
-                              <span class="topic">Early Registration</span>
-                              <div class="block-text">
-                                 <p>Early registration takes place in the Medicine Hat Lodge Saamis Ballroom Lobby, just beyond the hotel registration desk</p>
-                              </div>
-                           </div>
-                           <div class="block-detail">
-                              <span class="time">5:30PM - 7:30PM (Optional Event)</span>
-                              <span class="topic">Esplanade Arts & Heritage Centre Private Tour</span>
-                              <div class="block-text">
-                                <p>401 First St. SE, Medicine Hat</p>
-                                <p>Planning on arriving early?  Add-on this PRIVATE evening tour of The Esplanade, where visitors are delighted to discover a vibrant art gallery, a prized museum, expansive public archives and the Ewart Duggan House - the oldest brick home in Alberta.</p>
-                                <p>www.esplanade.ca</p>
-                              </div>
-                           </div>
-                        </li>
-                        <!--Tab-->
-                        <li>
-                           <div class="block-date"><i class="far fa-calendar-alt"></i> <strong>Friday</strong>  <span>- April 5 2019</span></div>
-                           <div class="block-detail">
-                            <span class="time">6:30AM - 9:00AM</span>
-                            <span class="topic">Breakfast</span>
-                            <div class="block-text">
-                               <p>Breakfast onsite in the Eatalion Restaurant (for all hotel room occupants)</p>
-                            </div>
-                         </div>
-                         <div class="block-detail">
-                            <span class="time">7:30AM - 4:30PM</span>
-                            <span class="topic">Registration</span>
-                            <div class="block-text">
-                               <p>Medicine Hat Lodge Saamis Ballroom Lobby (just beyond hotel registration desk)</p>
-                               <p>Silent Auction Opens</p>
-                            </div>
-                         </div>
-                         <div class="block-detail">
-                            <span class="time">8:30AM - 10:00AM</span>
-                            <span class="topic">New Commission Member Orientation</span>
-                            <div class="block-text">
-                                <p>This is an attendee directed session that will discuss the role of a Police Commission, the basics of police oversight and governance, the structure of the municipal police service, board basics, and FOIP legislation.</p>
-                                <span class="speaker"> <strong >Speaker</strong> : <a href="#" class="gradient-text "> Randy Pick, Medicine Hat Police Service Q.C. </a> </span>
-                            </div>
-                         </div>
-                         <div class="block-detail">
-                                <span class="time">8:30AM - 10:00AM</span>
-                                <span class="topic">New Member Committee & Policy Advisory Orientation</span>
-                                <div class="block-text">
-                                    <p>This is an attendee directed session that will discuss the role of Policing Committees, the basics of police oversight and governance, the structure of the RCMP, board basics, and FOIP legislation.</p>
-                                    <span class="speaker"> <strong >Speaker</strong> : <a href="#" class="gradient-text "> Terry Coleman, Chair, AAPG </a> </span>
-                                </div>
-                             </div>
-                         <div class="block-detail">
-                            <span class="time">10:00AM - 10:20AM</span>
-                            <span class="topic">Break</span>
-                            <div class="block-text">
-                               <p>Coffee & Tea (served in Saamis Ballroom Lobby)</p>
-                            </div>
-                         </div>
-                         <div class="block-detail">
-                            <span class="time">10:20AM - 11:30AM</span>
-                            <span class="topic">Public Relations 101 & Impacts of Social Media</span>
-                            <div class="block-text">
-                                <p>Avoid reactionary and pursue proactive service promotion.  Open discussion on how Social Media has changed public perceptions.</p>
-                                <span class="speaker"> <strong >Speaker</strong> : <a href="#" class="gradient-text "> Karyn Popplestone </a> </span>
-                            </div>
-                         </div>
-                         <div class="block-detail">
-                            <span class="time">11:30AM - 12:30PM</span>
-                            <span class="topic">Lunch Buffet</span>
-                            <div class="block-text">
-                               <p>Salad, Soup & Sandwiches  (served in Saamis Ballroom Lobby)</p>
-                            </div>
-                         </div>
+                        <li> <!-- Thursday -->
+                            <div class="block-date"><i class="far fa-calendar-alt"></i> <strong>Friday</strong>  <span>- April 5 2019</span></div>
                             <div class="block-detail">
-                                <span class="time">12:30PM - 1:30PM</span>
-                                <span class="topic">K-9 Unit Demonstration and up-close with Armored Vehicle</span>
+                                <span class="time">Evening</span>
+                                <span class="topic">Private Access to The Esplanade; with downtown stops. Optional Addon.</span>
                                 <div class="block-text">
-                                    <p>This demonstration will take place in the west parking lot.</p>
-                                    <span class="speaker"> <strong >Presenter</strong> : <a href="#" class="gradient-text "> Medicine Hat Police </a> </span>
-                                </div>
-                            </div>
-                            <div class="block-detail">
-                                <span class="time">1:30PM - 2:30PM</span>
-                                <span class="topic">Strategic Planning & Budget Oversight</span>
-                                <div class="block-text">
-                                    <p>The role of the Commission in Strategic Planning goals & vision for the service; who is driving the boat?  How Strategic Planning differs from the Business Plan action items & targets. Budget oversight; what should you know about operations and who should be involved.</p>
-                                    <span class="speaker"> <strong >Presenter</strong> : <a href="#" class="gradient-text "> TBA </a> </span>
-                                </div>
-                            </div>
-                            <div class="block-detail">
-                                <span class="time">1:30PM - 2:30PM</span>
-                                <span class="topic">Establishment of Ovesight in RCMP Jurisdictions</span>
-                                <div class="block-text">
-                                    <p>Looking to improve RCMP oversight in your community or considering a Policy Advisory Committee?  We will talk helpful bylaw amendments, benefits of community-driven standards and policing community goals collaboration, costs related to increasing the level of your oversight.</p>
-                                    <span class="speaker"> <strong >Presenter</strong> : <a href="#" class="gradient-text "> TBA </a> </span>
-                                </div>
-                            </div>
-                            <div class="block-detail">
-                                <span class="time">2:30PM - 2:50PM</span>
-                                <span class="topic">Break</span>
-                                <div class="block-text">
-                                    <p>Coffee & Tea with Decadent Delights (served in Saamis Ballroom Lobby)</p>
-                                </div>
-                            </div>
-                            <div class="block-detail">
-                                <span class="time">2:50PM - 4:00PM</span>
-                                <span class="topic">Cannabis Update</span>
-                                <div class="block-text">
-                                    <p>An update on the Federal, Provincial and Municipal governments’ framework relating to Cannabis and its impacts </p>
-                                    <span class="speaker"> <strong >Presenter</strong> : <a href="#" class="gradient-text "> Robert Palser B.A. LL.B Q.C., Senior Policy Counsel & Traffic Safety Coordinator of Alberta </a> </span>
-                                </div>
-                            </div>
-                            <div class="block-detail">
-                                <span class="time">4:30PM - 8:30PM</span>
-                                <span class="topic">Shuttles to & from Medalta Potteries</span>
-                                <div class="block-text">
-                                    <p>SHUTTLE DEPARTURE & RETURN TIMES (limit of 35 per shuttle – be early!)</p>
-                                    <p>Pick-up outside of Lodge entrance.<br/>
-                                            Arrive at the Medalta for PRIVATE TOUR - followed by Networking Reception (drink ticket provided)<br/>
-                                            6:30 Blessing and DINNER (wine provided at each table, Business casual attire)
-                                            </p>
+                                    <p>The Esplanade is where arts and heritage come to life in Medicine Hat, where the stories of our great collective culture are told through music and dance, theatre, painting and sculpture, exhibitions and installations, artifacts, objets d’art and more.</p>
 
+                                    <p>A marvel of contemporary Canadian architecture on traditional Blackfoot territory just steps from the South Saskatchewan River, the Esplanade occupies an eminent position on downtown’s elegant First Street South. From its rooftop terrace, you can see Saamis, the shoreline escarpment which is the setting for the story of how Medicine Hat got its name.</p>
+
+                                    <p>Inside, visitors are delighted to discover a vibrant art gallery, a prized museum, an intimate studio theatre, a dynamic education suite, expansive public archives and many volunteers and staff who are eager to tell their versions of our city’s tale. The Esplanade also features a 700-seat main stage theatre which boasts superior theatre technology, acoustic perfection and striking interior design.</p>
+
+                                    <p><a href="http://esplanade.ca" target="_NEW">The Esplanade Website</a></p>
                                 </div>
                             </div>
+                        </li>
+                        <li class="active"> <!-- Friday -->
+                            <div class="block-date"><i class="far fa-calendar-alt"></i> <strong>Friday</strong>  <span>- April 5 2019</span></div>
+                            <div class="block-detail">
+                             <span class="time">6:30AM - 9:00AM</span>
+                             <span class="topic">Breakfast</span>
+                             <div class="block-text">
+                                <p>Breakfast onsite in the Eatalion Restaurant (for all hotel room occupants)</p>
+                             </div>
+                          </div>
+                          <div class="block-detail">
+                             <span class="time">7:30AM - 4:30PM</span>
+                             <span class="topic">Registration</span>
+                             <div class="block-text">
+                                <p>Medicine Hat Lodge Saamis Ballroom Lobby (just beyond hotel registration desk)</p>
+                                <p>Silent Auction Opens</p>
+                             </div>
+                          </div>
+                          <div class="block-detail">
+                             <span class="time">8:30AM - 10:00AM</span>
+                             <span class="topic">New Commission Member Orientation</span>
+                             <div class="block-text">
+                                 <p>This is an attendee directed session that will discuss the role of a Police Commission, the basics of police oversight and governance, the structure of the municipal police service, board basics, and FOIP legislation.</p>
+                                 <span class="speaker"> <strong >Speaker</strong> : <a href="#" class="gradient-text "> Randy Pick, Medicine Hat Police Service Q.C. </a> </span>
+                             </div>
+                          </div>
+                          <div class="block-detail">
+                                 <span class="time">8:30AM - 10:00AM</span>
+                                 <span class="topic">New Member Committee & Policy Advisory Orientation</span>
+                                 <div class="block-text">
+                                     <p>This is an attendee directed session that will discuss the role of Policing Committees, the basics of police oversight and governance, the structure of the RCMP, board basics, and FOIP legislation.</p>
+                                     <span class="speaker"> <strong >Speaker</strong> : <a href="#" class="gradient-text "> Terry Coleman, Chair, AAPG </a> </span>
+                                 </div>
+                              </div>
+                          <div class="block-detail">
+                             <span class="time">10:00AM - 10:20AM</span>
+                             <span class="topic">Break</span>
+                             <div class="block-text">
+                                <p>Coffee & Tea (served in Saamis Ballroom Lobby)</p>
+                             </div>
+                          </div>
+                          <div class="block-detail">
+                             <span class="time">10:20AM - 11:30AM</span>
+                             <span class="topic">Public Relations 101 & Impacts of Social Media</span>
+                             <div class="block-text">
+                                 <p>Avoid reactionary and pursue proactive service promotion.  Open discussion on how Social Media has changed public perceptions.</p>
+                                 <span class="speaker"> <strong >Speaker</strong> : <a href="#" class="gradient-text "> Karyn Popplestone and other SolGen member </a> </span>
+                             </div>
+                          </div>
+                          <div class="block-detail">
+                             <span class="time">11:30AM - 12:30PM</span>
+                             <span class="topic">Lunch Buffet</span>
+                             <div class="block-text">
+                                <p>Salad, Soup & Sandwiches  (served in Saamis Ballroom Lobby)</p>
+                             </div>
+                          </div>
+                             <div class="block-detail">
+                                 <span class="time">12:30PM - 1:30PM</span>
+                                 <span class="topic">K-9 Unit Demonstration and up-close with Armored Vehicle</span>
+                                 <div class="block-text">
+                                     <p>This demonstration will take place in the west parking lot.</p>
+                                     <span class="speaker"> <strong >Presenter</strong> : <a href="#" class="gradient-text "> Medicine Hat Police </a> </span>
+                                 </div>
+                             </div>
+                             <div class="block-detail">
+                                 <span class="time">1:30PM - 2:30PM</span>
+                                 <span class="topic">Strategic Planning & Budget Oversight</span>
+                                 <div class="block-text">
+                                     <p>The role of the Commission in Strategic Planning goals & vision for the service; who is driving the boat?  How Strategic Planning differs from the Business Plan action items & targets. Budget oversight; what should you know about operations and who should be involved.</p>
+                                     <span class="speaker"> <strong >Presenter</strong> : <a href="#" class="gradient-text "> TBA </a> </span>
+                                 </div>
+                             </div>
+                             <div class="block-detail">
+                                 <span class="time">1:30PM - 2:30PM</span>
+                                 <span class="topic">Establishment of Ovesight in RCMP Jurisdictions</span>
+                                 <div class="block-text">
+                                     <p>Looking to improve RCMP oversight in your community or considering a Policy Advisory Committee?  We will talk helpful bylaw amendments, benefits of community-driven standards and policing community goals collaboration, costs related to increasing the level of your oversight.</p>
+                                     <span class="speaker"> <strong >Presenter</strong> : <a href="#" class="gradient-text "> TBA </a> </span>
+                                 </div>
+                             </div>
+                             <div class="block-detail">
+                                 <span class="time">2:30PM - 2:50PM</span>
+                                 <span class="topic">Break</span>
+                                 <div class="block-text">
+                                     <p>Coffee & Tea with Decadent Delights (served in Saamis Ballroom Lobby)</p>
+                                 </div>
+                             </div>
+                             <div class="block-detail">
+                                 <span class="time">2:50PM - 4:00PM</span>
+                                 <span class="topic">Cannabis Update</span>
+                                 <div class="block-text">
+                                     <p>An update on the Federal, Provincial and Municipal governments’ framework relating to Cannabis and its impacts </p>
+                                     <span class="speaker"> <strong >Presenter</strong> : <a href="#" class="gradient-text "> Robert Palser B.A. LL.B Q.C., Senior Policy Counsel & Traffic Safety Coordinator of Alberta </a> </span>
+                                 </div>
+                             </div>
+                             <div class="block-detail">
+                                 <span class="time">4:30PM - 8:30PM</span>
+                                 <span class="topic">Shuttles to & from Medalta Potteries for Banquet</span>
+                                 <div class="block-text">
+                                     <p>SHUTTLE DEPARTURE & RETURN TIMES (limit of 35 per shuttle – be early!)</p>
+                                     <p>Pick-up outside of Lodge entrance.<br/>
+                                        Arrive at the Medalta for PRIVATE TOUR - followed by Networking Reception (drink ticket provided)<br/>
+                                        6:30 Blessing and DINNER (wine provided at each table, Business casual attire)
+                                    </p>
+
+                                 </div>
+                             </div>
                         </li>
                         <!--Tab-->
                         <li>
                            <div class="block-date"><i class="far fa-calendar-alt"></i> <strong>Saturday</strong>  <span>- April 6 2019</span></div>
-                           <div class="block-date"><i class="far fa-calendar-alt"></i> <strong>Friday</strong>  <span>- April 5 2019</span></div>
                            <div class="block-detail">
                             <span class="time">6:30AM - 9:00AM</span>
                             <span class="topic">Breakfast</span>
@@ -580,7 +481,6 @@
                             <span class="topic">Registration</span>
                             <div class="block-text">
                                <p>Medicine Hat Lodge Saamis Ballroom Lobby (just beyond hotel registration desk)</p>
-                               <p>Silent Auction Opens</p>
                             </div>
                          </div>
                          <div class="block-detail">
@@ -615,8 +515,8 @@
                                 <p>Policy Manual Process/Procedure development; succession planning, continuing education, annual Board performance assessment, new member on-boarding; what should it look like, document management/destruction, use of personal email, minutes in closed meetings.</p>
                                 <span class="speaker"> <strong >Speaker</strong> : <a href="#" class="gradient-text "> Justin Krikler, Edmonton Police Commission Executive Director & Legal Council </a> </span>
                             </div>
-                            </div>
-                            <div class="block-detail">
+                        </div>
+                        <div class="block-detail">
                             <span class="time">11:30AM - 12:30PM</span>
                             <span class="topic">Hot Lunch Buffet</span>
                             <div class="block-text">
@@ -624,7 +524,72 @@
                                 <p>SILENT AUCTION CLOSES</p>
                             </div>
                         </div>
-
+                        <div class="block-detail">
+                            <span class="time">12:30PM - 1:30PM</span>
+                            <span class="topic">First Nations Board Collaboration</span>
+                            <div class="block-text">
+                                <p>Understanding First Nations Policing and how we can support each other</p>
+                                <span class="speaker"> <strong >Speaker</strong> : <a href="#" class="gradient-text "> Violet Meguinis, Chair Tsuu’tina Nation Police Commission/Ron Hepperle, Director of First Nations Policing </a> </span>
+                            </div>
+                        </div>
+                        <div class="block-detail">
+                            <span class="time">1:30PM - 1:45PM</span>
+                            <span class="topic">Police Act Engagement Update</span>
+                            <div class="block-text">
+                                <p>An update on consultations</p>
+                                <span class="speaker"> <strong >Speaker</strong> : <a href="#" class="gradient-text "> Jessica Thomson, Director of Engagement & Strategy, Office of Justice & Solicitor General </a> </span>
+                            </div>
+                        </div>
+                        <div class="block-detail">
+                            <span class="time">1:45PM - 2:00PM</span>
+                            <span class="topic">Break</span>
+                            <div class="block-text">
+                                <p>Coffee & Tea with Assorted Cookies (served in Saamis Ballroom Lobby)</p>
+                            </div>
+                        </div>
+                        <div class="block-detail">
+                            <span class="time">2:00PM - 3:00PM</span>
+                            <span class="topic">Policing Commissions - ROUND TABLE DISCUSSIONS</span>
+                            <div class="block-text">
+                                <p>Question & Answer session</p>
+                                <span class="speaker"> <strong >Speaker</strong> : <a href="#" class="gradient-text "> Greg Keen; Chair Medicine Hat Police Commission </a> </span>
+                            </div>
+                        </div>
+                        <div class="block-detail">
+                            <span class="time">2:00PM - 3:00PM</span>
+                            <span class="topic">Policing Committees - ROUND TABLE DISCUSSIONS</span>
+                            <div class="block-text">
+                                <p>Question & Answer session</p>
+                                <span class="speaker"> <strong >Speaker</strong> : <a href="#" class="gradient-text "> Nick Servos; Chair Canmore Policing Committee </a> </span>
+                            </div>
+                        </div>
+                        <div class="block-detail">
+                            <span class="time">3:00PM - 4:00PM</span>
+                            <span class="topic">Public Complaints Director Role</span>
+                            <div class="block-text">
+                                <p>What are the procedures of the PCD, how should Grievances be handled</p>
+                                <span class="speaker"> <strong >Speaker</strong> : <a href="#" class="gradient-text "> Provincial PCD & SolGen </a> </span>
+                            </div>
+                        </div>
+                        <div class="block-detail">
+                            <span class="time">4:00PM - 4:15PM</span>
+                            <span class="topic">Closing Address</span>
+                            <div class="block-text">
+                                <p>Please fill out Evaluation Forms</p>
+                            </div>
+                        </div>
+                        <div class="block-detail">
+                            <span class="time">4:15PM</span>
+                            <span class="topic">First Nations Police Commissions Joint Session</span>
+                        </div>
+                        <div class="block-detail">
+                            <span class="time">5:30PM - 7:30PM</span>
+                            <span class="topic">PRIVATE BREWERY Tour with Shuttle</span>
+                            <div class="block-text">
+                                <p>Private Tour of 3 local Breweries with tasting samples, ending at Industry Pub (with credit for whatever) and option to attend a private tour of a brand new local Gin Distillery (samples not included). Cost $49 pp</p>
+                                <p><a href="https://www.eventbrite.ca/e/alberta-association-of-police-governance-conference-breweries-tour-tickets-52323971407" target="_NEW">Tickets</a></p>
+                            </div>
+                        </div>
                         </li>
                      </ul>
                   </div>
@@ -645,7 +610,7 @@
                <div class="row">
                   <div class="col-sm-12  text-center  front-p">
                      <h1 class="title">AAPG Annual Conference Begins </h1>
-                     <p class="title-lead mt-10 mb-20">April 1 - 3 with over 20 sessions - Medicine Hat, AB </p>
+                     <p class="title-lead mt-10 mb-20">April 5 & 6 with 16 sessions - Medicine Hat, AB </p>
                      <span class="countdown gradient-text"></span>
                   </div>
                </div>
@@ -662,7 +627,7 @@
                <div class="row">
                   <div class="col-sm-8 col-sm-offset-2 mb-130 text-center">
                      <h1 class="title">Conference Tickets</h1>
-                     <p class="title-lead mt-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Come join Alberta's best in Police. </p>
+                     <p class="title-lead mt-10">Tickets are available for purchase now! Take advantage of our early bird pricing until February 1st, 2019. <br> Come join Alberta's best in Police. </p>
                   </div>
                </div>
                <!--End row-->
@@ -673,42 +638,39 @@
                <!--Row-->
                <div class="row vertical-align tickets">
                   <div class="col-sm-4 ">
-                     <h3 class="sub-title-0  mb-20"><span class="gradient-text">Groups save $100 ever 4 tickets</span><br>
+                     <h3 class="sub-title-0  mb-20"><span class="gradient-text">Member groups save $75 every 4th ticket</span><br>
                         <span class="gradient-text">Register single or groups</span>
                      </h3>
                      <div class="review-slider flexslider">
                         <ul class="slides">
                            <li>
-                              <blockquote>“ Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, dolore sapiente nostrum, veritatis nulla hic vitae atque soluta dignissimos esse excepturi minima? “ </blockquote>
+                              <blockquote>Early Bird Registration Prices until February 1, 2019 </blockquote>
                            </li>
                            <li>
-                              <blockquote>“ Lorem ipsum dolor, sit amet consectetur adipisicing elit. “ </blockquote>
-                           </li>
-                           <li>
-                              <blockquote>“ Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto dolor eligendi, aperiam ipsum corrupti debitis sed maxime, assumenda voluptates, rerum ab? Voluptates ullam eveniet fugit nisi enim. Consequuntur, soluta quasi.“ </blockquote>
+                              <blockquote>Buy 3 member tickets, and save $75 on the fourth ticket!</blockquote>
                            </li>
                         </ul>
                      </div>
                   </div>
                   <div class="col-sm-8 ">
-                     <div class="col-sm-6">
-                        <ul class="block-tickets overlap">
+                     <div class="col-sm-4">
+                        <ul class="block-tickets ">
                            <li>
-                              <ul class="block-ticket ">
-                                 <li class="block-price"><span class="price"><span class="cur">$</span>250</span><span class="block-type">Single Ticket</span></li>
+                              <ul class="block-ticket active">
+                                 <li class="block-price"><span class="price"><span class="cur">$</span>250</span><span class="block-type">Member Single Ticket</span></li>
                                  <li>Full Conference Access</li>
                                  <li>Gala Dinner</li>
                                  <li>All Sessions</li>
-                                 <li><a href="#" class="but mt-30"> Buy Ticket Now</a></li>
+                                 <li><a href="#register-modal" class="but mt-30 register-modal" data-vbtype="inline" title="Purchase Tickets"> Buy Ticket Now</a></li>
                               </ul>
                            </li>
                         </ul>
                      </div>
-                     <div class="col-sm-6">
-                        <ul class="block-tickets">
+                     <div class="col-sm-4">
+                        <ul class="block-tickets ">
                            <li>
-                              <ul class="block-ticket active">
-                                 <li class="block-price"><span class="price"><span class="cur">$</span>900</span><span class="block-type">Group of 4 Tickets</span></li>
+                              <ul class="block-ticket">
+                                 <li class="block-price"><span class="price"><span class="cur">$</span>925</span><span class="block-type">Group of 4 Tickets</span></li>
                                  <li>Full Conference Access</li>
                                  <li>Gala Dinner</li>
                                  <li>All Sessions</li>
@@ -717,6 +679,19 @@
                            </li>
                         </ul>
                      </div>
+                     <div class="col-sm-4">
+                        <ul class="block-tickets ">
+                            <li>
+                                <ul class="block-ticket">
+                                    <li class="block-price"><span class="price"><span class="cur">$</span>325</span><span class="block-type">Non-Member Single Ticket</span></li>
+                                    <li>Full Conference Access</li>
+                                    <li>Gala Dinner</li>
+                                    <li>All Sessions</li>
+                                    <li><a href="#" class="but mt-30"> Buy Tickets Now</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        </div>
                   </div>
                </div>
                <!--End row-->
@@ -724,50 +699,7 @@
             <!--End container-->
          </section>
          <!--End tickets section-->
-         <!--Register section-->
-         <section id="register" class="register pt-120 pb-120 overlay">
-            <div class="background-img " >
-               <img src="/conference/img/7.jpg" alt="">
-            </div>
-            <!--Container-->
-            <div class="container">
-               <!--Row-->
-               <div class="row">
-                  <div class="col-md-6 front-p">
-                     <form class="registry-form form" method="post" action="#">
-                        <h2 class="sub-title-1 mb-30">Register for AAPG Annual Conference 2019</h2>
-                        <div class="col-sm-6">
-                           <input placeholder="Your Name" value="" id="name" name="name" type="text" required>
-                        </div>
-                        <div class="col-sm-6">
-                           <input placeholder="Your Email" value="" id="email" name="email" type="text" required>
-                        </div>
-                        <div class="col-sm-6">
-                           <input placeholder="Phone number" value="" id="phone" name="phone" type="text">
-                        </div>
-                        <div class="col-sm-6">
-                           <div class="block-select">
-                              <select required>
-                                 <option value="">Choose Ticket</option>
-                                 <option value="250">Single Ticket</option>
-                                 <option value="900">4 Tickets </option>
-                              </select>
-                           </div>
-                        </div>
-                        <div class="col-sm-12">
-                           <input value="Get your ticket now" class=" but submit" type="submit">
-                        </div>
-                        <div class="col-sm-12">
-                           <p>* We don’t share your information with anyone.</p>
-                        </div>
-                     </form>
-                  </div>
-               </div>
-               <!--End row-->
-            </div>
-            <!--End container-->
-         </section>
-         <!--End register section-->
+
          <!--Sponsor section-->
          <section class="sponser pt-100 pb-100">
             <!--Container-->
@@ -782,7 +714,7 @@
                <!--End row-->
             </div>
             <!--End container-->
-            <!--Container-->
+            {{-- <!--Container-->
             <div class="container">
                <!--Row-->
                <div class="row">
@@ -811,7 +743,7 @@
                </div>
                <!--End row-->
             </div>
-            <!--End container-->
+            <!--End container--> --}}
          </section>
          <!--End sponser section-->
          <!--Contact section-->
@@ -830,10 +762,7 @@
                   <div class="col-md-5 col-md-offset-7 col-sm-5 col-sm-offset-7">
                      <div class="block-info-3">
                         <p>
-                           123 4 Street SE <br>
-                           Lethbridge, AB T1A1A1 Canada<br><br>
-                           Phone: (123) 456-7890 <br>
-                           Fax:  (123) 456-7890 <br>
+                           Phone: (587) 892-7874 <br>
                            Email : <a href="mailto:admin@aapg.ca" class="gradient-text">admin@aapg.ca</a>
                         </p>
                      </div>
@@ -926,42 +855,8 @@
             <div class="container">
                <!--Row-->
                <div class="row">
-                  <div class="col-sm-8 col-sm-offset-2 mb-100 text-center ">
-                     <h1 class="title">Frequently asked questions </h1>
-                     <p class="title-lead mt-10 mb-20">Some frequently asked questions for you.</p>
-                  </div>
-               </div>
-               <!--End row-->
-            </div>
-            <!--End container-->
-            <!--Container-->
-            <div class="container">
-               <!--Row-->
-               <div class="row">
-                  <div class="col-sm-8 col-sm-offset-2  ">
-                     <div class="block-faq mb-50">
-                        <h4 class="mb-10">Question 1?</h4>
-                        <p>Answer 1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt voluptatum quisquam voluptate odio laboriosam iusto ea? Itaque, odit omnis cumque reprehenderit porro illum, aliquid, corrupti voluptatem dolorum deleniti consequatur suscipit.</p>
-                     </div>
-                     <div class="block-faq mb-50">
-                        <h4 class="mb-10">Question 2?</h4>
-                        <p>Answer 2 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat blanditiis eos quidem perferendis debitis magni corrupti numquam esse et odit odio nihil distinctio repudiandae, possimus, soluta id. Aliquam, laboriosam doloremque.</p>
-                     </div>
-                     <div class="block-faq mb-50">
-                        <h4 class="mb-10">Question 3?</h4>
-                        <p>Answer 3 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi dicta qui sit cupiditate perferendis sapiente unde corporis doloremque voluptates tempora? Delectus nemo natus eius recusandae, atque facilis ipsa enim provident.</p>
-                     </div>
-                  </div>
-               </div>
-               <!--End row-->
-            </div>
-            <!--End container-->
-            <!--Container-->
-            <div class="container">
-               <!--Row-->
-               <div class="row">
                   <div class="col-sm-8 col-sm-offset-2  text-center mt-50">
-                     <h2 class="sub-title-1">Didn’t find what your are looking for ?</h2>
+                     <h2 class="sub-title-1">Didn’t find what your are looking for?</h2>
                      <p><a class="gradient-text" href="mailto:admin@aapge.ca ">admin@aapge.ca</a></p>
                   </div>
                </div>
@@ -1011,14 +906,14 @@
                   <div class="row">
                      <div class="col-sm-6 col-sm-offset-3">
                         <h2 class="sub-title-3 mb-30">About AAPG</h2>
-                        <p class="">Ad mortem te, Catalina, duci iussu consulis iam pridem oportebat, in te conferri pestem quam tu in nos omnes iam diu machinaris ac vitamus. </p>
-                        <ul class="block-social mt-20">
+                        <p class="">The AAPG supports excellence in civilian governance and oversight of police services in Alberta. </p>
+                        {{-- <ul class="block-social mt-20">
                            <li><a href="#"><i class="icon-facebook"></i></a></li>
                            <li><a href="#"><i class="icon-twitter"></i></a></li>
                            <li><a href="#"><i class="icon-youtube"></i></a></li>
                            <li><a href="#"><i class="icon-gplus"></i></a></li>
                            <li><a href="#"><i class="icon-instagram-1"></i></a></li>
-                        </ul>
+                        </ul> --}}
                      </div>
                   </div>
                </div>
@@ -1033,10 +928,7 @@
                      </div>
                      <div class="col-md-6 ">
                         <ul class="block-legal">
-                           <li><a href="#">Privacy Policy</a>
-                           <li><a  href="#">Terms of Use</a></li>
-                           <li><a  href="#">About</a></li>
-                           <li><a  href="#">Legal</a></li>
+                           <li><a href="/">Home</a>
                            <li><span><a class="gradient-text scroll" href="#wrapper">Back To Top</a></span></li>
                         </ul>
                      </div>
@@ -1045,6 +937,55 @@
                <!--End container-->
             </div>
          </footer>
+      </div>
+      <div id="register-modal">
+
+                   <form class="registry-form form" method="post" action="/conferences" autocomplete="off" id="payment-form">
+                        <h2 class="sub-title-1 mb-30">Register For The AAPG Annual Conference 2019</h2>
+                        <div class="row">
+                            <div class="col-sm-6 col-md-4">
+                                <input placeholder="Your Name" value="" id="name" name="name" type="text" required >
+                            </div>
+                            <div class="col-sm-6 col-md-4">
+                                <input placeholder="Your Email" value="" id="email" name="email" type="text" required>
+                            </div>
+                            <div class="col-sm-6 col-md-4">
+                                <input placeholder="Phone number" value="" id="phone" name="phone" type="text">
+                            </div>
+                            <div class="col-sm-6 col-md-4">
+                                <input placeholder="Company" value="" id="company" name="company" type="text">
+                            </div>
+                            <div class="col-sm-6 col-md-4">
+                                <div class="block-select">
+                                    <select required>
+                                    <option value="">Choose Ticket Type</option>
+                                    <option value="250">Member Ticket ( $250 )</option>
+                                    <option value="325">Non Member Ticket ( $325 )</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4">
+                                <input placeholder="Number of Tickets" value="" id="quantity" name="quantity" type="text">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div id="card-element">
+                                    <!-- A Stripe Element will be inserted here. -->
+                                </div>
+
+                                    <!-- Used to display form errors. -->
+                                <div id="card-errors" role="alert"></div>
+                            </div>
+                            <div class="col-sm-6">
+                                <input value="Get your ticket now" class="but submit" type="submit">
+                            </div>
+                            <div class="col-sm-12">
+                                <p>* We don’t share your information with anyone.</p>
+                            </div>
+                        </div>
+                   </form>
+
       </div>
       <!-- End wrapper-->
       <!--Javascript-->
@@ -1057,6 +998,81 @@
       <script src="/conference/js/venobox.min.js" type="text/javascript"></script>
       <script src="/conference/js/script.js" type="text/javascript"></script>
       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbGQXiGt-6UAmOFFdSzYI-byeE7ewBuVM&callback=initializeMap"></script>
+      <script>
+          // Create a Stripe client.
+            var stripe = Stripe("{{env('STRIPE_PUBLISHABLE_KEY')}}");
+
+            // Create an instance of Elements.
+            var elements = stripe.elements();
+
+            // Custom styling can be passed to options when creating an Element.
+            // (Note that this demo uses a wider set of styles than the guide below.)
+            var style = {
+            base: {
+                color: '#fff',
+                padding: '0 25px',
+                lineHeight: '45px',
+                fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
+                fontSmoothing: 'antialiased',
+                fontSize: '14px',
+                width: '90%',
+                '::placeholder': {
+                color: 'rgba(255,255,255,.7)'
+                }
+            },
+            invalid: {
+                color: '#fa755a',
+                iconColor: '#fa755a'
+            }
+            };
+
+            // Create an instance of the card Element.
+            var card = elements.create('card', {style: style});
+
+            // Add an instance of the card Element into the `card-element` <div>.
+            card.mount('#card-element');
+
+            // Handle real-time validation errors from the card Element.
+            card.addEventListener('change', function(event) {
+            var displayError = document.getElementById('card-errors');
+            if (event.error) {
+                displayError.textContent = event.error.message;
+            } else {
+                displayError.textContent = '';
+            }
+            });
+
+            // Handle form submission.
+            var form = document.getElementById('payment-form');
+            form.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            stripe.createToken(card).then(function(result) {
+                if (result.error) {
+                // Inform the user if there was an error.
+                var errorElement = document.getElementById('card-errors');
+                errorElement.textContent = result.error.message;
+                } else {
+                // Send the token to your server.
+                stripeTokenHandler(result.token);
+                }
+            });
+            });
+
+            // Submit the form with the token ID.
+            function stripeTokenHandler(token) {
+            // Insert the token ID into the form so it gets submitted to the server
+            var form = document.getElementById('payment-form');
+            var hiddenInput = document.createElement('input');
+            hiddenInput.setAttribute('type', 'hidden');
+            hiddenInput.setAttribute('name', 'stripeToken');
+            hiddenInput.setAttribute('value', token.id);
+            form.appendChild(hiddenInput);
+
+            // Submit the form
+            form.submit();
+            }
+      </script>
       <!-- Google analytics -->
       <!-- End google analytics -->
    </body>

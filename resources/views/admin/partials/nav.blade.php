@@ -100,22 +100,23 @@
             </a>
         </li>
         <li class="nav-header">CONFERENCES</li>
-        <router-link to="/admin/conferences" class="nav-link">
-            <i class="nav-icon fa fa-calendar"></i>
-            <p>Conferences</p>
-        </router-link>
-        <router-link to="/admin/schedules" class="nav-link">
-            <i class="nav-icon fa fa-calendar"></i>
-            <p>Schedules</p>
-        </router-link>
         <li class="nav-item">
-            <a href="#" class="nav-link">
-                <i class="nav-icon fa fa-envelope-o"></i>
-                <p>
-                    Registration
-                    <i class="fa fa-angle-left right"></i>
-                </p>
-            </a>
+            <router-link to="/admin/conferences" class="nav-link">
+                <i class="nav-icon fas fa-chalkboard-teacher"></i>
+                <p>Conferences</p>
+            </router-link>
+        </li>
+        <li class="nav-item">
+            <router-link to="/admin/conferences/schedules" class="nav-link">
+                <i class="nav-icon fas fa-calendar-week"></i>
+                <p>Schedules</p>
+            </router-link>
+        </li>
+        <li class="nav-item">
+            <router-link to="/admin/conferences/registration" class="nav-link">
+                <i class="nav-icon fas fa-ticket-alt"></i>
+                <p>Registration</p>
+            </router-link>
         </li>
         <li class="nav-header">Administration</li>
         <li class="nav-item">

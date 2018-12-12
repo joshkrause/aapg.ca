@@ -17,10 +17,14 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::get('profile', 'API\UserController@profile');
+Route::get('/conference/upcoming', 'API\ConferenceController@upcoming');
+Route::get('/conference/{conference}/attendants', 'API\ConferenceController@attendants');
+
 Route::apiResources([
     'user'=>'API\UserController',
     'conference'=>'API\ConferenceController',
     'schedule'=>'API\ScheduleController',
+    'attendant'=>'API\AttendantController',
+    'customer'=>'API\CustomerController',
 ]);
-Route::get('profile', 'API\UserController@profile');
-

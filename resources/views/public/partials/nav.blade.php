@@ -6,15 +6,15 @@
             <div class="d-flex justify-content-between">
                 <div class="gen-info font-14">
                     <span><i class="fa fa-envelope text-success-gradiant"></i> admin@aapg.ca</span>
-                    <span><i class="fa fa-phone-square text-success-gradiant"></i> (123)-456-6789</span>
+                    <span><i class="fa fa-phone-square text-success-gradiant"></i> (587) 892-7874</span>
                     <span class="hidden-lg-down"><i class="fa fa-clock-o text-success-gradiant"></i> 8.00 AM - 6:00PM</span>
                 </div>
-                <div class="social-info hidden-lg-down">
+                {{-- <div class="social-info hidden-lg-down">
                     <a href="#"><i class="fa fa-facebook"></i></a>
                     <a href="#"><i class="fa fa-twitter"></i></a>
                     <a href="#"><i class="fa fa-google-plus"></i></a>
                     <a href="#"><i class="fa fa-youtube-play"></i></a>
-                </div>
+                </div> --}}
             </div>
         </div>
         <div class="main-nav">
@@ -38,7 +38,7 @@
                         <li><a href="#">Policy & Process Sharing Portal</a></li>
                     </ul>
                 </li>
-                <li class="nav-item"><a href="javascript:void(0)" class="nav-link">Conferences</a></li>
+                <li class="nav-item"><a href="/conferences" class="nav-link">Conferences</a></li>
                 <li class="nav-item"><a href="javascript:void(0)" class="nav-link">Join AAPG</a></li>
                 <li class="nav-item"><a href="javascript:void(0)" class="nav-link">Alert CAC</a></li>
             </ul>
