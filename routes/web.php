@@ -15,6 +15,7 @@ use Laravel\Passport\Passport;
 
 Route::get('/', 'PagesController@home');
 Route::get('/conferences', 'ConferenceController@index')->name('conferences.home');
+Route::post('/conferences', 'ConferenceController@Order');
 
 Route::group(['prefix'=>'admin', 'middleware'=>'auth'], function() {
     Route::get('/', 'Admin\PagesController@spa');

@@ -10,4 +10,9 @@ class ConferenceController extends Controller
     {
         return view('public.conference.index');
     }
+
+    public function order(Request $request)
+    {
+        dd($request->all());
+    }
 }
