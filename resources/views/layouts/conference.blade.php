@@ -67,11 +67,11 @@
                            <ul>
                               <li><a class="scroll" href="/">Home</a></li>
                               <li><a class="scroll" href="#about">About</a></li>
-                              <li><a class="scroll" href="#speakers">Speakers</a></li>
                               <li><a class="scroll" href="#topics">Topics</a></li>
                               <li><a class="scroll" href="#schedule">Schedule</a></li>
                               <li><a class="scroll" href="#tickets">Tickets</a></li>
-                              <li><a class="scroll" href="#location">Location</a></li>
+                              <li><a class="scroll" href="#accom">Accomodation</a></li>
+                              <li><a class="scroll" href="#location">Contact</a></li>
                            </ul>
                         </nav>
                      </div>
