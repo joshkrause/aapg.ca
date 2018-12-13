@@ -16,7 +16,8 @@
       <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,700" rel="stylesheet">
       <script defer src="https://use.fontawesome.com/releases/v5.4.1/js/all.js" integrity="sha384-L469/ELG4Bg9sDQbl0hvjMq8pOcqFgkSpwhwnslzvVVGpDjYJ6wJJyYjvG3u8XW7" crossorigin="anonymous"></script>
-      <script src="https://js.stripe.com/v3/"></script>
+      <script src="https://checkout.stripe.com/checkout.js">
+      </script>
    </head>
    <body>
       <!-- Preloader -->
@@ -354,6 +355,8 @@
                                     <p>A marvel of contemporary Canadian architecture on traditional Blackfoot territory just steps from the South Saskatchewan River, the Esplanade occupies an eminent position on downtown’s elegant First Street South. From its rooftop terrace, you can see Saamis, the shoreline escarpment which is the setting for the story of how Medicine Hat got its name.</p>
 
                                     <p>Inside, visitors are delighted to discover a vibrant art gallery, a prized museum, an intimate studio theatre, a dynamic education suite, expansive public archives and many volunteers and staff who are eager to tell their versions of our city’s tale. The Esplanade also features a 700-seat main stage theatre which boasts superior theatre technology, acoustic perfection and striking interior design.</p>
+
+                                    <p><a href="https://www.eventbrite.ca/e/aapg-esplanade-tour-tickets-53562751632" target="_NEW">Tickets</a></p>
 
                                     <p><a href="http://esplanade.ca" target="_NEW">The Esplanade Website</a></p>
                                 </div>
@@ -780,8 +783,8 @@
                <!--Row-->
                <div class="row">
                   <div class="col-sm-8 col-sm-offset-2 mb-100 text-center ">
-                     <h1 class="title">Accommodation &amp; Travel </h1>
-                     <p class="title-lead mt-10 mb-20">Accommodation and travel info - information below or email us for further help.</p>
+                     <h1 class="title">Accommodations </h1>
+                     <p class="title-lead mt-10 mb-20">The Medicine Hat Lodge is the venue where we are holding our Annual Conference. The Comfort Inn and Suites is across the street from the Medicine Hat Lodge.</p>
                   </div>
                </div>
                <!--End row-->
@@ -793,58 +796,34 @@
                   <div class="col-sm-4 col-sm-offset-2 text-center">
                      <div class="block-img">
                         <div class="background-img">
-                           <img alt="" src="/conference/img/8.jpg" style="display: none;">
+                           <img alt="" src="/conference/img/mhl.jpg" style="display: none;">
                         </div>
                      </div>
-                     <p class="mt-30">Hotel 1 <br>
-                        123 4 street se<br>
+                     <p class="mt-30">Medicine Hat Lodge <br>
+                        1051 Ross Glen Dr SE<br>
                         Medicine Hat, AB<br>
-                        (123) 456-7890
+                        (403) 529-2222
                      </p>
-                     <a href="#" class="link gradient-text mt-30">
+                     <a href="https://www.medhatlodge.com/" class="link gradient-text mt-30">
                      Website
                      </a>
                   </div>
                   <div class="col-sm-4 text-center">
                     <div class="block-img">
                         <div class="background-img">
-                           <img alt="" src="/conference/img/8.jpg" style="display: none;">
+                           <img alt="" src="/conference/img/cinn.jpg" style="display: none;">
                         </div>
                      </div>
-                     <p class="mt-30">Hotel 2 <br>
-                        123 4 street se<br>
+                     <p class="mt-30">Comfort Inn <br>
+                        2317 Trans Canada Way SE<br>
                         Medicine Hat, AB<br>
-                        (123) 456-7890
+                        (403) 504-1700
                      </p>
-                     <a href="#" class="link gradient-text mt-30">
+                     <a href="http://www.comfortinnmedicinehat.com/" class="link gradient-text mt-30">
                      Website
                      </a>
                   </div>
                </div>
-               <!--End row-->
-               <div class="row mt-100">
-                  <div class="col-sm-4 col-sm-offset-2 text-center">
-                     <div class="block-img">
-                        <div class="background-img">
-                           <img alt="" src="/conference/img/10.jpg" style="display: none;">
-                        </div>
-                     </div>
-                     <h2 class="sub-title-2 mt-30">Flights</h2>
-                     <p class="mt-10">Ad mortem te, Catalina, duci iussu consulis iam pridem oportebat, in te conferri pestem quam tu in nos omnes iam diu machinaris ac vitamus.
-                     </p>
-                  </div>
-                  <div class="col-sm-4 text-center">
-                     <div class="block-img">
-                        <div class="background-img" >
-                           <img alt="" src="/conference/img/11.jpg" style="display: none;">
-                        </div>
-                     </div>
-                     <h2 class="sub-title-2 mt-30">Bus</h2>
-                     <p class=" mt-10 ">Ad mortem te, Catalina, duci iussu consulis iam pridem oportebat, in te conferri pestem quam tu in nos omnes iam diu machinaris ac vitamus.
-                     </p>
-                  </div>
-               </div>
-               <!--End row-->
             </div>
             <!--End container-->
          </section>
@@ -857,7 +836,7 @@
                <div class="row">
                   <div class="col-sm-8 col-sm-offset-2  text-center mt-50">
                      <h2 class="sub-title-1">Didn’t find what your are looking for?</h2>
-                     <p><a class="gradient-text" href="mailto:admin@aapge.ca ">admin@aapge.ca</a></p>
+                     <p><a class="gradient-text" href="mailto:admin@aapg.ca ">admin@aapg.ca</a></p>
                   </div>
                </div>
                <!--End row-->
@@ -866,59 +845,9 @@
          </section>
          <!--End faq section-->
 
-         <footer class="pt-120  bg-dark">
-            <section class="subsribe text-center ">
-               <!--Container-->
-               <div class="container">
-                  <!--Row-->
-                  <div class="row">
-                     <div class="col-sm-12  mb-30">
-                        <h1 class="title">Subscribe for the latest updates</h1>
-                     </div>
-                  </div>
-                  <!--End row-->
-               </div>
-               <!--End container-->
-               <!--Container-->
-               <div class="container ">
-                  <div class="row">
-                     <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
-                        <form method="post" class="subscribe-form form" action="#">
-                           <div class="col-sm-8">
-                              <input placeholder="Enter your email address" value="" id="user-name" name="name" type="text">
-                           </div>
-                           <div class="col-sm-4">
-                              <input value="Subscribe" class="but  submit" type="submit">
-                           </div>
-                           <div class="col-sm-12">
-                              <p>* We don’t share your information with anyone.</p>
-                           </div>
-                        </form>
-                     </div>
-                  </div>
-                  <hr>
-               </div>
-               <!--End container-->
-            </section>
-            <section class="top-footer pb-120">
-               <!--Container-->
-               <div class="container ">
-                  <div class="row">
-                     <div class="col-sm-6 col-sm-offset-3">
-                        <h2 class="sub-title-3 mb-30">About AAPG</h2>
-                        <p class="">The AAPG supports excellence in civilian governance and oversight of police services in Alberta. </p>
-                        {{-- <ul class="block-social mt-20">
-                           <li><a href="#"><i class="icon-facebook"></i></a></li>
-                           <li><a href="#"><i class="icon-twitter"></i></a></li>
-                           <li><a href="#"><i class="icon-youtube"></i></a></li>
-                           <li><a href="#"><i class="icon-gplus"></i></a></li>
-                           <li><a href="#"><i class="icon-instagram-1"></i></a></li>
-                        </ul> --}}
-                     </div>
-                  </div>
-               </div>
-               <!--End container-->
-            </section>
+         <footer class=" bg-dark">
+
+
             <div class="bottom-footer bg-black pt-50 pb-50">
                <!--Container-->
                <div class="container ">
@@ -948,7 +877,7 @@
                                 <input placeholder="Your Name" value="" id="name" name="name" type="text" required >
                             </div>
                             <div class="col-sm-6 col-md-4">
-                                <input placeholder="Your Email" value="" id="email" name="email" type="text" required>
+                                <input placeholder="Your Email" value="" id="stripe-email" name="email" type="text" required>
                             </div>
                             <div class="col-sm-6 col-md-4">
                                 <input placeholder="Phone number" value="" id="phone" name="phone" type="text">
@@ -971,26 +900,21 @@
                         </div>
                         <div class="row">
                             <div class="col-sm-6 col-md-4">
-                                <div class="block-select">
-                                    <select required name="payment">
-                                        <option value="cc">Pay Now With Credit Card</option>
-                                        <option value="cheque">Pay By Sending A Cheque</option>
-                                        <option value="cash">Pay In Person With Cash</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-4">
-                                <div id="card-element">
-                                    <!-- A Stripe Element will be inserted here. -->
-                                </div>
-
-                                    <!-- Used to display form errors. -->
-                                <div id="card-errors" role="alert"></div>
+                                <script
+                                    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                                    data-key="pk_9a6SkLKecsdw62Z1RC3Y3qPWKVBkt"
+                                    data-amount="999"
+                                    data-name="AAPG"
+                                    data-description="2019 Annual Conference"
+                                    data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+                                    data-locale="auto"
+                                    data-currency="cad">
+                                </script>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-sm-6 col-sm-offset-3">
-                                <button class="but submit" type="submit">Place Order Now</button>
+                                <button class="but submit" type="submit">Invoice For Payment</button>
                             </div>
                             <div class="col-sm-12">
                                 <p>* All credit card transactions are encrypted and processed through Stripe.com</p>
@@ -1005,89 +929,53 @@
       <script src="/conference/js/jquery.flexslider-min.js" type="text/javascript"></script>
       <script src="/conference/js/jquery.countdown.min.js" type="text/javascript"></script>
       <script src="/conference/js/smooth-scroll.js" type="text/javascript"></script>
-      <script src="/conference/js/jquery.validate.min.js" type="text/javascript"></script>
-      <script src="/conference/js/placeholders.min.js" type="text/javascript"></script>
       <script src="/conference/js/venobox.min.js" type="text/javascript"></script>
       <script src="/conference/js/script.js" type="text/javascript"></script>
       <script src="https://maps.googleapis.com/maps/api/js?key={{env('GOOGLE_MAPS_API_KEY')}}&callback=initializeMap"></script>
       <script>
-          window.onload = function () {
-            // Create a Stripe client.
-                var stripe = Stripe("{{env('STRIPE_KEY')}}");
+            // Creating Stripe Checkout handler object and also
+            // configuring Stripe publishable key and setting the options in Stripe Js.
+            var handler = StripeCheckout.configure({
+                //Replace it with your stripe publishable key
+                key: "{{env('STRIPE_KEY')}}",
+                image: '/assets/images/favicon.png',
+                allowRememberMe: false,
+                token: handleStripeToken
+            });
 
-                // Create an instance of Elements.
-                var elements = stripe.elements();
-
-                // Custom styling can be passed to options when creating an Element.
-                // (Note that this demo uses a wider set of styles than the guide below.)
-                var style = {
-                    base: {
-                        color: '#fff',
-                        padding: '0 25px',
-                        lineHeight: '45px',
-                        fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
-                        fontSmoothing: 'antialiased',
-                        fontSize: '14px',
-                        width: '100%',
-                        '::placeholder': {
-                        color: 'rgba(255,255,255,.7)'
-                    }
-                },
-                invalid: {
-                    color: '#fa755a',
-                    iconColor: '#fa755a'
-                    }
-                };
-
-                // Create an instance of the card Element.
-                var card = elements.create('card', {style: style});
-
-                // Add an instance of the card Element into the `card-element` <div>.
-                card.mount('#card-element');
-
-                // Handle real-time validation errors from the card Element.
-                card.addEventListener('change', function(event) {
-                var displayError = document.getElementById('card-errors');
-                if (event.error) {
-                    displayError.textContent = event.error.message;
-                } else {
-                    displayError.textContent = '';
+            // Calling Stripe Js to display pop up on button click event
+            $(".stripe-btn").on('click', function(e) {
+                e.preventDefault();
+                var form = $("#payment-form");
+                if(!$(form).valid()) {
+                    return false;
                 }
+                handler.open({
+                    name: 'AAPG',
+                    description: '2019 Annual Conference',
+                    amount: '2000' ,
+                    email: $('#stripe-email').val() ,
                 });
+                return false;
+            });
 
-                // Handle form submission.
-                var form = document.getElementById('payment-form');
-
-                form.addEventListener('submit', function(event) {
-
-                    event.preventDefault();
-
-                    stripe.createToken(card).then(function(result) {
-                        if (result.error) {
-                            // Inform the user if there was an error.
-                            var errorElement = document.getElementById('card-errors');
-                            errorElement.textContent = result.error.message;
-                        } else {
-                            // Send the token to your server.
-                            stripeTokenHandler(result.token);
-                        }
-                    });
-                });
-
-                // Submit the form with the token ID.
-                function stripeTokenHandler(token) {
-                // Insert the token ID into the form so it gets submitted to the server
-                var form = document.getElementById('payment-form');
-                var hiddenInput = document.createElement('input');
-                hiddenInput.setAttribute('type', 'hidden');
-                hiddenInput.setAttribute('name', 'stripeToken');
-                hiddenInput.setAttribute('value', token.id);
-                form.appendChild(hiddenInput);
-
-                // Submit the form
-                form.submit();
-                }
-          }
+            function handleStripeToken(token, args) {
+            form = $("#payment-form");
+            $("input[name='stripeToken']").val(token.id );
+            var options = {
+                beforeSend: showProcessing,
+                // post-submit callback when error returns
+                error: subscribeErrorHandler,
+                // post-submit callback when success returns
+                success: subscribeResponseHandler,
+                complete: hideProcessing,
+                contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+                dataType: 'json'
+            };
+            // Doing AJAX form submit to your server.
+            form.ajaxSubmit(options);
+            return false;
+        }
       </script>
       <!-- Google analytics -->
       <!-- End google analytics -->

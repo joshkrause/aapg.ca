@@ -296,8 +296,8 @@ function initializeMap() {
             }
         ],
 
-        lat = 39.148352,
-        lng = -84.443999,
+        lat = 50.0009,
+        lng = -110.6428,
 
 
 
