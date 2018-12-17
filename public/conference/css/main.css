@@ -710,7 +710,7 @@ input[type="text"]:hover,
     background: rgba(255, 255, 255, .09);
 }
 .registry-form .submit {
-    width: 95%;
+    width: 90%;
 }
 .form .submit {
     cursor: pointer;
@@ -1400,11 +1400,11 @@ select.error {
     line-height: 45px;
     border-radius: 25px;
     border: 1px solid transparent;
-    box-shadow: 0 1px 3px 0 #e6ebf1;
     -webkit-transition: box-shadow 150ms ease;
     transition: box-shadow 150ms ease;
     color: #fff;
     width: 90%;
+    padding: 0 25px;
   }
 
 

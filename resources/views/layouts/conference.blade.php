@@ -16,8 +16,7 @@
       <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,700" rel="stylesheet">
       <script defer src="https://use.fontawesome.com/releases/v5.4.1/js/all.js" integrity="sha384-L469/ELG4Bg9sDQbl0hvjMq8pOcqFgkSpwhwnslzvVVGpDjYJ6wJJyYjvG3u8XW7" crossorigin="anonymous"></script>
-      <script src="https://checkout.stripe.com/checkout.js">
-      </script>
+      <script src="https://js.stripe.com/v3/"></script>
    </head>
    <body>
       <!-- Preloader -->
@@ -345,7 +344,7 @@
                   <div class="col-sm-8 ">
                      <ul class="block-tab">
                         <li> <!-- Thursday -->
-                            <div class="block-date"><i class="far fa-calendar-alt"></i> <strong>Friday</strong>  <span>- April 5 2019</span></div>
+                            <div class="block-date"><i class="far fa-calendar-alt"></i> <strong>Thursday</strong>  <span>- April 4 2019</span></div>
                             <div class="block-detail">
                                 <span class="time">Evening</span>
                                 <span class="topic">Private Access to The Esplanade; with downtown stops. Optional Addon.</span>
@@ -353,8 +352,6 @@
                                     <p>The Esplanade is where arts and heritage come to life in Medicine Hat, where the stories of our great collective culture are told through music and dance, theatre, painting and sculpture, exhibitions and installations, artifacts, objets d’art and more.</p>
 
                                     <p>A marvel of contemporary Canadian architecture on traditional Blackfoot territory just steps from the South Saskatchewan River, the Esplanade occupies an eminent position on downtown’s elegant First Street South. From its rooftop terrace, you can see Saamis, the shoreline escarpment which is the setting for the story of how Medicine Hat got its name.</p>
-
-                                    <p>Inside, visitors are delighted to discover a vibrant art gallery, a prized museum, an intimate studio theatre, a dynamic education suite, expansive public archives and many volunteers and staff who are eager to tell their versions of our city’s tale. The Esplanade also features a 700-seat main stage theatre which boasts superior theatre technology, acoustic perfection and striking interior design.</p>
 
                                     <p><a href="https://www.eventbrite.ca/e/aapg-esplanade-tour-tickets-53562751632" target="_NEW">Tickets</a></p>
 
@@ -457,8 +454,8 @@
                                  </div>
                              </div>
                              <div class="block-detail">
-                                 <span class="time">4:30PM - 8:30PM</span>
-                                 <span class="topic">Shuttles to & from Medalta Potteries for Banquet</span>
+                                 <span class="time">4:30PM - 9:30PM</span>
+                                 <span class="topic">Gala Banquet Dinner Event</span>
                                  <div class="block-text">
                                      <p>SHUTTLE DEPARTURE & RETURN TIMES (limit of 35 per shuttle – be early!)</p>
                                      <p>Pick-up outside of Lodge entrance.<br/>
@@ -784,7 +781,7 @@
                <div class="row">
                   <div class="col-sm-8 col-sm-offset-2 mb-100 text-center ">
                      <h1 class="title">Accommodations </h1>
-                     <p class="title-lead mt-10 mb-20">The Medicine Hat Lodge is the venue where we are holding our Annual Conference. The Comfort Inn and Suites is across the street from the Medicine Hat Lodge.</p>
+                     <p class="title-lead mt-10 mb-20">The Medicine Hat Lodge is the venue where we are holding our Annual Conference. The Comfort Inn and Suites is across the street from the Medicine Hat Lodge. Reference #826470 to book AAPG discounted rooms, the discounted rooms are limited so book early!</p>
                   </div>
                </div>
                <!--End row-->
@@ -799,10 +796,10 @@
                            <img alt="" src="/conference/img/mhl.jpg" style="display: none;">
                         </div>
                      </div>
-                     <p class="mt-30">Medicine Hat Lodge <br>
+                     <p class="mt-30">Medicine Hat Lodge ( reference #826470 for discount )<br>
                         1051 Ross Glen Dr SE<br>
                         Medicine Hat, AB<br>
-                        (403) 529-2222
+                        (800) 661-8095
                      </p>
                      <a href="https://www.medhatlodge.com/" class="link gradient-text mt-30">
                      Website
@@ -826,6 +823,17 @@
                </div>
             </div>
             <!--End container-->
+
+            <div class="container">
+                <!--Row-->
+                <div class="row">
+                   <div class="col-sm-8 col-sm-offset-2 mt-100 text-center ">
+                      <h1 class="title">Travel </h1>
+                      <p class="title-lead mt-10 mb-20">Westjet has happily offered us a 5% discount on Econo flights and 10% discount on Econoflex and Premiums fares. Use the coupon code OR4X5UF, or the promo code WCC35.</p>
+                   </div>
+                </div>
+                <!--End row-->
+             </div>
          </section>
          <!--End accom section-->
          <!--Faq section-->
@@ -869,7 +877,7 @@
       </div>
       <div id="register-modal">
 
-                   <form class="registry-form form" method="post" action="/conferences" autocomplete="off" id="payment-form">
+                   <form class="registry-form form" id="checkout-form" method="post" action="/conferences" autocomplete="off" >
                     @csrf
                         <h2 class="sub-title-1 mb-30">Register For The AAPG Annual Conference 2019</h2>
                         <div class="row">
@@ -900,24 +908,26 @@
                         </div>
                         <div class="row">
                             <div class="col-sm-6 col-md-4">
-                                <script
-                                    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-                                    data-key="pk_9a6SkLKecsdw62Z1RC3Y3qPWKVBkt"
-                                    data-amount="999"
-                                    data-name="AAPG"
-                                    data-description="2019 Annual Conference"
-                                    data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
-                                    data-locale="auto"
-                                    data-currency="cad">
-                                </script>
+                                <div class="block-select">
+                                    <select required name="payment">
+                                        <option value="cc">Pay Now Via Credit Card</option>
+                                        <option value="cheque">Pay Via Cheque or Cash</option>
+                                    </select>
+                                </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-6 col-sm-offset-3">
-                                <button class="but submit" type="submit">Invoice For Payment</button>
+                            <div class="col-sm-6 col-md-4">
+                                    <div id="card-element">
+                                        <!-- A Stripe Element will be inserted here. -->
+                                    </div>
+
+                                    <!-- Used to display form errors. -->
+                                    <div id="card-errors" role="alert"></div>
+                            </div>
+                            <div class="col-sm-6 col-md-4">
+                                <button class="but submit" type="submit">Purchase</button>
                             </div>
                             <div class="col-sm-12">
-                                <p>* All credit card transactions are encrypted and processed through Stripe.com</p>
+                                <p>* All credit card transactions are encrypted and processed securly through Stripe.com</p>
                             </div>
                         </div>
                    </form>
@@ -933,50 +943,80 @@
       <script src="/conference/js/script.js" type="text/javascript"></script>
       <script src="https://maps.googleapis.com/maps/api/js?key={{env('GOOGLE_MAPS_API_KEY')}}&callback=initializeMap"></script>
       <script>
-            // Creating Stripe Checkout handler object and also
-            // configuring Stripe publishable key and setting the options in Stripe Js.
-            var handler = StripeCheckout.configure({
-                //Replace it with your stripe publishable key
-                key: "{{env('STRIPE_KEY')}}",
-                image: '/assets/images/favicon.png',
-                allowRememberMe: false,
-                token: handleStripeToken
-            });
 
-            // Calling Stripe Js to display pop up on button click event
-            $(".stripe-btn").on('click', function(e) {
-                e.preventDefault();
-                var form = $("#payment-form");
-                if(!$(form).valid()) {
-                    return false;
-                }
-                handler.open({
-                    name: 'AAPG',
-                    description: '2019 Annual Conference',
-                    amount: '2000' ,
-                    email: $('#stripe-email').val() ,
+                // Create a Stripe client.
+                var stripe = Stripe('pk_9a6SkLKecsdw62Z1RC3Y3qPWKVBkt');
+
+                // Create an instance of Elements.
+                var elements = stripe.elements();
+
+                // Custom styling can be passed to options when creating an Element.
+                // (Note that this demo uses a wider set of styles than the guide below.)
+                var style = {
+                    base: {
+                    color: '#fff',
+                    lineHeight: '45px',
+                    fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
+                    fontSmoothing: 'antialiased',
+                    fontSize: '14px',
+                    '::placeholder': {
+                        color: '#fff'
+                    }
+                    },
+                    invalid: {
+                    color: '#fa755a',
+                    iconColor: '#fa755a'
+                    }
+                };
+
+                // Create an instance of the card Element.
+                var card = elements.create('card', {style: style});
+
+                // Add an instance of the card Element into the `card-element` <div>.
+                card.mount('#card-element');
+
+                // Handle real-time validation errors from the card Element.
+                card.addEventListener('change', function(event) {
+                    var displayError = document.getElementById('card-errors');
+                    if (event.error) {
+                    displayError.textContent = event.error.message;
+                    } else {
+                    displayError.textContent = '';
+                    }
                 });
-                return false;
-            });
 
-            function handleStripeToken(token, args) {
-            form = $("#payment-form");
-            $("input[name='stripeToken']").val(token.id );
-            var options = {
-                beforeSend: showProcessing,
-                // post-submit callback when error returns
-                error: subscribeErrorHandler,
-                // post-submit callback when success returns
-                success: subscribeResponseHandler,
-                complete: hideProcessing,
-                contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
-                dataType: 'json'
-            };
-            // Doing AJAX form submit to your server.
-            form.ajaxSubmit(options);
-            return false;
-        }
-      </script>
+                // Handle form submission.
+                var form = document.getElementById('checkout-form');
+                form.addEventListener('submit', function(event) {
+                    event.preventDefault();
+                    alert('attached');
+
+                    stripe.createToken(card).then(function(result) {
+                    if (result.error) {
+                        // Inform the user if there was an error.
+                        var errorElement = document.getElementById('card-errors');
+                        errorElement.textContent = result.error.message;
+                    } else {
+                        // Send the token to your server.
+                        stripeTokenHandler(result.token);
+                    }
+                    });
+                });
+
+                // Submit the form with the token ID.
+                function stripeTokenHandler(token) {
+                    // Insert the token ID into the form so it gets submitted to the server
+                    var form = document.getElementById('payment-form');
+                    var hiddenInput = document.createElement('input');
+                    hiddenInput.setAttribute('type', 'hidden');
+                    hiddenInput.setAttribute('name', 'stripeToken');
+                    hiddenInput.setAttribute('value', token.id);
+                    form.appendChild(hiddenInput);
+
+                    // Submit the form
+                    // form.submit();
+                }
+                </script>
       <!-- Google analytics -->
       <!-- End google analytics -->
    </body>
