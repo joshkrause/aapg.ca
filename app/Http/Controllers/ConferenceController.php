@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use Alert;
+use App\Order;
 use App\Attendant;
 use Illuminate\Http\Request;
+use Cartalyst\Stripe\Laravel\Facades\Stripe;
 
 class ConferenceController extends Controller
 {
@@ -14,8 +17,117 @@ class ConferenceController extends Controller
 
     public function order(Request $request)
     {
-        return "Whoops! You are so fast, you've tried before our security certificate has updated! Just a little bit longer and you will be able to order successfully. Your credit card has not been charged.";
+        // try {
+        //     $this->validate($request, [
+        //         'name' => 'required|string',
+        //         'email'=>'required|string|email',
+        //         'phone'=>'required|string',
+        //         'company'=>'string',
+        //         'ticket'=>'required|string',
+        //         'quantity'=>'required|string',
+        //     ]);
+        // }
+        // catch (ValidationException $exception) {
+        //     return response()->json([
+        //         'status' => 'error',
+        //         'msg' => 'Error',
+        //         'erors' => $exception->errors()
+        //     ], 422);
+        // }
 
+        $ticket_subtotal = 0;
+        $guest_subtotal = 0;
+        $ticket_subtotal = $request->quantity * $request->ticket * 100;
+        $guest_subtotal = $request->guest * 7500;
+        if($request->quantity > 3 && $request->quantity < 8)
+        {
+            $ticket_subtotal = $ticket_subtotal - 7500;
+        }
+        elseif($request->quantity > 7 && $request->quantity < 12)
+        {
+            $ticket_subtotal = $ticket_subtotal - 15000;
+        }
+        elseif($request->quantity > 11 && $request->quantity < 16)
+        {
+            $ticket_subtotal = $ticket_subtotal - 22500;
+        }
+        $subtotal = $ticket_subtotal + $guest_subtotal;
+        $tax = $subtotal * 5 / 100;
+        $total = $subtotal + $tax;
+
+        if($request->ticket == 250)
+        {
+            $ticket_type = "Member";
+        }
+        else {
+            $ticket_type = "Non Member";
+        }
+        $charge_description = "AAPG Annual Conference. " . $request->quantity . " tickets and " . $request->guest . " guest tickets. Customer " . $request->name . ". Company " . $request->company;
+        $order = new Order([
+            'name' => $request->name,
+            'email' => $request->email,
+            'company' => $request->company,
+            'phone' => $request->phone,
+            'ticket_type' => $ticket_type,
+            'quantity' => $request->quantity,
+            'subtotal' => $subtotal,
+            'tax' => $tax,
+            'total' => $total,
+            'description' => $charge_description,
+        ]);
+
+        if($request->payment == "cc")
+        {
+
+            $charge_meta = array([
+                'Name' => $request->name,
+                'Email' => $request->email,
+                'Phone' => $request->phone,
+                'Company' => $request->company
+            ]);
+
+
+            $token = Stripe::tokens()->create([
+                'card' => [
+                    'number'    => $request->cc,
+                    'exp_month' => $request->month,
+                    'exp_year'  => $request->year,
+                    'cvc'       => $request->security,
+                ],
+            ]);
+
+            try {
+                $charge = Stripe::charges()->create([
+                    'source' => $token['id'],
+                    'currency' => 'CAD',
+                    'amount'   => $total / 100,
+                    'description' => $charge_description,
+                    'receipt_email' => $request->email,
+                    // 'metadata' => $charge_meta,
+                ]);
+
+            } catch (Stripe_CardError $e) {
+                Alert::error($e, 'Uh Oh!');
+                return back();
+            } catch (Stripe_Error $e) {
+                Alert::error($e, 'Uh Oh!');
+                return back();
+            } catch (\Exception $e) {
+                Alert::error($e->getMessage(), 'Uh Oh!')->persistent('OK');
+                return back();
+
+            }
+
+
+            $order['stripe_id'] = $charge['id'];
+
+        }
+
+        $order->save();
+
+        Alert::success('Your order has been completed! If you paid via credit card you will receive a credit card invoice shortly. If you requested to pay by cash or cheque we will contact you ASAP.', 'Registration Received')->persistent('Ok');
+
+        return back();
 
         // try {
         //     $this->validate($request, [
@@ -25,7 +137,6 @@ class ConferenceController extends Controller
         //         'company'=>'string',
         //         'ticket'=>'required|string',
         //         'quantity'=>'required|string',
-
         //     ]);
 
         //     $attendant = Attendant::create([

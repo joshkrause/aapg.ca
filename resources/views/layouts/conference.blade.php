@@ -381,7 +381,7 @@
                              <span class="topic">New Commission Member Orientation</span>
                              <div class="block-text">
                                  <p>This is an attendee directed session that will discuss the role of a Police Commission, the basics of police oversight and governance, the structure of the municipal police service, board basics, and FOIP legislation.</p>
-                                 <span class="speaker"> <strong >Speaker</strong> : <a href="#" class="gradient-text "> Randy Pick, Medicine Hat Police Service Q.C. </a> </span>
+                                 <span class="speaker"> <strong >Speaker</strong> : <a href="#" class="gradient-text "> TBA </a> </span>
                              </div>
                           </div>
                           <div class="block-detail">
@@ -389,7 +389,7 @@
                                  <span class="topic">New Member Committee & Policy Advisory Orientation</span>
                                  <div class="block-text">
                                      <p>This is an attendee directed session that will discuss the role of Policing Committees, the basics of police oversight and governance, the structure of the RCMP, board basics, and FOIP legislation.</p>
-                                     <span class="speaker"> <strong >Speaker</strong> : <a href="#" class="gradient-text "> Terry Coleman, Chair, AAPG </a> </span>
+                                     <span class="speaker"> <strong >Speaker</strong> : <a href="#" class="gradient-text "> TBA </a> </span>
                                  </div>
                               </div>
                           <div class="block-detail">
@@ -404,7 +404,7 @@
                              <span class="topic">Public Relations 101 & Impacts of Social Media</span>
                              <div class="block-text">
                                  <p>Avoid reactionary and pursue proactive service promotion.  Open discussion on how Social Media has changed public perceptions.</p>
-                                 <span class="speaker"> <strong >Speaker</strong> : <a href="#" class="gradient-text "> Karyn Popplestone and other SolGen member </a> </span>
+                                 <span class="speaker"> <strong >Speaker</strong> : <a href="#" class="gradient-text "> TBA </a> </span>
                              </div>
                           </div>
                           <div class="block-detail">
@@ -450,7 +450,7 @@
                                  <span class="topic">Cannabis Update</span>
                                  <div class="block-text">
                                      <p>An update on the Federal, Provincial and Municipal governments’ framework relating to Cannabis and its impacts </p>
-                                     <span class="speaker"> <strong >Presenter</strong> : <a href="#" class="gradient-text "> Robert Palser B.A. LL.B Q.C., Senior Policy Counsel & Traffic Safety Coordinator of Alberta </a> </span>
+                                     <span class="speaker"> <strong >Presenter</strong> : <a href="#" class="gradient-text "> TBA </a> </span>
                                  </div>
                              </div>
                              <div class="block-detail">
@@ -488,7 +488,7 @@
                             <span class="topic">Annual General Meeting</span>
                             <div class="block-text">
                                 <p>All AAPG members should attend.</p>
-                                <span class="speaker"> <strong >Speaker</strong> : <a href="#" class="gradient-text "> Terry Coleman, Chair of AAPG </a> </span>
+                                <span class="speaker"> <strong >Speaker</strong> : <a href="#" class="gradient-text "> TBA </a> </span>
                             </div>
                          </div>
                          <div class="block-detail">
@@ -498,7 +498,6 @@
                                 <p>Piper Entrance VIPs & Board, Rise for introduction of the Lieutenant Governor & O’Canada</p>
                                 <p>First Nations Elder Blessing</p>
                                 <p>Welcome Address and Greeting:  City of Medicine Hat and VIP’s</p>
-                                <p>Mayor, M.H. Commission Chair, M.H.P.S. Chief, M.H. Detachment Commander,  M.H.P.A. President, AB Minister of Justice & Solicitor General, CAN Minister of Public Safety, Assistant Deputy Minister AB Justice & Solicitor General, RCMP Assistant Commissioner, and AAPG Board recognition.</p>
                             </div>
                          </div>
                          <div class="block-detail">
@@ -513,7 +512,7 @@
                             <span class="topic">Commission & Committee Internal Organization</span>
                             <div class="block-text">
                                 <p>Policy Manual Process/Procedure development; succession planning, continuing education, annual Board performance assessment, new member on-boarding; what should it look like, document management/destruction, use of personal email, minutes in closed meetings.</p>
-                                <span class="speaker"> <strong >Speaker</strong> : <a href="#" class="gradient-text "> Justin Krikler, Edmonton Police Commission Executive Director & Legal Council </a> </span>
+                                <span class="speaker"> <strong >Speaker</strong> : <a href="#" class="gradient-text "> TBA </a> </span>
                             </div>
                         </div>
                         <div class="block-detail">
@@ -529,7 +528,7 @@
                             <span class="topic">First Nations Board Collaboration</span>
                             <div class="block-text">
                                 <p>Understanding First Nations Policing and how we can support each other</p>
-                                <span class="speaker"> <strong >Speaker</strong> : <a href="#" class="gradient-text "> Violet Meguinis, Chair Tsuu’tina Nation Police Commission/Ron Hepperle, Director of First Nations Policing </a> </span>
+                                <span class="speaker"> <strong >Speaker</strong> : <a href="#" class="gradient-text "> TBA </a> </span>
                             </div>
                         </div>
                         <div class="block-detail">
@@ -537,7 +536,7 @@
                             <span class="topic">Police Act Engagement Update</span>
                             <div class="block-text">
                                 <p>An update on consultations</p>
-                                <span class="speaker"> <strong >Speaker</strong> : <a href="#" class="gradient-text "> Jessica Thomson, Director of Engagement & Strategy, Office of Justice & Solicitor General </a> </span>
+                                <span class="speaker"> <strong >Speaker</strong> : <a href="#" class="gradient-text "> TBA  </a> </span>
                             </div>
                         </div>
                         <div class="block-detail">
@@ -552,7 +551,7 @@
                             <span class="topic">Policing Commissions - ROUND TABLE DISCUSSIONS</span>
                             <div class="block-text">
                                 <p>Question & Answer session</p>
-                                <span class="speaker"> <strong >Speaker</strong> : <a href="#" class="gradient-text "> Greg Keen; Chair Medicine Hat Police Commission </a> </span>
+                                <span class="speaker"> <strong >Speaker</strong> : <a href="#" class="gradient-text "> TBA </a> </span>
                             </div>
                         </div>
                         <div class="block-detail">
@@ -560,7 +559,7 @@
                             <span class="topic">Policing Committees - ROUND TABLE DISCUSSIONS</span>
                             <div class="block-text">
                                 <p>Question & Answer session</p>
-                                <span class="speaker"> <strong >Speaker</strong> : <a href="#" class="gradient-text "> Nick Servos; Chair Canmore Policing Committee </a> </span>
+                                <span class="speaker"> <strong >Speaker</strong> : <a href="#" class="gradient-text "> TBA </a> </span>
                             </div>
                         </div>
                         <div class="block-detail">
@@ -568,7 +567,7 @@
                             <span class="topic">Public Complaints Director Role</span>
                             <div class="block-text">
                                 <p>What are the procedures of the PCD, how should Grievances be handled</p>
-                                <span class="speaker"> <strong >Speaker</strong> : <a href="#" class="gradient-text "> Provincial PCD & SolGen </a> </span>
+                                <span class="speaker"> <strong >Speaker</strong> : <a href="#" class="gradient-text "> TBA </a> </span>
                             </div>
                         </div>
                         <div class="block-detail">
@@ -877,23 +876,27 @@
       </div>
       <div id="register-modal">
 
-                   <form class="registry-form form" id="checkout-form" method="post" action="/conferences" autocomplete="off" >
+                   <form class="registry-form form" id="checkout-form" method="post" action="/conferences" autocomplete="off"
+                   {{-- onSubmit="process(event);" --}}
+                   >
                     @csrf
                         <h2 class="sub-title-1 mb-30">Register For The AAPG Annual Conference 2019</h2>
                         <div class="row">
-                            <div class="col-sm-6 col-md-4">
+                            <div class="col-sm-6 col-md-3">
                                 <input placeholder="Your Name" value="" id="name" name="name" type="text" required >
                             </div>
-                            <div class="col-sm-6 col-md-4">
-                                <input placeholder="Your Email" value="" id="stripe-email" name="email" type="text" required>
+                            <div class="col-sm-6 col-md-3">
+                                <input placeholder="Your Email" value="" id="email" name="email" type="text" required>
                             </div>
-                            <div class="col-sm-6 col-md-4">
+                            <div class="col-sm-6 col-md-3">
                                 <input placeholder="Phone number" value="" id="phone" name="phone" type="text">
                             </div>
-                            <div class="col-sm-6 col-md-4">
+                            <div class="col-sm-6 col-md-3">
                                 <input placeholder="Company" value="" id="company" name="company" type="text">
                             </div>
-                            <div class="col-sm-6 col-md-4">
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6 col-md-3">
                                 <div class="block-select">
                                     <select required name="ticket">
                                     <option value="">Choose Ticket Type</option>
@@ -903,12 +906,13 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="col-sm-6 col-md-4">
+                            <div class="col-sm-3 col-md-3">
                                 <input placeholder="Number of Tickets" value="" id="quantity" name="quantity" type="text">
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-6 col-md-4">
+                            <div class="col-sm-3 col-md-3">
+                                <input placeholder="Number of Guests" value="" id="guest" name="guest" type="text">
+                            </div>
+                            <div class="col-sm-6 col-md-3">
                                 <div class="block-select">
                                     <select required name="payment">
                                         <option value="cc">Pay Now Via Credit Card</option>
@@ -916,14 +920,23 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="col-sm-6 col-md-4">
-                                    <div id="card-element">
-                                        <!-- A Stripe Element will be inserted here. -->
-                                    </div>
+                        </div>
 
-                                    <!-- Used to display form errors. -->
-                                    <div id="card-errors" role="alert"></div>
+                        <div class="row">
+                            <div class="col-sm-6 col-md-3">
+                                    <input placeholder="Credit Card Number" value="" id="cc" name="cc" type="text">
                             </div>
+                            <div class="col-sm-6 col-md-3">
+                                <input placeholder="CC Month" value="" id="month" name="month" type="text">
+                            </div>
+                            <div class="col-sm-6 col-md-3">
+                                <input placeholder="CC Year" value="" id="year" name="year" type="text">
+                            </div>
+                            <div class="col-sm-6 col-md-3">
+                                <input placeholder="Security Code" value="" id="security" name="security" type="text">
+                            </div>
+                        </div>
+                        <div class="row">
                             <div class="col-sm-6 col-md-4">
                                 <button class="but submit" type="submit">Purchase</button>
                             </div>
@@ -942,82 +955,10 @@
       <script src="/conference/js/smooth-scroll.js" type="text/javascript"></script>
       <script src="/conference/js/venobox.min.js" type="text/javascript"></script>
       <script src="/conference/js/script.js" type="text/javascript"></script>
+      <script src="/conference/js/sweetalert2.all.min.js" type="text/javascript"></script>
       <script src="https://maps.googleapis.com/maps/api/js?key={{env('GOOGLE_MAPS_API_KEY')}}&callback=initializeMap"></script>
-      <script>
+      @include('sweet::alert')
 
-                // Create a Stripe client.
-                var stripe = Stripe('pk_9a6SkLKecsdw62Z1RC3Y3qPWKVBkt');
-
-                // Create an instance of Elements.
-                var elements = stripe.elements();
-
-                // Custom styling can be passed to options when creating an Element.
-                // (Note that this demo uses a wider set of styles than the guide below.)
-                var style = {
-                    base: {
-                    color: '#fff',
-                    lineHeight: '45px',
-                    fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
-                    fontSmoothing: 'antialiased',
-                    fontSize: '14px',
-                    '::placeholder': {
-                        color: '#fff'
-                    }
-                    },
-                    invalid: {
-                    color: '#fa755a',
-                    iconColor: '#fa755a'
-                    }
-                };
-
-                // Create an instance of the card Element.
-                var card = elements.create('card', {style: style});
-
-                // Add an instance of the card Element into the `card-element` <div>.
-                card.mount('#card-element');
-
-                // Handle real-time validation errors from the card Element.
-                card.addEventListener('change', function(event) {
-                    var displayError = document.getElementById('card-errors');
-                    if (event.error) {
-                    displayError.textContent = event.error.message;
-                    } else {
-                    displayError.textContent = '';
-                    }
-                });
-
-                // Handle form submission.
-                var form = document.getElementById('checkout-form');
-                form.addEventListener('submit', function(event) {
-                    event.preventDefault();
-                    alert('attached');
-
-                    stripe.createToken(card).then(function(result) {
-                    if (result.error) {
-                        // Inform the user if there was an error.
-                        var errorElement = document.getElementById('card-errors');
-                        errorElement.textContent = result.error.message;
-                    } else {
-                        // Send the token to your server.
-                        stripeTokenHandler(result.token);
-                    }
-                    });
-                });
-
-                // Submit the form with the token ID.
-                function stripeTokenHandler(token) {
-                    // Insert the token ID into the form so it gets submitted to the server
-                    var form = document.getElementById('payment-form');
-                    var hiddenInput = document.createElement('input');
-                    hiddenInput.setAttribute('type', 'hidden');
-                    hiddenInput.setAttribute('name', 'stripeToken');
-                    hiddenInput.setAttribute('value', token.id);
-                    form.appendChild(hiddenInput);
-
-                    // Submit the form
-                    // form.submit();
-                }
-                </script>
       <!-- Google analytics -->
       <!-- End google analytics -->
    </body>
