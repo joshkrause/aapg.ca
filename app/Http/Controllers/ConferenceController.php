@@ -62,7 +62,8 @@ class ConferenceController extends Controller
         else {
             $ticket_type = "Non Member";
         }
-        $charge_description = "AAPG Annual Conference. " . $request->quantity . " tickets and " . $request->guest . " guest tickets. Customer " . $request->name . ". Company " . $request->company;
+        $charge_description = "AAPG Annual Conference. " . $request->quantity . " tickets and " . $request->guest . " guest tickets. Customer " . $request->name . ". Community " . $request->company;
+        $notes = "Member Names: " . $request->member_names . ". Guest Names: " . $request->guest_names;
         $order = new Order([
             'name' => $request->name,
             'email' => $request->email,
@@ -74,6 +75,7 @@ class ConferenceController extends Controller
             'tax' => $tax,
             'total' => $total,
             'description' => $charge_description,
+            'notes' => $notes,
         ]);
 
         if($request->payment == "cc")

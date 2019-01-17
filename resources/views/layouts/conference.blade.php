@@ -637,8 +637,8 @@
                <!--Row-->
                <div class="row vertical-align tickets">
                   <div class="col-sm-4 ">
-                     <h3 class="sub-title-0  mb-20"><span class="gradient-text">Member groups save $75 every 4th ticket</span><br>
-                        <span class="gradient-text">Register single or groups</span>
+                     <h3 class="sub-title-0  mb-20"><span class="gradient-text">Member groups save $75 every 4th ticket. </span><br>
+                        <span class="gradient-text">Discount Applied automatically.</span>
                      </h3>
                      <div class="review-slider flexslider">
                         <ul class="slides">
@@ -646,7 +646,7 @@
                               <blockquote>Early Bird Registration Prices until February 1, 2019 </blockquote>
                            </li>
                            <li>
-                              <blockquote>Buy 3 member tickets, and save $75 on the fourth ticket!</blockquote>
+                              <blockquote>Buy 3 member tickets, and save $75 on the fourth ticket! Discount is applied automatically.</blockquote>
                            </li>
                         </ul>
                      </div>
@@ -892,7 +892,7 @@
                                 <input placeholder="Phone number" value="" id="phone" name="phone" type="text">
                             </div>
                             <div class="col-sm-6 col-md-3">
-                                <input placeholder="Company" value="" id="company" name="company" type="text">
+                                <input placeholder="Community" value="" id="company" name="company" type="text">
                             </div>
                         </div>
                         <div class="row">
@@ -919,6 +919,16 @@
                                         <option value="cheque">Pay Via Cheque or Cash</option>
                                     </select>
                                 </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p>Enter all names of AAPG members attending.</p>
+                                <input placeholder="Names of Members" value="" id="member_names" name="member_names" type="text">
+                            </div>
+                            <div class="col-md-6">
+                                <p>Enter all names of guests attending.</p>
+                                <input placeholder="Names of Guests" value="" id="guest_names" name="guest_names" type="text">
                             </div>
                         </div>
 
