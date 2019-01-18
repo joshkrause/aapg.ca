@@ -52,8 +52,7 @@ class ConferenceController extends Controller
             $ticket_subtotal = $ticket_subtotal - 22500;
         }
         $subtotal = $ticket_subtotal + $guest_subtotal;
-        $tax = $subtotal * 5 / 100;
-        $total = $subtotal + $tax;
+        $total = $subtotal;
 
         if($request->ticket == 250)
         {
@@ -72,7 +71,7 @@ class ConferenceController extends Controller
             'ticket_type' => $ticket_type,
             'quantity' => $request->quantity,
             'subtotal' => $subtotal,
-            'tax' => $tax,
+            'tax' => '0',
             'total' => $total,
             'description' => $charge_description,
             'notes' => $notes,
