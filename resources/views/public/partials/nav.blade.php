@@ -19,7 +19,7 @@
         </div>
         <div class="main-nav">
             <ul>
-                <li class="nav-item"><a href="javascript:void(0)" class="nav-link">Home <i class="fa fa-angle-down m-l-5"></i></a>
+                <li class="nav-item"><a href="/" class="nav-link">Home <i class="fa fa-angle-down m-l-5"></i></a>
                     <ul class="animated fadeInUp">
                         <li><a href="#">Bylaws / Minutes / Police Act</a></li>
                         <li><a href="#">Strategic Goals / Business Plan</a></li>
@@ -28,16 +28,11 @@
                 </li>
                 <li class="nav-item"><a href="javascript:void(0)" class="nav-link">Communications <i class="fa fa-angle-down m-l-5"></i></a>
                     <ul class="animated fadeInUp">
-                        <li><a href="#">Newsletters</a></li>
-                        <li><a href="#">Ask The Members</a></li>
-                        <li><a href="#">Board Member Portal</a></li>
+                        <li><a href="/communications/newsletters">Newsletters</a></li>
+                        <li><a href="/communications/questions">Ask The Members</a></li>
                     </ul>
                 </li>
-                <li class="nav-item"><a href="javascript:void(0)" class="nav-link">Resources <i class="fa fa-angle-down m-l-5"></i></a>
-                    <ul class="animated fadeInUp">
-                        <li><a href="#">Policy & Process Sharing Portal</a></li>
-                    </ul>
-                </li>
+                <li class="nav-item"><a href="/resources" class="nav-link">Resources</li>
                 <li class="nav-item"><a href="/conferences" class="nav-link">Conferences</a></li>
                 <li class="nav-item"><a href="javascript:void(0)" class="nav-link">Join AAPG</a></li>
                 <li class="nav-item"><a href="javascript:void(0)" class="nav-link">Alert CAC</a></li>

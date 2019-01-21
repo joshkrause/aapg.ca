@@ -14,6 +14,11 @@ use Laravel\Passport\Passport;
  */
 
 Route::get('/', 'PagesController@home');
+Route::get('/communications/newsletters', 'CommunicationsController@newsletters');
+Route::get('/communications/questions', 'CommunicationsController@questions');
+Route::get('/resources', 'ResourcesController@index');
+
+
 Route::get('/conferences', 'ConferenceController@index')->name('conferences.home');
 Route::post('/conferences', 'ConferenceController@Order');
 
