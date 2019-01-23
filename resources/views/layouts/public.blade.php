@@ -15,6 +15,8 @@
     <link href="/public/node_modules/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <link href="/public/node_modules/aos/dist/aos.css" rel="stylesheet">
+    <link href="/public/node_modules/prism/prism.css" rel="stylesheet">
+    <link href="/public/node_modules/perfect-scrollbar/dist/css/perfect-scrollbar.min.css" >
 
     <link href="/public/node_modules/bootstrap-touch-slider/bootstrap-touch-slider.css" rel="stylesheet">
     <link href="/public/node_modules/owl.carousel/dist/assets/owl.theme.green.css" rel="stylesheet">
@@ -23,6 +25,7 @@
 
     <link href="/public/css/style.css" rel="stylesheet">
     <link href="/public/css/yourstyle.css" rel="stylesheet">
+    @yield('css')
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>

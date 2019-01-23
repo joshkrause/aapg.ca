@@ -17,6 +17,12 @@ Route::get('/', 'PagesController@home');
 Route::get('/communications/newsletters', 'CommunicationsController@newsletters');
 Route::get('/communications/questions', 'CommunicationsController@questions');
 Route::get('/resources', 'ResourcesController@index');
+Route::get('/resources/bylaws', 'ResourcesController@bylaws');
+Route::get('/resources/goals', 'ResourcesController@goals');
+Route::get('/board', 'BoardController@index');
+Route::get('/members', 'MembersController@index');
+Route::get('/communications/topics', 'PostsController@index');
+Route::get('/communications/topics/{post}', 'PostsController@show');
 
 
 Route::get('/conferences', 'ConferenceController@index')->name('conferences.home');

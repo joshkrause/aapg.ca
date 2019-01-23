@@ -21,13 +21,15 @@
             <ul>
                 <li class="nav-item"><a href="/" class="nav-link">Home <i class="fa fa-angle-down m-l-5"></i></a>
                     <ul class="animated fadeInUp">
-                        <li><a href="#">Bylaws / Minutes / Police Act</a></li>
-                        <li><a href="#">Strategic Goals / Business Plan</a></li>
-                        <li><a href="#">Our Membership</a></li>
+                        <li><a href="/resources/bylaws">Bylaws / Minutes / Police Act</a></li>
+                        <li><a href="/resources/goals">Strategic Goals / Business Plan</a></li>
+                        <li><a href="/members">Our Membership</a></li>
+                        <li><a href="/board">Board Members</a></li>
                     </ul>
                 </li>
                 <li class="nav-item"><a href="javascript:void(0)" class="nav-link">Communications <i class="fa fa-angle-down m-l-5"></i></a>
                     <ul class="animated fadeInUp">
+                        <li><a href="/communications/topics">Hot Topics</a></li>
                         <li><a href="/communications/newsletters">Newsletters</a></li>
                         <li><a href="/communications/questions">Ask The Members</a></li>
                     </ul>

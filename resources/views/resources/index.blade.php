@@ -18,11 +18,22 @@
                 <!-- Column -->
                 <div class="col-md-6 wrap-feature3-box">
                     <div class="card card-shadow" data-aos="fade-right" data-aos-duration="1200">
+                        <div class="card-header">
+                            <h3>Commission Samples</h3>
+                        </div>
                         <div class="card-body d-flex">
-                            <div class="align-self-center">
-                                <h5 class="font-medium"><a href="javascript:void(0)" class="linking">Resource Name <i class="ti-arrow-right"></i></a></h5>
-                                <p class="m-t-20">Resource Description Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            </div>
+                            @if($samples->count())
+                                <div class="align-self-center">
+                                    @foreach($samples as $sample)
+                                    <h5 class="font-medium"><a href="/resources/samples/{{$sample->id}}" class="linking">{{$sample->name}} <i class="ti-arrow-right"></i></a></h5>
+                                    <p class="m-t-20">{{$sample->description}}</p>
+                                    <hr>
+                                    @endforeach
+                                    <a href="/resources/samples" class="btn waves-effect waves-light btn-primary btn-sm">View All</a>
+                                </div>
+                            @else
+                                <p class="m-t-20">Coming Soon</p>
+                            @endif
                         </div>
                     </div>
                 </div>
@@ -30,35 +41,45 @@
                 <!-- Column -->
                 <div class="col-md-6 wrap-feature3-box">
                     <div class="card card-shadow" data-aos="fade-right" data-aos-duration="1200">
+                        <div class="card-header">
+                            <h3>Educational Powerpoints</h3>
+                        </div>
                         <div class="card-body d-flex">
+                            @if($powerpoints->count())
                             <div class="align-self-center">
-                                <h5 class="font-medium"><a href="javascript:void(0)" class="linking">Resource Name <i class="ti-arrow-right"></i></a></h5>
-                                <p class="m-t-20">Resource Description Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            </div>
+                                    @foreach($powerpoints as $powerpoint)
+                                    <h5 class="font-medium"><a href="/resources/samples/{{$powerpoint->id}}" class="linking">{{$powerpoint->name}} <i class="ti-arrow-right"></i></a></h5>
+                                    <p class="m-t-20">{{$powerpoint->description}}</p>
+                                    @endforeach
+                                    <hr>
+                                    <a href="/resources/powerpoints" class="btn waves-effect waves-light btn-primary btn-sm">View All</a>
+                                </div>
+                            @else
+                                <p class="m-t-20">Coming Soon</p>
+                            @endif
                         </div>
                     </div>
                 </div>
                 <!-- Column -->
                 <!-- Column -->
-                <div class="col-md-6 wrap-feature3-box">
+                <div class="col-md-12 wrap-feature3-box">
                     <div class="card card-shadow" data-aos="fade-right" data-aos-duration="1200">
-                        <div class="card-body d-flex">
-                            <div class="align-self-center">
-                                <h5 class="font-medium"><a href="javascript:void(0)" class="linking">Resource Name <i class="ti-arrow-right"></i></a></h5>
-                                <p class="m-t-20">Resource Description Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            </div>
+                        <div class="card-header">
+                            <h3>Stakeholder Links</h3>
                         </div>
-                    </div>
-                </div>
-                <!-- Column -->
-                <!-- Column -->
-                <div class="col-md-6 wrap-feature3-box">
-                    <div class="card card-shadow" data-aos="fade-right" data-aos-duration="1200">
                         <div class="card-body d-flex">
+                            @if($links->count())
                             <div class="align-self-center">
-                                <h5 class="font-medium"><a href="javascript:void(0)" class="linking">Resource Name <i class="ti-arrow-right"></i></a></h5>
-                                <p class="m-t-20">Resource Description Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            </div>
+                                    @foreach($links as $link)
+                                    <h5 class="font-medium"><a href="{{$link->link}}" class="linking">{{$link->name}} <i class="ti-arrow-right"></i></a></h5>
+                                    <p class="m-t-20">{{$link->description}}</p>
+                                    @endforeach
+                                    <hr>
+                                    <a href="/resources/links" class="btn waves-effect waves-light btn-primary btn-sm">View All</a>
+                                </div>
+                            @else
+                                <p class="m-t-20">Coming Soon</p>
+                            @endif
                         </div>
                     </div>
                 </div>
