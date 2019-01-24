@@ -56,12 +56,6 @@
                             <a href="#" class="font-medium text-muted db  m-t-5">admin@aapg.ca</a>
                         </div>
                     </div>
-                    <div class="d-flex no-block">
-                        <div class="display-7 m-r-20 align-self-top"><i class="icon-Over-Time"></i></div>
-                        <div class="info">
-                            <span class="font-medium text-muted db  m-t-5">8.00 AM - 6:00PM</span>
-                        </div>
-                    </div>
                 </div>
                 <!-- Column -->
                 <!-- Column -->

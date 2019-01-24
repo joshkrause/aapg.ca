@@ -7,7 +7,6 @@
                 <div class="gen-info font-14">
                     <span><i class="fa fa-envelope text-success-gradiant"></i> admin@aapg.ca</span>
                     <span><i class="fa fa-phone-square text-success-gradiant"></i> (587) 892-7874</span>
-                    <span class="hidden-lg-down"><i class="fa fa-clock-o text-success-gradiant"></i> 8.00 AM - 6:00PM</span>
                 </div>
                 {{-- <div class="social-info hidden-lg-down">
                     <a href="#"><i class="fa fa-facebook"></i></a>
@@ -21,10 +20,10 @@
             <ul>
                 <li class="nav-item"><a href="/" class="nav-link">Home <i class="fa fa-angle-down m-l-5"></i></a>
                     <ul class="animated fadeInUp">
+                        <li><a href="/board">Board Members</a></li>
                         <li><a href="/resources/bylaws">Bylaws / Minutes / Police Act</a></li>
                         <li><a href="/resources/goals">Strategic Goals / Business Plan</a></li>
                         <li><a href="/members">Our Membership</a></li>
-                        <li><a href="/board">Board Members</a></li>
                     </ul>
                 </li>
                 <li class="nav-item"><a href="javascript:void(0)" class="nav-link">Communications <i class="fa fa-angle-down m-l-5"></i></a>

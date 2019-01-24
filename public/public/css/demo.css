@@ -38,6 +38,7 @@ This is for Header
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    height:120px;
     -webkit-box-shadow: 0px 0px 30px rgba(115, 128, 157, 0.1);
     box-shadow: 0px 0px 30px rgba(115, 128, 157, 0.1); }
     .header7 .h7-nav-bar .logo-box {
@@ -77,7 +78,7 @@ This is for Header
           padding: 0px;
           position: relative; }
           .header7 .h7-nav-bar .h7-nav-box .main-nav ul li a {
-            padding: 20px 0px 21px;
+            padding: 0px 0px 21px;
             color: #8d97ad;
             display: block; }
       .header7 .h7-nav-bar .h7-nav-box .main-nav > ul {

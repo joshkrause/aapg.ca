@@ -48,18 +48,6 @@
         <div class="topbar">
             <div class="header7">
                 <div class="container po-relative">
-
-                    <div class="h7-topbar">
-                        <div class="d-flex justify-content-between font-14">
-                            <div class=" hidden-md-down align-self-center">
-                                2019 Conference Details Available Now
-                            </div>
-                            <div class="con-btn">
-                                <a class="btn btn-success-gradiant btn-rounded btn-sm" href="/conferences">2019 Conference</a>
-                            </div>
-                        </div>
-                    </div>
-
                     @include('public.partials.nav')
                 </div>
             </div>
