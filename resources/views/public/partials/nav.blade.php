@@ -34,7 +34,13 @@
                     </ul>
                 </li>
                 <li class="nav-item"><a href="/resources" class="nav-link">Resources</li>
-                <li class="nav-item"><a href="/conferences" class="nav-link">Conferences</a></li>
+                <li class="nav-item"><a href="/conferences" class="nav-link">Conferences <i class="fa fa-angle-down m-l-5"></i></a>
+                <ul class="animated fadeInUp">
+                        <li><a href="/conferences">Upcoming Conference</a></li>
+                        <li><a href="/communications/affiliate">Affiliate Conferences</a></li>
+                        <li><a href="/communications/archive">Past Conferences</a></li>
+                    </ul>
+                </li>
                 <li class="nav-item"><a href="javascript:void(0)" class="nav-link">Join AAPG</a></li>
                 <li class="nav-item"><a href="javascript:void(0)" class="nav-link">Alert CAC</a></li>
             </ul>

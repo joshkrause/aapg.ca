@@ -20,6 +20,7 @@ class CreateBoardsTable extends Migration
             $table->string('image')->nullable();
             $table->string('community')->nullable();
             $table->string('position')->nullable();
+            $table->integer('sort')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });

@@ -339,7 +339,7 @@
                         <li class="active"><i class="far fa-calendar-alt"></i> <strong>Friday</strong>  <span>- April 5 2019</span></li>
                         <li class=""><i class="far fa-calendar-alt"></i> <strong>Saturday</strong>  <span>- April 6 2019</span></li>
                      </ul>
-                     <a class="link mt-20 gradient-text scroll" href="#accom">Accommodation</a>
+                     <a href="{{asset('conference/2019/2019-aapg-conference.pdf')}}" class="but mt-30 "  title="Download Program"> Download Program</a>
                   </div>
                   <div class="col-sm-8 ">
                      <ul class="block-tab">

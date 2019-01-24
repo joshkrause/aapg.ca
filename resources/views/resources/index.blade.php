@@ -16,10 +16,10 @@
             <!-- Row  -->
             <div class="row m-t-40">
                 <!-- Column -->
-                <div class="col-md-6 wrap-feature3-box">
+                <div class="col-md-12 wrap-feature3-box">
                     <div class="card card-shadow" data-aos="fade-right" data-aos-duration="1200">
                         <div class="card-header">
-                            <h3>Commission Samples</h3>
+                            <h3>Best Practice Samples</h3>
                         </div>
                         <div class="card-body d-flex">
                             @if($samples->count())
@@ -62,7 +62,7 @@
                 </div>
                 <!-- Column -->
                 <!-- Column -->
-                <div class="col-md-12 wrap-feature3-box">
+                <div class="col-md-6 wrap-feature3-box">
                     <div class="card card-shadow" data-aos="fade-right" data-aos-duration="1200">
                         <div class="card-header">
                             <h3>Stakeholder Links</h3>
