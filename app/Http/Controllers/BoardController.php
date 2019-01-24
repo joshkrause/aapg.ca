@@ -9,7 +9,7 @@ class BoardController extends Controller
 {
     public function index()
     {
-        $board = Board::all();
+        $board = Board::orderBy('sort')->get();
         return view('board.index', compact('board'));
     }
 }
