@@ -907,11 +907,17 @@
                                 </div>
                             </div>
                             <div class="col-sm-3 col-md-3">
-                                <input placeholder="Number of Tickets" value="" id="quantity" name="quantity" type="text">
+                                <input placeholder="# of Conference Tickets" value="" id="quantity" name="quantity" type="text">
+                            </div>
+                            <div class="col-md-6">
+                                <input placeholder="Names of Registrants" value="" id="member_names" name="member_names" type="text">
                             </div>
                             <div class="col-sm-3 col-md-3">
-                                <input placeholder="Number of Guests" value="" id="guest" name="guest" type="text">
+                                <input placeholder="Number of Guest Tickets" value="" id="guest" name="guest" type="text">
                             </div>
+                            <div class="col-md-6">
+                                    <input placeholder="Names of Guests" value="" id="guests_names" name="guests_names" type="text">
+                                </div>
                             <div class="col-sm-6 col-md-3">
                                 <div class="block-select">
                                     <select required name="payment">
@@ -921,17 +927,6 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <p>Enter all names of AAPG members attending.</p>
-                                <input placeholder="Names of Members" value="" id="member_names" name="member_names" type="text">
-                            </div>
-                            <div class="col-md-6">
-                                <p>Enter all names of guests attending.</p>
-                                <input placeholder="Names of Guests" value="" id="guest_names" name="guest_names" type="text">
-                            </div>
-                        </div>
-
                         <div class="row">
                             <div class="col-sm-6 col-md-3">
                                     <input placeholder="Credit Card Number" value="" id="cc" name="cc" type="text">
