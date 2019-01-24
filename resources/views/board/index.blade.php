@@ -15,7 +15,6 @@
             <div class="row">
                 @if($board->count())
                 @foreach($board->chunk(3) as $group)
-                    <div class="card-group">
                         @foreach($group as $b)
                             <div class="card col-md-4">
                                 @if($b->image)
@@ -30,7 +29,6 @@
                                 </div>
                             </div>
                         @endforeach
-                    </div>
                 @endforeach
                 @endif
             </div>

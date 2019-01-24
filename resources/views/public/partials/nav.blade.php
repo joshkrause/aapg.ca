@@ -38,7 +38,7 @@
                 <ul class="animated fadeInUp">
                         <li><a href="/conferences">Upcoming Conference</a></li>
                         <li><a href="/communications/affiliate">Affiliate Conferences</a></li>
-                        <li><a href="/communications/archive">Past Conferences</a></li>
+                        <li><a href="/communications/archive">Past AGM Resolutions & Minutes</a></li>
                     </ul>
                 </li>
                 <li class="nav-item"><a href="javascript:void(0)" class="nav-link">Join AAPG</a></li>
