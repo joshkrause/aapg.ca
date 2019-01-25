@@ -41,7 +41,7 @@
                         <li><a href="/communications/archive">Past AGM Resolutions & Minutes</a></li>
                     </ul>
                 </li>
-                <li class="nav-item"><a href="javascript:void(0)" class="nav-link">Join AAPG</a></li>
+                <li class="nav-item"><a href="/members/apply" class="nav-link">Join AAPG</a></li>
                 <li class="nav-item"><a href="javascript:void(0)" class="nav-link">Alert CAC</a></li>
             </ul>
         </div>

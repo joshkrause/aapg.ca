@@ -12,7 +12,6 @@
             <div class="row justify-content-center">
                 <div class="col-md-7 text-center">
                     <h2 class="title">Our Membership</h2>
-                    <a href="/members/apply" class="btn btn-success">Join AAPG</a>
                 </div>
             </div>
         </div>
@@ -61,6 +60,17 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="d-flex">
+                <div class="display-7 align-self-center">
+                    <h3 class="">Interested In Joining Alberta Association of Police Governance?</h3>
+                    <h6 class="font-16 subtitle">Learn more about what we have to offer</h6>
+                </div>
+                <div class="ml-auto m-t-10 m-b-10">
+                    <a href="/members/apply" class="btn btn-info-gradiant btn-md">Learn More</a>
                 </div>
             </div>
         </div>
