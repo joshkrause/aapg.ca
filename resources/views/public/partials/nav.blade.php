@@ -18,7 +18,7 @@
         </div>
         <div class="main-nav">
             <ul>
-                <li class="nav-item"><a href="/" class="nav-link">Home <i class="fa fa-angle-down m-l-5"></i></a>
+                <li class="nav-item"><a href="/" class="nav-link">About Us <i class="fa fa-angle-down m-l-5"></i></a>
                     <ul class="animated fadeInUp">
                         <li><a href="/board">Board Members</a></li>
                         <li><a href="/resources/bylaws">Bylaws / Minutes / Police Act</a></li>
@@ -43,6 +43,7 @@
                 </li>
                 <li class="nav-item"><a href="/members/apply" class="nav-link">Join AAPG</a></li>
                 <li class="nav-item"><a href="javascript:void(0)" class="nav-link">Alert CAC</a></li>
+                <li class="nav-item"><a href="javascript:void(0)" class="nav-link">Board Portal</a></li>
             </ul>
         </div>
     </nav>

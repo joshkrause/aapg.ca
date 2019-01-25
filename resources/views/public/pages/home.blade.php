@@ -19,7 +19,7 @@
                         <div class="slide-text slide_style_left">
                             <h2 data-animation="animated zoomInRight" class="bg-success-gradiant title">Alberta Association of Police Governance</h2>
                             <p data-animation="animated fadeInLeft">
-                                <a class="bg-white btn btn-md btn-arrow" data-toggle="collapse" href="#"> <span> Supporting excellence in civilian governance <i class="ti-arrow-right"></i></span> </a>
+                                <a class="bg-white btn btn-md btn-arrow" data-toggle="collapse" href="#"> <span> Supporting excellence in civilian governance </span> </a>
                             </p>
                         </div>
                     </div>
