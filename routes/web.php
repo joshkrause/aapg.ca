@@ -21,6 +21,7 @@ Route::get('/resources/bylaws', 'ResourcesController@bylaws');
 Route::get('/resources/goals', 'ResourcesController@goals');
 Route::get('/board', 'BoardController@index');
 Route::get('/members', 'MembersController@index');
+Route::get('/members/apply', 'MembersController@apply');
 Route::get('/communications/topics', 'PostsController@index');
 Route::get('/communications/topics/{post}', 'PostsController@show');
 
