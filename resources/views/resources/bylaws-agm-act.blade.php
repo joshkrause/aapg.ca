@@ -94,7 +94,7 @@
                                 </div>
                             </div>
                             <div class="col-md-4 text-center">
-                                <a href="{{asset('files/resources/' . $minutes->first()->file)}}" class="text-white linking bg-success-gradiant">Download <i class="ti-arrow-right"></i></a>
+                                <a href="{{asset('storage/files/resources/' . $minutes->first()->file)}}" class="text-white linking bg-success-gradiant">Download <i class="ti-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
