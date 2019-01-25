@@ -43,8 +43,9 @@
                     $500 for an agency overseeing a police service of between 76 - 500 members<br/>
                     $100 for an agency overseeing a police service of 75 and fewer members.</p>
                 <h5>Full Membership Requirements</h5>
-                <p>Complete the contact information and email to admin@aapg.ca
+                <p>Complete the membership application and email to admin@aapg.ca
                 </p>
+                <p><a href="/storage/membership/aapg-membership.pdf" class="btn waves-effect waves-light btn-primary">Membership Application</a></p>
             </div>
             <div class="col-md-6">
                 <h4 class="text-center">Associate Membership</h4>
@@ -58,8 +59,9 @@
                 <p>Annual associate membership fees are set at $100.</p>
 
                 <h5>Associate Membership Requirements</h5>
-                <p>If would like to join our Associate membership, please fill out the Contact information and return to admin@aapg.ca with a paragraph on your Police Oversight and Governance challenges and/or needs. Often this paragraph is just the fact that the municipality is looking for more connection because they have, or are considering, some sort of oversight group or person.
+                <p>If would like to join our Associate membership, please fill out the membership application and return to admin@aapg.ca with a paragraph on your Police Oversight and Governance challenges and/or needs. Often this paragraph is just the fact that the municipality is looking for more connection because they have, or are considering, some sort of oversight group or person.
                 </p>
+                <p><a href="/storage/membership/aapg-membership.pdf" class="btn waves-effect waves-light btn-primary">Membership Application</a></p>
             </div>
         </div>
     </div>
