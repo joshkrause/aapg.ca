@@ -45,7 +45,7 @@
                 <h5>Full Membership Requirements</h5>
                 <p>Complete the membership application and email to admin@aapg.ca
                 </p>
-                <p><a href="/storage/membership/aapg-membership.pdf" class="btn waves-effect waves-light btn-primary">Membership Application</a></p>
+                <p><a href="/storage/files/membership/aapg-membership.pdf" class="btn waves-effect waves-light btn-primary">Membership Application</a></p>
             </div>
             <div class="col-md-6">
                 <h4 class="text-center">Associate Membership</h4>
@@ -61,7 +61,7 @@
                 <h5>Associate Membership Requirements</h5>
                 <p>If would like to join our Associate membership, please fill out the membership application and return to admin@aapg.ca with a paragraph on your Police Oversight and Governance challenges and/or needs. Often this paragraph is just the fact that the municipality is looking for more connection because they have, or are considering, some sort of oversight group or person.
                 </p>
-                <p><a href="/storage/membership/aapg-membership.pdf" class="btn waves-effect waves-light btn-primary">Membership Application</a></p>
+                <p><a href="/storage/files/membership/aapg-membership.pdf" class="btn waves-effect waves-light btn-primary">Membership Application</a></p>
             </div>
         </div>
     </div>
