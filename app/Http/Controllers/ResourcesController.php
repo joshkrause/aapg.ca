@@ -49,4 +49,10 @@ class ResourcesController extends Controller
         $samples = Resource::where('category', 'samples')->latest()->get();
         return view('resources.samples', compact('samples'));
     }
+
+    public function information()
+    {
+        $information = Resource::where('category', 'information')->latest()->get();
+        return view('resources.information', compact('information'));
+    }
 }
