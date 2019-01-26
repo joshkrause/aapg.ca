@@ -25,7 +25,7 @@
                             </div>
                             <div class="col-md-4 text-center">
                                 @if($bylaws->count() > 0)
-                                <a href="{{asset('files/resources/' . $bylaws->first()->file)}}" class="text-white linking bg-success-gradiant">Download <i class="ti-arrow-right"></i></a>
+                                <a href="{{asset('storage/files/resources/' . $bylaws->first()->file)}}" class="text-white linking bg-success-gradiant">Download <i class="ti-arrow-right"></i></a>
                                 @else
                                     Coming Soon
                                 @endif
@@ -45,7 +45,7 @@
                                 </div>
                             </div>
                             <div class="col-md-4 text-center">
-                                <a href="{{asset('files/resources/' . $policy_manual->first()->file)}}" class="text-white linking bg-success-gradiant">Download <i class="ti-arrow-right"></i></a>
+                                <a href="{{asset('storage/files/resources/' . $policy_manual->first()->file)}}" class="text-white linking bg-success-gradiant">Download <i class="ti-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -86,7 +86,7 @@
                             </div>
                             <div class="col-md-4 text-center">
                                 @if($police_act->count() > 0)
-                                <a href="{{asset('files/resources/' . $police_act->first()->file)}}" class="text-white linking bg-success-gradiant">Download <i class="ti-arrow-right"></i></a>
+                                <a href="{{asset('storage/files/resources/' . $police_act->first()->file)}}" class="text-white linking bg-success-gradiant">Download <i class="ti-arrow-right"></i></a>
                                 @else
                                     Coming Soon.
                                 @endif
