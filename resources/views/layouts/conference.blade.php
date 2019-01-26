@@ -947,6 +947,7 @@
                             </div>
                             <div class="col-sm-12">
                                 <p>* All credit card transactions are encrypted and processed securly through Stripe.com</p>
+                                <p>* Guest Tickets are for the Gala Dinner only and cost $75. One guest ticket per full conference ticket.</p>
                             </div>
                         </div>
                    </form>

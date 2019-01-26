@@ -52,26 +52,6 @@
                 </div>
                 <!-- Column -->
                 <!-- Column -->
-                <div class="col-lg-6" data-aos="zoom-in" data-aos-duration="1200">
-                    <div class="card">
-                        <div class="row">
-                            <div class="col-md-8">
-                                <div class="card-body d-flex no-block">
-                                    <div>
-                                        <h5 class="font-medium">Records Retention Act</h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 text-center">
-                                @if($records_retention->count() > 0)
-                                <a href="{{asset('storage/files/resources/' . $records_retention->first()->file)}}" class="text-white linking bg-success-gradiant">Download <i class="ti-arrow-right"></i></a>
-                                @else
-                                    Coming Soon.
-                                @endif
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
                 <div class="col-lg-6" data-aos="zoom-in" data-aos-duration="1200">
                     <div class="card">

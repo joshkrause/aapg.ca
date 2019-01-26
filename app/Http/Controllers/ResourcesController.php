@@ -31,12 +31,11 @@ class ResourcesController extends Controller
     }
     public function bylaws()
     {
-        $bylaws = Resource::where('category', 'bylaws')->limit('10')->get();
-        $police_act = Resource::where('category', 'policeact')->limit('10')->get();
-        $minutes = Resource::where('category', 'minutes')->limit('10')->get();
-        $privacy_policy = Resource::where('category', 'policeact')->limit('10')->get();
-        $policy_manual = Resource::where('category', 'policymanual')->limit('10')->get();
-        $records_retention = Resource::where('category', 'records')->limit('10')->get();
+        $bylaws = Resource::where('category', 'bylaws')->latest()->get();
+        $police_act = Resource::where('category', 'policeact')->latest()->get();
+        $minutes = Resource::where('category', 'minutes')->latest()->get();
+        $privacy_policy = Resource::where('category', 'policeact')->latest()->get();
+        $policy_manual = Resource::where('category', 'policymanual')->latest()->get();
         return view('resources.bylaws-agm-act', compact('bylaws', 'minutes', 'privacy_policy', 'police_act', 'policy_manual', 'records_retention'));
     }
 
