@@ -20,12 +20,19 @@ Route::post('/communications/questions', 'QuestionsController@submit');
 Route::get('/resources', 'ResourcesController@index');
 Route::get('/resources/bylaws', 'ResourcesController@bylaws');
 Route::get('/resources/goals', 'ResourcesController@goals');
+Route::get('/resources/samples', 'ResourcesController@samples');
+Route::get('/resources/information', 'ResourcesController@information');
 Route::get('/board', 'BoardController@index');
 Route::get('/members', 'MembersController@index');
 Route::get('/members/apply', 'MembersController@apply');
 Route::get('/communications/topics', 'PostsController@index');
 Route::get('/communications/topics/{post}', 'PostsController@show');
-
+Route::get('/portal', 'PortalController@index');
+Route::get('/conferences/archive', 'PortalController@index');
+Route::get('/alert', 'AlertController@index');
+Route::get('/alert/members', 'PortalController@index');
+Route::get('/alert/news', 'PortalController@index');
+Route::get('/alert/nominate', 'PortalController@index');
 
 Route::get('/conferences', 'ConferenceController@index')->name('conferences.home');
 Route::post('/conferences', 'ConferenceController@Order');

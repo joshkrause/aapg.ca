@@ -8,7 +8,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-7 text-center">
-                <h2 class="title">Apply For Membership with AAPG</h2>
+                <h2 class="title spacer">Apply For Membership with AAPG</h2>
             </div>
             <div class="col-md-10 ml-auto mr-auto">
                 <p>We maintain a frequent relationship with the Solicitor Generals office and do our best to help our members with any questions or concerns they might find difficult to get answers from within the Solicitor Generals' office.  We are the 'push', when needed, and lobby on behalf of membership Resolutions.</p>

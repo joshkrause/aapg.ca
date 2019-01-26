@@ -10,13 +10,13 @@
             <div class="row justify-content-center">
                 <div class="col-md-7 text-center">
                     <h2 class="title">Resources to Assist Your Organization</h2>
-                    <h6 class="subtitle">Our publicaly available downloads and links are here to assist your organization</h6>
+                    <h6 class="subtitle">Our publicly available downloads and links are here to assist your organization</h6>
                 </div>
             </div>
             <!-- Row  -->
             <div class="row m-t-40">
                 <!-- Column -->
-                <div class="col-md-12 wrap-feature3-box">
+                <div class="col-md-6 wrap-feature3-box">
                     <div class="card card-shadow" data-aos="fade-right" data-aos-duration="1200">
                         <div class="card-header">
                             <h3>Best Practice Samples</h3>
@@ -25,7 +25,17 @@
                             @if($samples->count())
                                 <div class="align-self-center">
                                     @foreach($samples as $sample)
-                                    <h5 class="font-medium"><a href="/resources/samples/{{$sample->id}}" class="linking">{{$sample->name}} <i class="ti-arrow-right"></i></a></h5>
+                                    <h5 class="font-medium">
+                                        <a
+                                            @if(! empty($sample->link))
+                                                href="{{$sample->link}}" target="_NEW"
+                                            @elseif(!empty($sample->file))
+                                                href="/storage/files/resources/{{$sample->file}}"
+                                            @endif
+                                            class="linking">{{$sample->name}}
+                                            <i class="ti-arrow-right"></i>
+                                        </a>
+                                    </h5>
                                     <p class="m-t-20">{{$sample->description}}</p>
                                     <hr>
                                     @endforeach
@@ -38,6 +48,38 @@
                     </div>
                 </div>
                 <!-- Column -->
+                <div class="col-md-6 wrap-feature3-box">
+                        <div class="card card-shadow" data-aos="fade-right" data-aos-duration="1200">
+                            <div class="card-header">
+                                <h3>Informational Items</h3>
+                            </div>
+                            <div class="card-body d-flex">
+                                @if($information->count())
+                                    <div class="align-self-center">
+                                        @foreach($information as $info)
+                                        <h5 class="font-medium">
+                                            <a
+                                            @if(! empty($info->link))
+                                                href="{{$info->link}}" target="_NEW"
+                                            @elseif(!empty($info->file))
+                                                href="/storage/files/resources/{{$info->file}}"
+                                            @endif
+                                            class="linking">{{$info->name}}
+                                            <i class="ti-arrow-right"></i>
+                                            </a>
+                                        </h5>
+                                        <p class="m-t-20">{{$info->description}}</p>
+                                        <hr>
+                                        @endforeach
+                                        <a href="/resources/information" class="btn waves-effect waves-light btn-primary btn-sm">View All</a>
+                                    </div>
+                                @else
+                                    <p class="m-t-20">Coming Soon</p>
+                                @endif
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Column -->
                 <!-- Column -->
                 <div class="col-md-6 wrap-feature3-box">
                     <div class="card card-shadow" data-aos="fade-right" data-aos-duration="1200">
