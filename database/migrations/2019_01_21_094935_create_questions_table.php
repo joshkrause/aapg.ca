@@ -15,8 +15,11 @@ class CreateQuestionsTable extends Migration
     {
         Schema::create('questions', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('question');
+            $table->text('question');
             $table->text('answer')->nullable();
+            $table->string('name')->nullable();
+            $table->string('email')->nullable();
+            $table->string('community')->nullable();
             $table->boolean('active')->default('0');
             $table->softDeletes();
             $table->timestamps();

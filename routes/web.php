@@ -15,7 +15,8 @@ use Laravel\Passport\Passport;
 
 Route::get('/', 'PagesController@home');
 Route::get('/communications/newsletters', 'CommunicationsController@newsletters');
-Route::get('/communications/questions', 'CommunicationsController@questions');
+Route::get('/communications/questions', 'QuestionsController@questions');
+Route::post('/communications/questions', 'QuestionsController@submit');
 Route::get('/resources', 'ResourcesController@index');
 Route::get('/resources/bylaws', 'ResourcesController@bylaws');
 Route::get('/resources/goals', 'ResourcesController@goals');

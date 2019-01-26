@@ -20,6 +20,7 @@
 
     <link href="/public/node_modules/bootstrap-touch-slider/bootstrap-touch-slider.css" rel="stylesheet">
     <link href="/public/node_modules/owl.carousel/dist/assets/owl.theme.green.css" rel="stylesheet">
+    {{-- <link href="/public/node_modules/sweetalert2/css/sweetalert2.all.min.css" rel="stylesheet"> --}}
 
     <link href="/public/css/demo.css" rel="stylesheet">
 
@@ -84,6 +85,8 @@
     <script src="/public/js/jquery.counterup.min.js"></script>
     <script src="/public//node_modules/bootstrap-touch-slider/bootstrap-touch-slider.js"></script>
     <script src="/public//node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
+    <script src="/public/js/sweetalert.min.js" type="text/javascript"></script>
+    @include('sweet::alert')
     @yield('js')
 </body>
 

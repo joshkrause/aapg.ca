@@ -14,21 +14,23 @@
             <!-- Row  -->
             <div class="row wrap-feature-20">
                 <!-- Column -->
+                @foreach($goals as $goal)
                 <div class="col-lg-6" data-aos="flip-left" data-aos-duration="1200">
                     <div class="card">
                         <div class="row">
                             <div class="col-md-8">
                                 <div class="card-body d-flex no-block">
                                     <div>
-                                        <h5 class="font-medium">2018 - 2020 Strategic Goals</h5></div>
+                                        <h5 class="font-medium">{{$goal->name}}</h5></div>
                                 </div>
                             </div>
                             <div class="col-md-4 text-center">
-                                <a href="{{asset('storage/files/resources/' . $goals->first()->file) }}" class="text-white linking bg-success-gradiant">Download <i class="ti-arrow-right"></i></a>
+                                <a href="{{asset('storage/files/resources/' . $goal->file) }}" class="text-white linking bg-success-gradiant">Download <i class="ti-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
+                @endforeach
                 <!-- Column -->
             </div>
             <!-- Row  -->
