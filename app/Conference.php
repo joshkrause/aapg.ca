@@ -12,6 +12,7 @@ class Conference extends Model
     protected $fillable = [
         'title', 'start', 'end', 'active', 'live'
     ];
+    protected $dates = ['start', 'end', 'live'];
 
     public function scopeUpcoming($query)
     {

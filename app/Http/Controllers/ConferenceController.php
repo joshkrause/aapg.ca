@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Alert;
 use App\Order;
 use App\Attendant;
+use Carbon\Carbon;
+use App\Conference;
 use Illuminate\Http\Request;
 use Cartalyst\Stripe\Laravel\Facades\Stripe;
 
@@ -13,6 +15,14 @@ class ConferenceController extends Controller
     public function index()
     {
         return view('public.conference.index');
+    }
+
+    public function affiliate()
+    {
+        $today = Carbon::now()->toDateString();
+        $conferences = Conference::where('affiliate', '1')->where('end', '>=', $today)->orderBy('start')->get();
+
+        return view('public.conference.affiliate', compact('conferences'));
     }
 
     public function order(Request $request)

@@ -29,6 +29,7 @@ Route::get('/communications/topics/{post}', 'PostsController@show');
 
 Route::get('/conferences', 'ConferenceController@index')->name('conferences.home');
 Route::post('/conferences', 'ConferenceController@Order');
+Route::get('/conferences/affiliate', 'ConferenceController@affiliate')->name('conferences.affiliate');
 
 Route::group(['prefix'=>'admin', 'middleware'=>'auth'], function() {
     Route::get('/', 'Admin\PagesController@spa');

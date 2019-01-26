@@ -24,6 +24,7 @@
                         <li><a href="/resources/bylaws">Bylaws / Minutes / Police Act</a></li>
                         <li><a href="/resources/goals">Strategic Goals / Business Plan</a></li>
                         <li><a href="/members">Our Membership</a></li>
+                        <li class="nav-item"><a href="javascript:void(0)" class="nav-link">Board Portal</a></li>
                     </ul>
                 </li>
                 <li class="nav-item"><a href="javascript:void(0)" class="nav-link">Communications <i class="fa fa-angle-down m-l-5"></i></a>
@@ -37,13 +38,12 @@
                 <li class="nav-item"><a href="/conferences" class="nav-link">Conferences <i class="fa fa-angle-down m-l-5"></i></a>
                 <ul class="animated fadeInUp">
                         <li><a href="/conferences">Upcoming Conference</a></li>
-                        <li><a href="/communications/affiliate">Affiliate Conferences</a></li>
-                        <li><a href="/communications/archive">Past AGM Resolutions & Minutes</a></li>
+                        <li><a href="/conferences/affiliate">Affiliate Conferences</a></li>
+                        <li><a href="/conferences/archive">Past AGM Resolutions & Minutes</a></li>
                     </ul>
                 </li>
                 <li class="nav-item"><a href="/members/apply" class="nav-link">Join AAPG</a></li>
                 <li class="nav-item"><a href="javascript:void(0)" class="nav-link">Alert CAC</a></li>
-                <li class="nav-item"><a href="javascript:void(0)" class="nav-link">Board Portal</a></li>
             </ul>
         </div>
     </nav>
