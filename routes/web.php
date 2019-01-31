@@ -44,4 +44,10 @@ Route::group(['prefix'=>'admin', 'middleware'=>'auth'], function() {
 });
 Auth::routes();
 
+Route::get('/mail/conference', function () {
+    $order = App\Order::find(5);
+
+    return new App\Mail\ConferenceRegistration($order);
+});
+
 

@@ -8,6 +8,8 @@ use App\Attendant;
 use Carbon\Carbon;
 use App\Conference;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\ConferenceRegistration;
 use Cartalyst\Stripe\Laravel\Facades\Stripe;
 
 class ConferenceController extends Controller
@@ -136,6 +138,7 @@ class ConferenceController extends Controller
         }
 
         $order->save();
+        Mail::to('admin@aapg.ca')->send(new ConferenceRegistration($order));
 
         Alert::success('Your order has been completed! If you paid via credit card you will receive a credit card invoice shortly. If you requested to pay by cash or cheque we will contact you ASAP.', 'Registration Received')->persistent('Ok');
 

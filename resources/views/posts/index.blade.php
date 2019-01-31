@@ -3,7 +3,7 @@
 @section('title', 'Hot Topics')
 
 @section('content')
-<div class="spacer">
+    <div class="spacer">
         <div class="container">
             <!-- Row  -->
             <div class="row justify-content-center">
