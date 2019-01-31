@@ -101,14 +101,37 @@ class ConferenceController extends Controller
             ]);
 
 
-            $token = Stripe::tokens()->create([
-                'card' => [
-                    'number'    => $request->cc,
-                    'exp_month' => $request->month,
-                    'exp_year'  => $request->year,
-                    'cvc'       => $request->security,
-                ],
-            ]);
+            try {
+                $token = Stripe::tokens()->create([
+                    'card' => [
+                        'number'    => $request->cc,
+                        'exp_month' => $request->month,
+                        'exp_year'  => $request->year,
+                        'cvc'       => $request->security,
+                    ],
+                ]);
+            } catch (Cartalyst\Stripe\Exception\BadRequestException $e) {
+                Alert::error($e, 'Uh Oh!');
+                return back();
+            } catch (Cartalyst\Stripe\Exception\UnauthorizedException $e) {
+                Alert::error($e, 'Uh Oh!');
+                return back();
+            } catch (Cartalyst\Stripe\Exception\InvalidRequestException $e) {
+                Alert::error($e, 'Uh Oh!');
+                return back();
+            } catch (Cartalyst\Stripe\Exception\NotFoundException $e) {
+                Alert::error($e, 'Uh Oh!');
+                return back();
+            } catch (Cartalyst\Stripe\Exception\CardErrorException $e) {
+                Alert::error($e, 'Uh Oh!');
+                return back();
+            } catch (Cartalyst\Stripe\Exception\ServerErrorException $e) {
+                Alert::error($e, 'Uh Oh!');
+                return back();
+            } catch (\Exception $e) {
+                Alert::error($e->getMessage(), 'Uh Oh!')->persistent('OK');
+                return back();
+            }
 
             try {
                 $charge = Stripe::charges()->create([
@@ -120,16 +143,27 @@ class ConferenceController extends Controller
                     // 'metadata' => $charge_meta,
                 ]);
 
-            } catch (Stripe_CardError $e) {
+            } catch (Cartalyst\Stripe\Exception\BadRequestException $e) {
                 Alert::error($e, 'Uh Oh!');
                 return back();
-            } catch (Stripe_Error $e) {
+            } catch (Cartalyst\Stripe\Exception\UnauthorizedException $e) {
+                Alert::error($e, 'Uh Oh!');
+                return back();
+            } catch (Cartalyst\Stripe\Exception\InvalidRequestException $e) {
+                Alert::error($e, 'Uh Oh!');
+                return back();
+            } catch (Cartalyst\Stripe\Exception\NotFoundException $e) {
+                Alert::error($e, 'Uh Oh!');
+                return back();
+            } catch (\Cartalyst\Stripe\Exception\CardErrorException $e) {
+                Alert::error($e, 'Uh Oh!');
+                return back();
+            } catch (Cartalyst\Stripe\Exception\ServerErrorException $e) {
                 Alert::error($e, 'Uh Oh!');
                 return back();
             } catch (\Exception $e) {
                 Alert::error($e->getMessage(), 'Uh Oh!')->persistent('OK');
                 return back();
-
             }
 
 
