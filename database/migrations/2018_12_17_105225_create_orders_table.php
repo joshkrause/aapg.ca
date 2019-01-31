@@ -20,6 +20,7 @@ class CreateOrdersTable extends Migration
             $table->string('company')->nullable();
             $table->string('ticket_type');
             $table->integer('quantity');
+            $table->integer('guests')->default(0);
             $table->integer('subtotal');
             $table->integer('tax');
             $table->integer('total');
@@ -28,6 +29,7 @@ class CreateOrdersTable extends Migration
             $table->text('description')->nullable();
             $table->text('notes')->nullable();
             $table->string('phone')->nullable();
+            $table->softDeletes();
             $table->timestamps();
         });
     }

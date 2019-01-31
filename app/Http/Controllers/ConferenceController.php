@@ -85,6 +85,7 @@ class ConferenceController extends Controller
             'total' => $total,
             'description' => $charge_description,
             'notes' => $notes,
+            'guests' => $request->guest,
         ]);
 
         if($request->payment == "cc")
