@@ -626,7 +626,7 @@
                <div class="row">
                   <div class="col-sm-8 col-sm-offset-2 mb-130 text-center">
                      <h1 class="title">Conference Tickets</h1>
-                     <p class="title-lead mt-10">Tickets are available for purchase now! Take advantage of our early bird pricing until February 1st, 2019. <br> Come join Alberta's best in Police. </p>
+                     <p class="title-lead mt-10">Tickets are available for purchase now! <br> Come join Alberta's best in Police. </p>
                   </div>
                </div>
                <!--End row-->
@@ -642,9 +642,7 @@
                      </h3>
                      <div class="review-slider flexslider">
                         <ul class="slides">
-                           <li>
-                              <blockquote>Early Bird Registration Prices until February 1, 2019 </blockquote>
-                           </li>
+                           
                            <li>
                               <blockquote>Buy 3 member tickets, and save $75 on the fourth ticket! Discount is applied automatically.</blockquote>
                            </li>
@@ -656,7 +654,7 @@
                         <ul class="block-tickets ">
                            <li>
                               <ul class="block-ticket active">
-                                 <li class="block-price"><span class="price"><span class="cur">$</span>250</span><span class="block-type">Member Single Ticket</span></li>
+                                 <li class="block-price"><span class="price"><span class="cur">$</span>275</span><span class="block-type">Member Single Ticket</span></li>
                                  <li>Full Conference Access</li>
                                  <li>Gala Dinner</li>
                                  <li>All Sessions</li>
@@ -900,7 +898,7 @@
                                 <div class="block-select">
                                     <select required name="ticket">
                                     <option value="">Choose Ticket Type</option>
-                                    <option value="250">Member Ticket ( $250 )</option>
+                                    <option value="275">Member Ticket ( $275 )</option>
                                     <option value="200">NEW Member Ticket ( $200 )</option>
                                     <option value="325">Non Member Ticket ( $325 )</option>
                                     </select>
