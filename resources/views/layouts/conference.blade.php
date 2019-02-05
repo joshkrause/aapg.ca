@@ -680,7 +680,7 @@
                         <ul class="block-tickets ">
                             <li>
                                 <ul class="block-ticket">
-                                    <li class="block-price"><span class="price"><span class="cur">$</span>325</span><span class="block-type">Non-Member Single Ticket</span></li>
+                                    <li class="block-price"><span class="price"><span class="cur">$</span>350</span><span class="block-type">Non-Member Single Ticket</span></li>
                                     <li>Full Conference Access</li>
                                     <li>Gala Dinner</li>
                                     <li>All Sessions</li>
@@ -900,7 +900,7 @@
                                     <option value="">Choose Ticket Type</option>
                                     <option value="275">Member Ticket ( $275 )</option>
                                     <option value="200">NEW Member Ticket ( $200 )</option>
-                                    <option value="325">Non Member Ticket ( $325 )</option>
+                                    <option value="350">Non Member Ticket ( $350 )</option>
                                     </select>
                                 </div>
                             </div>
