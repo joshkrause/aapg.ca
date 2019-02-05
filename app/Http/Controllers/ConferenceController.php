@@ -66,7 +66,7 @@ class ConferenceController extends Controller
         $subtotal = $ticket_subtotal + $guest_subtotal;
         $total = $subtotal;
 
-        if($request->ticket == 250)
+        if($request->ticket == 275)
         {
             $ticket_type = "Member";
         }
