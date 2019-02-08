@@ -58,11 +58,12 @@
             <div class="row">
                 <div class="col-lg-5" data-aos="fade-right" data-aos-duration="1200">
                     <h3 class="title">2019 Annual AAPG Conference</h3>
-                    <h6 class="subtitle">Our Annual Conference is being hosted this April in Medicine Hat, AB. We have an incredible 2 days planned of learning and discussion, as well as some unique activities in the evenings.</h6> <a class="btn btn-success-gradiant btn-md btn-arrow m-t-20" href="/conferences"><span>2019 Conference Details <i class="ti-arrow-right"></i></span></a>
+                    <h6 class="subtitle">Our 2019 Annual Conference will be in April at Medicine Hat, AB.  We have planned an incredible two days of learning and discussion, as well as some unique activities in the evenings.</h6> <a class="btn btn-success-gradiant btn-md btn-arrow m-t-20" href="/conferences"><span>2019 Conference Details <i class="ti-arrow-right"></i></span></a>
                 </div>
                 <div class="col-lg-6 ml-auto">
                     <h3 class="title">What Is The Alberta Association of Police Governance?</h3>
-                    <p>The AAPG supports excellence in civilian governance and oversight of police services in Alberta. Through AAPG, members are provided with educational opportunities, access to best practices, forums for liaison with related agencies, and proactive representation in order that police oversight in Alberta speaks with one voice when advocating for change to law or policy.</p>
+                    <p>The AAPG supports excellence in civilian governance and oversight of police services in Alberta.  Through the AAPG, members have access to educational opportunities, best practices, and forums for liaison with related agencies.  The AAPG is well positioned to advocate for effective police governance and oversight that is responsive to our changing environment.  In that regard, the AAPG provides input and feedback on potential changes to relevant legislation and policies.
+                    </p>
                 </div>
             </div>
         </div>
