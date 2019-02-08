@@ -20,8 +20,7 @@
                         </a>
                         @endunless
                         <h2 class="title font-light"><a href="/communications/topics/{{$post->id}}" class="link">{{$post->title}}</a></h2>
-                        <p class="m-t-30 m-b-30">{!!str_limit($post->content, 100)!!}</p>
-                        <a href="/communications/topics/{{$post->id}}" class="font-13">CONTINUE READING</a>
+                        <p><a href="/communications/topics/{{$post->id}}" class="font-13">CONTINUE READING</a></p>
                     </div>
                     <!-- Blog  -->
                     <hr class="op-5" />
