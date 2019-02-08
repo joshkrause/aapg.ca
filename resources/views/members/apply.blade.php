@@ -13,7 +13,7 @@
             <div class="col-md-10 ml-auto mr-auto">
                 <p>We maintain a frequent relationship with the Solicitor Generals office and do our best to help our members with any questions or concerns they might find difficult to get answers from within the Solicitor Generals' office.  We are the 'push', when needed, and lobby on behalf of membership Resolutions.</p>
 
-                <p>We provide template examples for your document needs, so you can view what other communities do, and save the time of starting from scratch.  (We have a new website under development, and anticipate the document link to be available within the next 30-days - but we can manually email you available documents, as requested).  We have found our Associate members use this area for RCMP oversight bylaw examples.</p>
+                <p>We provide template examples for your document needs, so you can view what other communities do, and save the time of starting from scratch. We have found our Associate members use this area for RCMP oversight bylaw examples.</p>
 
                 <p>Our Board is active in calling, or meeting directly with, your municipal representatives to assist you with any questions or concerns.</p>
 
