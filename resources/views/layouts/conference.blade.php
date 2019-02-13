@@ -339,10 +339,10 @@
                         <li class="active"><i class="far fa-calendar-alt"></i> <strong>Friday</strong>  <span>- April 5 2019</span></li>
                         <li class=""><i class="far fa-calendar-alt"></i> <strong>Saturday</strong>  <span>- April 6 2019</span></li>
                      </ul>
-                     <a href="{{asset('storage/conference/2019/2019-aapg-conference.pdf')}}" class="but mt-30 "  title="Download Program"> Download Program</a>
-                     <a href="{{asset('storage/conference/2019/agm-call-for-nominiations.pdf')}}" class="but mt-30 "  title="Download Program"> Call For Nominations</a>
-                     <a href="{{asset('storage/conference/2019/agm-call-for-resolutions.pdf')}}" class="but mt-30 "  title="Download Program"> Call For Resolutions</a>
-                     <a href="{{asset('storage/conference/2019/rfp-host-conference.pdf')}}" class="but mt-30 "  title="Download Program"> RFP To Host 2020 Conference</a>
+                     <a href="{{asset('/storage/conference/2019/2019-aapg-conference.pdf')}}" class="but mt-30 "  title="Download Program"> Download Program</a>
+                     <a href="{{asset('/storage/conference/2019/agm-call-for-nominiations.pdf')}}" class="but mt-30 "  title="Download Program"> Call For Nominations</a>
+                     <a href="{{asset('/storage/conference/2019/agm-call-for-resolutions.pdf')}}" class="but mt-30 "  title="Download Program"> Call For Resolutions</a>
+                     <a href="{{asset('/storage/conference/2019/rfp-host-conference.pdf')}}" class="but mt-30 "  title="Download Program"> RFP To Host 2020 Conference</a>
                     </div>
                   <div class="col-sm-8 ">
                      <ul class="block-tab">
