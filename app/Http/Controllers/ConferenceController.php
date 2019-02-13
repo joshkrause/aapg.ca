@@ -51,17 +51,17 @@ class ConferenceController extends Controller
         $guest_subtotal = 0;
         $ticket_subtotal = $request->quantity * $request->ticket * 100;
         $guest_subtotal = $request->guest * 7500;
-        if($request->quantity > 3 && $request->quantity < 8)
+        if($request->quantity > 3 && $request->quantity < 8 && $request->ticket=="275")
         {
-            $ticket_subtotal = $ticket_subtotal - 7500;
+            $ticket_subtotal = $ticket_subtotal - 10000;
         }
-        elseif($request->quantity > 7 && $request->quantity < 12)
+        elseif($request->quantity > 7 && $request->quantity < 12  && $request->ticket=="275")
         {
-            $ticket_subtotal = $ticket_subtotal - 15000;
+            $ticket_subtotal = $ticket_subtotal - 20000;
         }
-        elseif($request->quantity > 11 && $request->quantity < 16)
+        elseif($request->quantity > 11 && $request->quantity < 16  && $request->ticket=="275")
         {
-            $ticket_subtotal = $ticket_subtotal - 22500;
+            $ticket_subtotal = $ticket_subtotal - 30000;
         }
         $subtotal = $ticket_subtotal + $guest_subtotal;
         $total = $subtotal;
