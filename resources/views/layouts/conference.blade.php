@@ -640,14 +640,14 @@
                <!--Row-->
                <div class="row vertical-align tickets">
                   <div class="col-sm-4 ">
-                     <h3 class="sub-title-0  mb-20"><span class="gradient-text">Member groups save $75 every 4th ticket. </span><br>
+                     <h3 class="sub-title-0  mb-20"><span class="gradient-text">Member groups save $100 every 4th ticket. </span><br>
                         <span class="gradient-text">Discount Applied automatically.</span>
                      </h3>
                      <div class="review-slider flexslider">
                         <ul class="slides">
 
                            <li>
-                              <blockquote>Buy 3 member tickets, and save $75 on the fourth ticket! Discount is applied automatically.</blockquote>
+                              <blockquote>Buy 3 member tickets, and save $100 on the fourth ticket! Discount is applied automatically.</blockquote>
                            </li>
                         </ul>
                      </div>
