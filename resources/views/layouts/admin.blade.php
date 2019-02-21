@@ -9,10 +9,10 @@
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-  <link rel="stylesheet" href="/admin/dist/css/adminlte.min.css">
-  <link rel="stylesheet" href="/admin/plugins/select2/select2.min.css">
-  <link rel="stylesheet" href="/admin/plugins/redactor/redactor.css">
-  <link rel="stylesheet" href="/admin/plugins/redactor/plugins/filemanager/filemanager.css">
+  <link rel="stylesheet" href="/admin_assets/dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="/admin_assets/plugins/select2/select2.min.css">
+  <link rel="stylesheet" href="/admin_assets/plugins/redactor/redactor.css">
+  <link rel="stylesheet" href="/admin_assets/plugins/redactor/plugins/filemanager/filemanager.css">
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
 <body class="hold-transition sidebar-mini">
@@ -42,7 +42,7 @@
     <div class="sidebar">
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="info">
-          <a href="/admin/profile" class="d-block">{{Auth::user()->name}}</a>
+          <a href="/admin_assets/profile" class="d-block">{{Auth::user()->name}}</a>
         </div>
       </div>
 
@@ -70,19 +70,19 @@
 </div>
 <!-- ./wrapper -->
 
-<script src="/admin/plugins/jquery/jquery.min.js"></script>
-<script src="/admin/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="/admin/plugins/slimScroll/jquery.slimscroll.min.js"></script>
-<script src="/admin/plugins/fastclick/fastclick.js"></script>
-<script src="/admin/plugins/select2/select2.full.min.js"></script>
-<script src="/admin/dist/js/adminlte.min.js"></script>
+<script src="/admin_assets/plugins/jquery/jquery.min.js"></script>
+<script src="/admin_assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/admin_assets/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<script src="/admin_assets/plugins/fastclick/fastclick.js"></script>
+<script src="/admin_assets/plugins/select2/select2.full.min.js"></script>
+<script src="/admin_assets/dist/js/adminlte.min.js"></script>
 <script src="/conference/js/sweetalert2.all.min.js" type="text/javascript"></script>
 <!-- Redactor -->
-<script src="/admin/plugins/redactor/redactor.js"></script>
-<script src="/admin/plugins/redactor/plugins/video/video.js"></script>
-<script src="/admin/plugins/redactor/plugins/filemanager/filemanager.js"></script>
-<script src="/admin/plugins/redactor/plugins/imagemanager/imagemanager.js"></script>
-<script src="/admin/plugins/redactor/plugins/widget/widget.js"></script>
+<script src="/admin_assets/plugins/redactor/redactor.js"></script>
+<script src="/admin_assets/plugins/redactor/plugins/video/video.js"></script>
+<script src="/admin_assets/plugins/redactor/plugins/filemanager/filemanager.js"></script>
+<script src="/admin_assets/plugins/redactor/plugins/imagemanager/imagemanager.js"></script>
+<script src="/admin_assets/plugins/redactor/plugins/widget/widget.js"></script>
 @yield('js')
 @include('sweet::alert')
 </body>

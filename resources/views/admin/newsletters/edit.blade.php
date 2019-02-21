@@ -78,9 +78,9 @@
 @stop
 
 @section('js')
-<script src="/admin/plugins/input-mask/jquery.inputmask.js"></script>
-<script src="/admin/plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
-<script src="/admin/plugins/input-mask/jquery.inputmask.extensions.js"></script>
+<script src="/admin_assets/plugins/input-mask/jquery.inputmask.js"></script>
+<script src="/admin_assets/plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
+<script src="/admin_assets/plugins/input-mask/jquery.inputmask.extensions.js"></script>
     <script>
         $('.select2').select2();
         $('.datemask').inputmask('yyyy-mm-dd', { 'placeholder': 'yyyy-mm-dd' })
