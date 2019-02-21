@@ -40,9 +40,10 @@ class UserController extends Controller
      */
     public function store(UserCreateRequest $request)
     {
-        if( User::create( $request->all() ) )
+        $user = User::create( $request->all());
+        if( $user)
         {
-            $user->password=bcrypt($request->password);
+            $user->password = bcrypt($request->password);
             $user->save();
             SweetAlert::success('User created successfully', 'User Created');
         }
