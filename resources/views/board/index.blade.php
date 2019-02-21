@@ -18,7 +18,7 @@
                         @foreach($group as $b)
                             <div class="card col-md-4">
                                 @if($b->image)
-                                <img class="card-img-top" src="{{asset('storage/images/board/' . $b->image)}}" alt="{{$b->name}}">
+                                <img class="card-img-top" src="{{asset($b->image)}}" alt="{{$b->name}}">
                                 @endif
                                 <div class="card-body">
                                     <h4 class="card-title">{{$b->name}}</h4>

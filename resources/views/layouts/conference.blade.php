@@ -900,10 +900,10 @@
                             <div class="col-sm-6 col-md-3">
                                 <div class="block-select">
                                     <select required name="ticket">
-                                    <option value="">Choose Ticket Type</option>
-                                    <option value="275">Member Ticket ( $275 )</option>
-                                    <option value="200">NEW Member Ticket ( $200 )</option>
-                                    <option value="350">Non Member Ticket ( $350 )</option>
+                                        <option value="">Choose Ticket Type</option>
+                                        <option value="275">Member Ticket ( $275 )</option>
+                                        <option value="200">NEW Member Ticket ( $200 )</option>
+                                        <option value="350">Non Member Ticket ( $350 )</option>
                                     </select>
                                 </div>
                             </div>
@@ -923,7 +923,7 @@
                                 <div class="block-select">
                                     <select required name="payment">
                                         <option value="cc">Pay Now Via Credit Card</option>
-                                        <option value="cheque">Pay Via Cheque or Cash</option>
+                                        <option value="cheque">Pay Via Invoice</option>
                                     </select>
                                 </div>
                             </div>

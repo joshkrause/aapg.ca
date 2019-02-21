@@ -20,8 +20,7 @@ Route::post('/communications/questions', 'QuestionsController@submit');
 Route::get('/resources', 'ResourcesController@index');
 Route::get('/resources/bylaws', 'ResourcesController@bylaws');
 Route::get('/resources/goals', 'ResourcesController@goals');
-Route::get('/resources/samples', 'ResourcesController@samples');
-Route::get('/resources/information', 'ResourcesController@information');
+Route::get('/resources/{category}', 'ResourcesController@category');
 Route::get('/board', 'BoardController@index');
 Route::get('/members', 'MembersController@index');
 Route::get('/members/apply', 'MembersController@apply');
@@ -39,8 +38,24 @@ Route::post('/conferences', 'ConferenceController@Order');
 Route::get('/conferences/affiliate', 'ConferenceController@affiliate')->name('conferences.affiliate');
 
 Route::group(['prefix'=>'admin', 'middleware'=>'auth'], function() {
-    Route::get('/', 'Admin\PagesController@spa');
-    Route::get( '/{any}', 'Admin\PagesController@spa')->where('any', '.*' );
+    Route::get('/', 'Admin\PagesController@dashboard');
+    Route::resource('users', 'Admin\UserController');
+    Route::resource('board', 'Admin\BoardController');
+    Route::resource('resources', 'Admin\ResourceController');
+    Route::resource('members', 'Admin\MembersController');
+    Route::resource('posts', 'Admin\PostsController');
+    Route::resource('newsletters', 'Admin\NewsletterController');
+
+    Route::group(['prefix' => 'conferences'], function() {
+        Route::resource('registration', 'Admin\Conference\RegistrationController');
+    });
+
+    Route::group(['prefix' => 'redactor'], function () {
+        Route::post('/images', 'RedactorController@uploadImage');
+        Route::post('/files', 'RedactorController@uploadFile');
+    });
+    Route::get('/filemanager', 'Admin\FilemanagerController@index');
+    Route::get('/imagemanager', 'Admin\FilemanagerController@images');
 });
 Auth::routes();
 

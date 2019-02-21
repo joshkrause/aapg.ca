@@ -7,5 +7,6 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Resource extends Model
 {
+    protected $fillable = ['name', 'description', 'link', 'file', 'category'];
     use SoftDeletes;
 }

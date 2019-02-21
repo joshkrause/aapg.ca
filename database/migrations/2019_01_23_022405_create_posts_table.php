@@ -20,7 +20,7 @@ class CreatePostsTable extends Migration
             $table->boolean('featured')->default(0);
             $table->boolean('active')->default(0);
             $table->integer('user_id');
-            $table->string('image');
+            $table->string('image')->nullable();
             $table->string('section');
             $table->softDeletes();
             $table->timestamps();

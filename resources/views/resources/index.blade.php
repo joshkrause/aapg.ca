@@ -30,7 +30,7 @@
                                             @if(! empty($sample->link))
                                                 href="{{$sample->link}}" target="_NEW"
                                             @elseif(!empty($sample->file))
-                                                href="/storage/files/resources/{{$sample->file}}"
+                                                href="{{$sample->file}}"
                                             @endif
                                             class="linking">{{$sample->name}}
                                             <i class="ti-arrow-right"></i>
@@ -62,7 +62,7 @@
                                             @if(! empty($info->link))
                                                 href="{{$info->link}}" target="_NEW"
                                             @elseif(!empty($info->file))
-                                                href="/storage/files/resources/{{$info->file}}"
+                                                href="{{$info->file}}"
                                             @endif
                                             class="linking">{{$info->name}}
                                             <i class="ti-arrow-right"></i>

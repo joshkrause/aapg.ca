@@ -9,21 +9,11 @@ class ResourcesController extends Controller
 {
     public function index()
     {
-        $samples = Resource::where('category', 'samples')->limit('4')->get();
-        $information = Resource::where('category', 'information')->limit('4')->get();
-        $powerpoints = Resource::where('category', 'powerpoints')->limit('4')->get();
-        $links = Resource::where('category', 'links')->limit('10')->get();
+        $samples = Resource::where('category', 'samples')->latest()->limit('4')->get();
+        $information = Resource::where('category', 'information')->latest()->limit('4')->get();
+        $powerpoints = Resource::where('category', 'powerpoints')->latest()->limit('4')->get();
+        $links = Resource::where('category', 'links')->latest()->limit('10')->get();
         return view('resources.index', compact('samples', 'powerpoints', 'links', 'information'));
-    }
-
-    public function powerpoints()
-    {
-
-    }
-
-    public function links()
-    {
-
     }
 
     public function bylaws()
@@ -44,15 +34,9 @@ class ResourcesController extends Controller
         return view('resources.goals', compact('goals', 'business_plan'));
     }
 
-    public function samples()
+    public function category($category)
     {
-        $samples = Resource::where('category', 'samples')->latest()->get();
-        return view('resources.samples', compact('samples'));
-    }
-
-    public function information()
-    {
-        $information = Resource::where('category', 'information')->latest()->get();
-        return view('resources.information', compact('information'));
+        $resources = Resource::where('category', $category)->latest()->get();
+        return view('resources.' . $category, compact('resources'));
     }
 }

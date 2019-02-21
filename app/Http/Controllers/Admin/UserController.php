@@ -2,8 +2,12 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\User;
 use Illuminate\Http\Request;
+use UxWeb\SweetAlert\SweetAlert;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Admin\Users\UserEditRequest;
+use App\Http\Requests\Admin\Users\UserCreateRequest;
 
 class UserController extends Controller
 {
@@ -14,7 +18,8 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
+        $users = User::all();
+        return view('admin.users.index', compact('users'));
     }
 
     /**
@@ -24,7 +29,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.users.create');
     }
 
     /**
@@ -33,9 +38,20 @@ class UserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(UserCreateRequest $request)
     {
-        //
+        if( User::create( $request->all() ) )
+        {
+            $user->password=bcrypt($request->password);
+            $user->save();
+            SweetAlert::success('User created successfully', 'User Created');
+        }
+        else
+        {
+            SweetAlert::error('User was not created. Please correct your errors.', 'Oops!');
+            return back();
+        }
+        return redirect('admin/users');
     }
 
     /**
@@ -44,9 +60,9 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(User $user)
     {
-        //
+        return view('admin.users.edit', compact('user'));
     }
 
     /**
@@ -55,9 +71,9 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(User $user)
     {
-        //
+        return view('admin.users.edit', compact('user'));
     }
 
     /**
@@ -67,9 +83,16 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UserEditRequest $request, User $user)
     {
-        //
+        $user->update($request->all());
+        if(!empty($request->password))
+        {
+            $user->password=bcrypt($request->password);
+            $user->save();
+        }
+        SweetAlert::success('User was updated.', 'User Updated');
+        return redirect('/admin/users');
     }
 
     /**
@@ -78,9 +101,11 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(User $user)
     {
-        //
+        $user->delete();
+        SweetAlert::success('User was deleted.', 'User Deleted');
+        return redirect('/admin/users');
     }
 
     public function profile()

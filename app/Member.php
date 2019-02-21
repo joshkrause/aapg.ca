@@ -7,5 +7,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Member extends Model
 {
+    protected $fillable = ['name', 'type', 'joined'];
+
     use SoftDeletes;
 }
