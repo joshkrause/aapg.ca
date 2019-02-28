@@ -56,6 +56,9 @@ Route::group(['prefix'=>'admin', 'middleware'=>'auth'], function() {
     });
     Route::get('/filemanager', 'Admin\FilemanagerController@index');
     Route::get('/imagemanager', 'Admin\FilemanagerController@images');
+    // Asset Manager
+    Route::get('/asset-manager', 'AssetManagerController@manage');
+    Route::post('/server/{file}', 'AssetManagerController@file');
 });
 Auth::routes();
 
