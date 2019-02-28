@@ -25,7 +25,7 @@
                             </div>
                             <div class="col-md-4 text-center">
                                 @if($bylaws->count() > 0)
-                                <a href="{{asset($bylaws->first()->file)}}" class="text-white linking bg-success-gradiant">Download <i class="ti-arrow-right"></i></a>
+                                <a href="/storage/{{$bylaws->first()->file}}" class="text-white linking bg-success-gradiant">Download <i class="ti-arrow-right"></i></a>
                                 @else
                                     Coming Soon
                                 @endif
@@ -45,7 +45,7 @@
                                 </div>
                             </div>
                             <div class="col-md-4 text-center">
-                                <a href="{{asset($policy_manual->first()->file)}}" class="text-white linking bg-success-gradiant">Download <i class="ti-arrow-right"></i></a>
+                                <a href="/storage/{{$policy_manual->first()->file}}" class="text-white linking bg-success-gradiant">Download <i class="ti-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -69,7 +69,7 @@
                                 @elseif($minutes->count() < 1)
                                     Coming Soon.
                                 @else
-                                <a href="{{asset($minutes->first()->file)}}" class="text-white linking bg-success-gradiant">Download <i class="ti-arrow-right"></i></a>
+                                <a href="/storage/{{$minutes->first()->file}}" class="text-white linking bg-success-gradiant">Download <i class="ti-arrow-right"></i></a>
                                 @endif
                             </div>
                         </div>
@@ -89,7 +89,7 @@
                                 </div>
                             </div>
                             <div class="col-md-4 text-center">
-                                <a href="{{asset($file->file)}}" class="text-white linking bg-success-gradiant">Download <i class="ti-arrow-right"></i></a>
+                                <a href="/storage/{{$file->file}}" class="text-white linking bg-success-gradiant">Download <i class="ti-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
