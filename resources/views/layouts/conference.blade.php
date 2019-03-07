@@ -384,7 +384,7 @@
                              <span class="topic">New Commission Member Orientation</span>
                              <div class="block-text">
                                  <p>This is an attendee directed session that will discuss the role of a Police Commission, the basics of police oversight and governance, the structure of the municipal police service, board basics, and FOIP legislation.</p>
-                                 <span class="speaker"> <strong >Speaker</strong> : <a href="#" class="gradient-text "> TBA </a> </span>
+                                 <span class="speaker"> <strong >Speaker</strong> : <a href="#" class="gradient-text "> Randy Pick Q.C. - Medicine Hat Police Service </a> </span>
                              </div>
                           </div>
                           <div class="block-detail">
@@ -392,7 +392,7 @@
                                  <span class="topic">New Member Committee & Policy Advisory Orientation</span>
                                  <div class="block-text">
                                      <p>This is an attendee directed session that will discuss the role of Policing Committees, the basics of police oversight and governance, the structure of the RCMP, board basics, and FOIP legislation.</p>
-                                     <span class="speaker"> <strong >Speaker</strong> : <a href="#" class="gradient-text "> TBA </a> </span>
+                                     <span class="speaker"> <strong >Speaker</strong> : <a href="#" class="gradient-text "> Terry Coleman - Chair: AAPG & Chair: High River Policing Committee </a> </span>
                                  </div>
                               </div>
                           <div class="block-detail">
@@ -407,7 +407,7 @@
                              <span class="topic">Public Relations 101 & Impacts of Social Media</span>
                              <div class="block-text">
                                  <p>Avoid reactionary and pursue proactive service promotion.  Open discussion on how Social Media has changed public perceptions.</p>
-                                 <span class="speaker"> <strong >Speaker</strong> : <a href="#" class="gradient-text "> TBA </a> </span>
+                                 <span class="speaker"> <strong >Speaker</strong> : <a href="#" class="gradient-text "> Rita Sittler - Manager of Administrative Services: Medicine Hat Police Service </a> </span>
                              </div>
                           </div>
                           <div class="block-detail">
@@ -415,6 +415,7 @@
                              <span class="topic">Lunch Buffet</span>
                              <div class="block-text">
                                 <p>Salad, Soup & Sandwiches  (served in Saamis Ballroom Lobby)</p>
+                                <span class="speaker"> <strong >Noon Sponsor</strong> : <a href="#" class="gradient-text "> Law Enforcement Torch Run - Special Olympics Alberta </a> </span>
                              </div>
                           </div>
                              <div class="block-detail">
@@ -430,7 +431,7 @@
                                  <span class="topic">Strategic Planning & Budget Oversight</span>
                                  <div class="block-text">
                                      <p>The role of the Commission in Strategic Planning goals & vision for the service; who is driving the boat?  How Strategic Planning differs from the Business Plan action items & targets. Budget oversight; what should you know about operations and who should be involved.</p>
-                                     <span class="speaker"> <strong >Presenter</strong> : <a href="#" class="gradient-text "> TBA </a> </span>
+                                     <span class="speaker"> <strong >Presenter</strong> : <a href="#" class="gradient-text "> Darlene Brander - Chair: Saskatoon Police Commission </a> </span>
                                  </div>
                              </div>
                              <div class="block-detail">
@@ -438,7 +439,7 @@
                                  <span class="topic">Establishment of Ovesight in RCMP Jurisdictions</span>
                                  <div class="block-text">
                                      <p>Looking to improve RCMP oversight in your community or considering a Policy Advisory Committee?  We will talk helpful bylaw amendments, benefits of community-driven standards and policing community goals collaboration, costs related to increasing the level of your oversight.</p>
-                                     <span class="speaker"> <strong >Presenter</strong> : <a href="#" class="gradient-text "> TBA </a> </span>
+                                     <span class="speaker"> <strong >Presenter</strong> : <a href="#" class="gradient-text "> Al Bohachyk - St. Albert Policing Committee & Perry Brooks - Fort Saskatchewan Policing Committee </a> </span>
                                  </div>
                              </div>
                              <div class="block-detail">
@@ -453,7 +454,7 @@
                                  <span class="topic">Cannabis Update</span>
                                  <div class="block-text">
                                      <p>An update on the Federal, Provincial and Municipal governments’ framework relating to Cannabis and its impacts </p>
-                                     <span class="speaker"> <strong >Presenter</strong> : <a href="#" class="gradient-text "> TBA </a> </span>
+                                     <span class="speaker"> <strong >Presenter</strong> : <a href="#" class="gradient-text "> Robert Palser B.A. LL. B Q.C. - Senior Policy Counsel & Traffic Safety Coordinator of Alberta </a> </span>
                                  </div>
                              </div>
                              <div class="block-detail">
@@ -491,16 +492,16 @@
                             <span class="topic">Annual General Meeting</span>
                             <div class="block-text">
                                 <p>All AAPG members should attend.</p>
-                                <span class="speaker"> <strong >Speaker</strong> : <a href="#" class="gradient-text "> TBA </a> </span>
+                                <span class="speaker"> <strong >Facilitator</strong> : <a href="#" class="gradient-text "> Terry Chapman - Terry Coleman - Chair of AAPG & Chair of High River Policing Committee </a> </span>
                             </div>
                          </div>
                          <div class="block-detail">
                             <span class="time">8:30AM - 9:40AM</span>
                             <span class="topic">Opening Ceremonies</span>
                             <div class="block-text">
-                                <p>Piper Entrance VIPs & Board, Rise for introduction of the Lieutenant Governor & O’Canada</p>
+                                <p>Piper Entrance VIPs & Board, Rise for O’Canada</p>
                                 <p>First Nations Elder Blessing</p>
-                                <p>Welcome Address and Greeting:  City of Medicine Hat and VIP’s</p>
+                                <p>Welcome Address and Greeting:  City of Medicine Hat Mayor, M.H. Commission Chair, M.H.P.S. Chief, M.H. Detachment Commander, M.H.P.A. President, RCMP Deputy Commissioner, and AAPG Board Chair (Board recognition)</p>
                             </div>
                          </div>
                          <div class="block-detail">
@@ -515,7 +516,7 @@
                             <span class="topic">Commission & Committee Internal Organization</span>
                             <div class="block-text">
                                 <p>Policy Manual Process/Procedure development; succession planning, continuing education, annual Board performance assessment, new member on-boarding; what should it look like, document management/destruction, use of personal email, minutes in closed meetings.</p>
-                                <span class="speaker"> <strong >Speaker</strong> : <a href="#" class="gradient-text "> TBA </a> </span>
+                                <span class="speaker"> <strong >Speaker</strong> : <a href="#" class="gradient-text "> Micki Ruth, Vice-Chair Edmonton Police Commission </a> </span>
                             </div>
                         </div>
                         <div class="block-detail">
@@ -531,7 +532,7 @@
                             <span class="topic">First Nations Board Collaboration</span>
                             <div class="block-text">
                                 <p>Understanding First Nations Policing and how we can support each other</p>
-                                <span class="speaker"> <strong >Speaker</strong> : <a href="#" class="gradient-text "> TBA </a> </span>
+                                <span class="speaker"> <strong >Speaker</strong> : <a href="#" class="gradient-text "> Violet Meguinis - Chair Tsuu'tina Nation Plice Commission </a> </span>
                             </div>
                         </div>
                         <div class="block-detail">
@@ -539,7 +540,7 @@
                             <span class="topic">Police Act Engagement Update</span>
                             <div class="block-text">
                                 <p>An update on consultations</p>
-                                <span class="speaker"> <strong >Speaker</strong> : <a href="#" class="gradient-text "> TBA  </a> </span>
+                                <span class="speaker"> <strong >Speaker</strong> : <a href="#" class="gradient-text "> Terry Coleman - Chair of AAPG and Chair of High River Policing Committee  </a> </span>
                             </div>
                         </div>
                         <div class="block-detail">
@@ -554,7 +555,7 @@
                             <span class="topic">Policing Commissions - ROUND TABLE DISCUSSIONS</span>
                             <div class="block-text">
                                 <p>Question & Answer session</p>
-                                <span class="speaker"> <strong >Speaker</strong> : <a href="#" class="gradient-text "> TBA </a> </span>
+                                <span class="speaker"> <strong >Facilitator</strong> : <a href="#" class="gradient-text "> Greg Keen - Chair Medicine Hat Police Commission </a> </span>
                             </div>
                         </div>
                         <div class="block-detail">
@@ -562,7 +563,7 @@
                             <span class="topic">Policing Committees - ROUND TABLE DISCUSSIONS</span>
                             <div class="block-text">
                                 <p>Question & Answer session</p>
-                                <span class="speaker"> <strong >Speaker</strong> : <a href="#" class="gradient-text "> TBA </a> </span>
+                                <span class="speaker"> <strong >Facilitator</strong> : <a href="#" class="gradient-text "> Nick Servos - Chair of Canmore Policing Committee </a> </span>
                             </div>
                         </div>
                         <div class="block-detail">
@@ -570,7 +571,7 @@
                             <span class="topic">Public Complaints Director Role</span>
                             <div class="block-text">
                                 <p>What are the procedures of the PCD, how should Grievances be handled</p>
-                                <span class="speaker"> <strong >Speaker</strong> : <a href="#" class="gradient-text "> TBA </a> </span>
+                                <span class="speaker"> <strong >Speaker</strong> : <a href="#" class="gradient-text "> Heather Spicer - Executive Director of Calgary Police Commission </a> </span>
                             </div>
                         </div>
                         <div class="block-detail">

@@ -64,7 +64,7 @@
                                                         <option @if(old('category')=="goals") selected="selected" @endif value="goals">AAPG Strategic Goals</option>
                                                         <option @if(old('category')=="bylaws") selected="selected" @endif value="bylaws">AAPG Bylaws</option>
                                                         <option @if(old('category')=="minutes") selected="selected" @endif value="minutes">Meeting Minutes</option>
-                                                </select>
+                                                        <option @if(old('category')=="board") selected="selected" @endif value="board">Board Member Portal</option>                                                    </select>
                                             </div>
                                         </div>
                                     </div>

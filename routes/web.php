@@ -13,7 +13,7 @@ use Laravel\Passport\Passport;
 |
  */
 
-Route::get('/', 'PagesController@home');
+Route::get('/', 'PagesController@home')->name('home');
 Route::get('/communications/newsletters', 'CommunicationsController@newsletters');
 Route::get('/communications/questions', 'QuestionsController@questions');
 Route::post('/communications/questions', 'QuestionsController@submit');
@@ -26,7 +26,7 @@ Route::get('/members', 'MembersController@index');
 Route::get('/members/apply', 'MembersController@apply');
 Route::get('/communications/topics', 'PostsController@index');
 Route::get('/communications/topics/{post}', 'PostsController@show');
-Route::get('/portal', 'PortalController@index');
+Route::get('/portal', 'PortalController@index')->middleware(['auth', 'board']);
 Route::get('/conferences/archive', 'PortalController@index');
 Route::get('/alert', 'AlertController@index');
 Route::get('/alert/members', 'PortalController@index');
