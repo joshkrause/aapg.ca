@@ -26,11 +26,11 @@
                     <ul class="general-listing">
                         <li><a href="/"><i class="fa fa-circle"></i> Home</a></li>
                         <li><a href="/conferences"><i class="fa fa-circle"></i> Annual Conference</a></li>
-                        {{-- <li><a href="#"><i class="fa fa-circle"></i> Communications</a></li>
+                        <li><a href="/communications/topics"><i class="fa fa-circle"></i> Communications</a></li>
                         <li><a href="/resources"><i class="fa fa-circle"></i> Resources</a></li>
                         <li><a href="/conferences"><i class="fa fa-circle"></i> Conferences</a></li>
                         <li><a href="/members/apply"><i class="fa fa-circle"></i> Join AAPG</a></li>
-                        <li><a href="/alert"><i class="fa fa-circle"></i> Alert CAC </a></li> --}}
+                        <li><a href="/alert"><i class="fa fa-circle"></i> Alert CAC </a></li>
                     </ul>
                 </div>
                 <!-- Column -->
