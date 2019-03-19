@@ -675,7 +675,7 @@
                                  <li>Full Conference Access</li>
                                  <li>Gala Dinner</li>
                                  <li>All Sessions</li>
-                                 <li><a href="#" class="but mt-30"> Buy Tickets Now</a></li>
+                                 <li><a href="#register-modal" class="but mt-30"> Buy Tickets Now</a></li>
                               </ul>
                            </li>
                         </ul>
@@ -688,7 +688,7 @@
                                     <li>Full Conference Access</li>
                                     <li>Gala Dinner</li>
                                     <li>All Sessions</li>
-                                    <li><a href="#" class="but mt-30"> Buy Tickets Now</a></li>
+                                    <li><a href="#register-modal" class="but mt-30"> Buy Tickets Now</a></li>
                                 </ul>
                             </li>
                         </ul>
