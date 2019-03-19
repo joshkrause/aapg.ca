@@ -27,10 +27,10 @@
                         <li><a href="/"><i class="fa fa-circle"></i> Home</a></li>
                         <li><a href="/conferences"><i class="fa fa-circle"></i> Annual Conference</a></li>
                         {{-- <li><a href="#"><i class="fa fa-circle"></i> Communications</a></li>
-                        <li><a href="#"><i class="fa fa-circle"></i> Resources</a></li>
-                        <li><a href="#"><i class="fa fa-circle"></i> Conferences</a></li>
-                        <li><a href="#"><i class="fa fa-circle"></i> Join AAPG</a></li>
-                        <li><a href="#"><i class="fa fa-circle"></i> Alert CAC </a></li> --}}
+                        <li><a href="/resources"><i class="fa fa-circle"></i> Resources</a></li>
+                        <li><a href="/conferences"><i class="fa fa-circle"></i> Conferences</a></li>
+                        <li><a href="/members/apply"><i class="fa fa-circle"></i> Join AAPG</a></li>
+                        <li><a href="/alert"><i class="fa fa-circle"></i> Alert CAC </a></li> --}}
                     </ul>
                 </div>
                 <!-- Column -->
@@ -53,7 +53,7 @@
                     <div class="d-flex no-block">
                         <div class="display-7 m-r-20 align-self-top"><i class="icon-Mail"></i></div>
                         <div class="info">
-                            <a href="#" class="font-medium text-muted db  m-t-5">admin@aapg.ca</a>
+                            <a href="mailto:admin@aapg.ca" class="font-medium text-muted db  m-t-5">admin@aapg.ca</a>
                         </div>
                     </div>
                 </div>
@@ -63,9 +63,13 @@
                     <div class="subscribe-box">
                         <div class="display-4 text-white"><i class="icon-Mail-3"></i></div>
                         <p>Join our newsletter for regular information and notices. </p>
-                        <form>
+                        <form method="post" action="newsletter">
+                            @csrf
                             <div class="m-b-20">
-                                <input class="form-control" placeholder="enter email">
+                                <input class="form-control" name="name" type="text placeholder="First and Last Name">
+                            </div>
+                            <div class="m-b-20">
+                                <input class="form-control" name="email" type="text" placeholder="Email Address">
                             </div>
                             <button class="btn btn-danger-gradiant">Subscribe Now</button>
                         </form>
