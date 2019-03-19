@@ -32,6 +32,7 @@ Route::get('/alert', 'AlertController@index');
 Route::get('/alert/members', 'PortalController@index');
 Route::get('/alert/news', 'PortalController@index');
 Route::get('/alert/nominate', 'PortalController@index');
+Route::post('/newsletter', 'NewsletterController@store');
 
 Route::get('/conferences', 'ConferenceController@index')->name('conferences.home');
 Route::post('/conferences', 'ConferenceController@Order');
@@ -45,6 +46,7 @@ Route::group(['prefix'=>'admin', 'middleware'=>'auth'], function() {
     Route::resource('members', 'Admin\MembersController');
     Route::resource('posts', 'Admin\PostsController');
     Route::resource('newsletters', 'Admin\NewsletterController');
+    Route::get('newsletters/subscribers', 'Admin\NewsletterController@subscribers');
 
     Route::group(['prefix' => 'conferences'], function() {
         Route::resource('registration', 'Admin\Conference\RegistrationController');
