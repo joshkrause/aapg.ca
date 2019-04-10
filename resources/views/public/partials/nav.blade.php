@@ -37,7 +37,7 @@
                 <li class="nav-item"><a href="/resources" class="nav-link">Resources</li>
                 <li class="nav-item"><a href="/conferences" class="nav-link">Conferences <i class="fa fa-angle-down m-l-5"></i></a>
                 <ul class="animated fadeInUp">
-                        <li><a href="/conferences">Upcoming Conference</a></li>
+                        <li><a href="/conferences">Past Conferences</a></li>
                         <li><a href="/conferences/affiliate">Affiliate Conferences</a></li>
                         <li><a href="/conferences/archive">Past AGM Resolutions & Minutes</a></li>
                     </ul>
