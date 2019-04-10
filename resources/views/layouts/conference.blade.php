@@ -88,7 +88,7 @@
                   <div class="row">
                      <div class="col-sm-12 text-center">
                         <h3 class="mb-10">AAPG</h3>
-                        <h1 class="large mb-10">Annual Conference</h1>
+                        <h1 class="large mb-10">Annual Conference Is Complete</h1>
                         <p class="uppercase ">April 5th - 6th 2019 with 16 different sessions - Medicine Hat, Alberta </p>
                         <a href="#tickets" class="but scroll "> Register Now</a>
                      </div>
@@ -630,7 +630,7 @@
                <div class="row">
                   <div class="col-sm-8 col-sm-offset-2 mb-130 text-center">
                      <h1 class="title">Conference Tickets</h1>
-                     <p class="title-lead mt-10">Tickets are available for purchase now! <br> Come join Alberta's best in Police. </p>
+                     <p class="title-lead mt-10">Tickets are no longer available for purchase! <br> Thanks for your support! </p>
                   </div>
                </div>
                <!--End row-->
@@ -662,7 +662,7 @@
                                  <li>Full Conference Access</li>
                                  <li>Gala Dinner</li>
                                  <li>All Sessions</li>
-                                 <li><a href="#register-modal" class="but mt-30 register-modal" data-vbtype="inline" title="Purchase Tickets"> Buy Ticket Now</a></li>
+                                 {{-- <li><a href="#register-modal" class="but mt-30 register-modal" data-vbtype="inline" title="Purchase Tickets"> Buy Ticket Now</a></li> --}}
                               </ul>
                            </li>
                         </ul>
@@ -675,7 +675,7 @@
                                  <li>Full Conference Access</li>
                                  <li>Gala Dinner</li>
                                  <li>All Sessions</li>
-                                 <li><a href="#register-modal" class="but mt-30"> Buy Tickets Now</a></li>
+                                 {{-- <li><a href="#register-modal" class="but mt-30"> Buy Tickets Now</a></li> --}}
                               </ul>
                            </li>
                         </ul>
@@ -688,7 +688,7 @@
                                     <li>Full Conference Access</li>
                                     <li>Gala Dinner</li>
                                     <li>All Sessions</li>
-                                    <li><a href="#register-modal" class="but mt-30"> Buy Tickets Now</a></li>
+                                    {{-- <li><a href="#register-modal" class="but mt-30"> Buy Tickets Now</a></li> --}}
                                 </ul>
                             </li>
                         </ul>
