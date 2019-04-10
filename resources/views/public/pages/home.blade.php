@@ -24,18 +24,7 @@
                         </div>
                     </div>
                     <!-- End of Slide -->
-                    <!-- Second Slide -->
-                    <div class="carousel-item">
-                        <!-- Slide Background --><img src="/public/images/slider/slide2.jpg" alt="Building Magical Apps" class="slide-image" />
-                        <!-- Slide Text Layer -->
-                        <div class="slide-text slide_style_center">
-                            <h2 data-animation="animated flipInX" class="bg-success-gradiant title">2019 Conference Details</h2>
-                            <p data-animation="animated lightSpeedIn">
-                                <a class="bg-white btn btn-md btn-arrow" data-toggle="collapse" href="/conferences"> <span>Book Your Spot <i class="ti-arrow-right"></i></span> </a>
-                            </p>
-                        </div>
-                    </div>
-                    <!-- End of Slide -->
+                    
                     <!-- End of Wrapper For Slides -->
                     <!-- Slider Control -->
                     <div class="slider-control hide">
@@ -58,7 +47,7 @@
             <div class="row">
                 <div class="col-lg-5" data-aos="fade-right" data-aos-duration="1200">
                     <h3 class="title">2019 Annual AAPG Conference</h3>
-                    <h6 class="subtitle">Our 2019 Annual Conference will be in April at Medicine Hat, AB.  We have planned an incredible two days of learning and discussion, as well as some unique activities in the evenings.</h6> <a class="btn btn-success-gradiant btn-md btn-arrow m-t-20" href="/conferences"><span>2019 Conference Details <i class="ti-arrow-right"></i></span></a>
+                    <h6 class="subtitle">Our 2019 Annual Conference was in Medicine Hat, AB over April 5 & 6.  We had an incredible two days of learning and discussion, as well as some unique activities in the evenings.</h6> 
                 </div>
                 <div class="col-lg-6 ml-auto">
                     <h3 class="title">What Is The Alberta Association of Police Governance?</h3>
