@@ -1,6 +1,6 @@
 <script>
     $R('.redactor-textarea', {
-        plugins: ['video', 'filemanager', 'widget', 'imagemanager', 'alignment'],
+        plugins: ['video', 'filemanager', 'widget', 'imagemanager', 'alignment', 'fontfamily'],
         imageUpload: '/admin/redactor/images',
         imageManagerJson: '/admin/imagemanager/',
         fileUpload: '/admin/redactor/files',
