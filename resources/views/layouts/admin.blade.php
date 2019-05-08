@@ -82,6 +82,8 @@
 <script src="/admin_assets/plugins/redactor/plugins/video/video.js"></script>
 <script src="/admin_assets/plugins/redactor/plugins/filemanager/filemanager.js"></script>
 <script src="/admin_assets/plugins/redactor/plugins/imagemanager/imagemanager.js"></script>
+<script src="/admin_assets/plugins/redactor/plugins/alignment/alignment.js"></script>
+<script src="/admin_assets/plugins/redactor/plugins/fontfamily/fontfamily.js"></script>
 <script src="/admin_assets/plugins/redactor/plugins/widget/widget.js"></script>
 @yield('js')
 @include('sweet::alert')
