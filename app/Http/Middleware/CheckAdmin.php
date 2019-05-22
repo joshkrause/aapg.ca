@@ -18,7 +18,7 @@ class CheckAdmin
     {
         if (! $request->user()->admin == "1") {
             if($request->user()->board == "1") {
-                redirect('/portal');
+                return redirect('/portal');
             }
         }
         return $next($request);
