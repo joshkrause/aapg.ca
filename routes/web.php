@@ -28,7 +28,7 @@ Route::get('/members/apply', 'MembersController@apply');
 Route::get('/communications/topics', 'PostsController@index');
 Route::get('/communications/topics/{post}', 'PostsController@show');
 Route::get('/portal', 'PortalController@index')->middleware(['auth', 'board', 'admin']);
-Route::get('/conferences/archive', 'PortalController@index');
+Route::get('/conferences/archive', 'ConferenceController@archive');
 Route::get('/alert', 'AlertController@index');
 Route::post('/newsletter', 'NewsletterController@store');
 
