@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers\Admin;
 
+use Alert;
 use App\Newsletter;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Storage;
 
 class NewsletterController extends Controller
 {
@@ -26,7 +28,7 @@ class NewsletterController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.newsletters.create');
     }
 
     /**
@@ -37,7 +39,22 @@ class NewsletterController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        if($newsletter = Newsletter::create($request->all()))
+        {
+            if ($request->hasFile('file')) {
+                $file = $request->file;
+                $path = Storage::putFile('files/newsletters', $file);
+                $newsletter->file = $path;
+                $newsletter->save();
+            }
+            Alert::success('Newsletter created successfully', 'Newsletter Created');
+        }
+        else
+        {
+            Alert::error('Newsletter was not created. Please correct your errors.', 'Oops!');
+            return back();
+        }
+        return redirect('admin/newsletters');
     }
 
     /**
@@ -69,9 +86,24 @@ class NewsletterController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Newsletter $newsletter)
     {
-        //
+        if($newsletter->update($request->all()))
+        {
+            if ($request->hasFile('file')) {
+                $file = $request->file;
+                $path = Storage::putFile('files/newsletters', $file);
+                $newsletter->file = $path;
+                $newsletter->save();
+            }
+            Alert::success('Newsletter updated successfully', 'Newsletter Updated');
+        }
+        else
+        {
+            Alert::error('Newsletter was not updated. Please correct your errors.', 'Oops!');
+            return back();
+        }
+        return redirect('admin/newsletters');
     }
 
     /**
@@ -80,8 +112,14 @@ class NewsletterController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Newsletter $newsletter)
     {
-        //
+        if( !empty($newsletter->file) )
+        {
+            Storage::delete($newsletter->file);
+        }
+        $newsletter->delete();
+        Alert::success('Newsletter deleted successfully', 'Newsletter Deleted');
+        return redirect('admin/newsletters');
     }
 }

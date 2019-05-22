@@ -59,6 +59,18 @@
                                         </div>
                                         <input name="password_confirmation" type="password" class="form-control" placeholder="New Password Again">
                                     </div>
+                                    <div class="form-group">
+                                        <select name="board" class="form-control" >
+                                            <option @if(old('board', $user->board)=="0") selected="selected" @endif value="0">No Board Access</option>
+                                            <option @if(old('board', $user->board)=="1") selected="selected" @endif value="1">Board Access</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                            <select name="admin" class="form-control" >
+                                                <option @if(old('admin', $user->admin)=="0") selected="selected" @endif value="0">No Administrator Access</option>
+                                                <option @if(old('admin', $user->admin)=="1") selected="selected" @endif value="1">Administrator</option>
+                                            </select>
+                                        </div>
                                 </div>
                                 <div class="modal-footer">
                                     <a href="/admin/users" class="btn btn-danger">Cancel</a>

@@ -49,6 +49,7 @@
                                         <div class="col-sm-6">
                                             <div class="form-group">
                                                 <input name="document" type="file" class="form-control" placeholder="Document">
+                                                <small><a href="{{Storage::url($resource->file)}}">{{$resource->name}}</a></small>
                                             </div>
                                         </div>
                                         <div class="col-sm-6">

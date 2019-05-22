@@ -1,5 +1,11 @@
+@php
+    $top = App\NavButton::active()->topLevel()->with(['children' => function ($q) {
+        $q->active()->orderBy('sort_order');
+    }])->orderBy('sort_order')->get();
+@endphp
+
 <div class="h7-nav-bar">
-    <div class="logo-box"><a href="javascript:void(0)" class="navbar-brand"><img src="/public/images/logos/nav-logo.png" alt="AAPG"/></a></div>
+    <div class="logo-box"><a href="javascript:void(0)" class="navbar-brand"><img src="/public/images/logos/nav-logo.png" alt="AAPG" class="brand-logo" /></a></div>
     <button class="btn btn-success btn-circle hidden-md-up op-clo"><i class="ti-menu"></i></button>
     <nav class="h7-nav-box">
         <div class="h7-mini-bar">
@@ -8,16 +14,11 @@
                     <span><i class="fa fa-envelope text-success-gradiant"></i> admin@aapg.ca</span>
                     <span><i class="fa fa-phone-square text-success-gradiant"></i> (587) 892-7874</span>
                 </div>
-                {{-- <div class="social-info hidden-lg-down">
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                    <a href="#"><i class="fa fa-google-plus"></i></a>
-                    <a href="#"><i class="fa fa-youtube-play"></i></a>
-                </div> --}}
             </div>
         </div>
         <div class="main-nav">
             <ul>
+<<<<<<< Updated upstream
                 <li class="nav-item"><a href="/" class="nav-link">About Us <i class="fa fa-angle-down m-l-5"></i></a>
                     <ul class="animated fadeInUp">
                         <li><a href="/board">Board Members</a></li>
@@ -44,6 +45,21 @@
                 </li>
                 <li class="nav-item"><a href="/members/apply" class="nav-link">Join AAPG</a></li>
                 <li class="nav-item"><a href="/alert" class="nav-link">Alert CAC</a></li>
+=======
+                @foreach($top as $button)
+                    @if($button->children->count() > 0)
+                    <li class="nav-item"><a href="{{$button->link}}" class="nav-link">{{$button->name}} <i class="fa fa-angle-down m-l-5"></i></a>
+                        <ul class="animated fadeInUp">
+                            @foreach($button->children as $child)
+                            <li><a href="{{$child->link}}">{{$child->name}}</a></li>
+                            @endforeach
+                        </ul>
+                    </li>
+                    @else
+                    <li class="nav-item"><a href="{{$button->link}}" class="nav-link">{{$button->name}}</a></li>
+                    @endif
+                @endforeach
+>>>>>>> Stashed changes
             </ul>
         </div>
     </nav>

@@ -14,6 +14,7 @@ use Laravel\Passport\Passport;
  */
 
 Route::get('/', 'PagesController@home')->name('home');
+Route::get('/pages/{slug}', 'PagesController@page');
 Route::get('/communications/newsletters', 'CommunicationsController@newsletters');
 Route::get('/communications/questions', 'QuestionsController@questions');
 Route::post('/communications/questions', 'QuestionsController@submit');
@@ -26,28 +27,48 @@ Route::get('/members', 'MembersController@index');
 Route::get('/members/apply', 'MembersController@apply');
 Route::get('/communications/topics', 'PostsController@index');
 Route::get('/communications/topics/{post}', 'PostsController@show');
-Route::get('/portal', 'PortalController@index')->middleware(['auth', 'board']);
+Route::get('/portal', 'PortalController@index')->middleware(['auth', 'board', 'admin']);
 Route::get('/conferences/archive', 'PortalController@index');
 Route::get('/alert', 'AlertController@index');
+<<<<<<< Updated upstream
 Route::get('/alert/members', 'PortalController@index');
 Route::get('/alert/news', 'PortalController@index');
 Route::get('/alert/nominate', 'PortalController@index');
 Route::post('/newsletter', 'NewsletterController@store');
+=======
+Route::get('/alert/members', 'ALertController@members');
+Route::get('/alert/news', 'ALertController@news');
+Route::get('/alert/nominate', 'ALertController@nominate');
+>>>>>>> Stashed changes
 
 Route::get('/conferences', 'ConferenceController@index')->name('conferences.home');
 Route::post('/conferences', 'ConferenceController@Order');
 Route::get('/conferences/affiliate', 'ConferenceController@affiliate')->name('conferences.affiliate');
 
-Route::group(['prefix'=>'admin', 'middleware'=>'auth'], function() {
+Route::group(['prefix'=>'admin', 'middleware'=> ['auth', 'admin']], function() {
     Route::get('/', 'Admin\PagesController@dashboard');
     Route::resource('users', 'Admin\UserController');
     Route::resource('board', 'Admin\BoardController');
     Route::resource('resources', 'Admin\ResourceController');
+    Route::resource('sponsors', 'Admin\SponsorController');
     Route::resource('members', 'Admin\MembersController');
     Route::resource('posts', 'Admin\PostsController');
     Route::resource('newsletters', 'Admin\NewsletterController');
+<<<<<<< Updated upstream
     Route::get('newsletters/subscribers', 'Admin\NewsletterController@subscribers');
+=======
+    Route::resource('nav-buttons', 'Admin\NavButtonController');
+    Route::get('pages/{page}/builder', 'Admin\PageController@builder');
+    Route::post('pages/{page}/builder', 'Admin\PageController@saveHtml');
+    Route::resource('pages', 'Admin\PageController');
+    Route::resource('questions', 'Admin\QuestionController');
+    Route::resource('portal', 'Admin\PortalController');
+    Route::post('/nav-reorder', 'Admin\NavButtonController@reorder');
+>>>>>>> Stashed changes
 
+    Route::get('conferences/{conference}/builder', 'Admin\Conference\ConferenceController@builder');
+    Route::post('conferences/{conference}/builder', 'Admin\Conference\ConferenceController@saveHtml');
+    Route::resource('conferences', 'Admin\Conference\ConferenceController');
     Route::group(['prefix' => 'conferences'], function() {
         Route::resource('registration', 'Admin\Conference\RegistrationController');
     });
@@ -59,8 +80,11 @@ Route::group(['prefix'=>'admin', 'middleware'=>'auth'], function() {
     Route::get('/filemanager', 'Admin\FilemanagerController@index');
     Route::get('/imagemanager', 'Admin\FilemanagerController@images');
     // Asset Manager
-    Route::get('/asset-manager', 'AssetManagerController@manage');
-    Route::post('/server/{file}', 'AssetManagerController@file');
+    Route::get('/asset-manager', 'Admin\AssetManagerController@manage');
+    Route::post('/asset-manager/saveImages', 'Admin\AssetManagerController@saveImages');
+    Route::post('/asset-manager/saveLargeImages', 'Admin\AssetManagerController@saveLargeImages');
+    Route::post('/asset-manager/saveModuleImages', 'Admin\AssetManagerController@saveModuleImages');
+    Route::post('/server/{file}', 'Admin\AssetManagerController@file');
 });
 Auth::routes();
 

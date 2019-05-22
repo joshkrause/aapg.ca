@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <link rel="stylesheet" href="/admin_assets/dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="/admin_assets/plugins/nestable/nestable.css">
   <link rel="stylesheet" href="/admin_assets/plugins/select2/select2.min.css">
   <link rel="stylesheet" href="/admin_assets/plugins/redactor/redactor.css">
   <link rel="stylesheet" href="/admin_assets/plugins/redactor/plugins/filemanager/filemanager.css">

@@ -49,6 +49,7 @@
                                         <div class="col-sm-6">
                                             <div class="form-group">
                                                 <input name="document" type="file" class="form-control" placeholder="Newsletter PDF">
+                                                <small><a href="{{Storage::url($newsletter->file)}}">{{$newsletter->name}}</a></small>
                                             </div>
                                         </div>
                                     </div>

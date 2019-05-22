@@ -24,8 +24,8 @@
 
     <link href="/public/css/demo.css" rel="stylesheet">
 
+    <link href="/public/css/tweaks.css" rel="stylesheet">
     <link href="/public/css/style.css" rel="stylesheet">
-    <link href="/public/css/yourstyle.css" rel="stylesheet">
     @yield('css')
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

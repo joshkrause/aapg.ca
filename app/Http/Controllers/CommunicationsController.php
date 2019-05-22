@@ -9,7 +9,7 @@ class CommunicationsController extends Controller
 {
     public function newsletters()
     {
-        $newsletters = Newsletter::all();
+        $newsletters = Newsletter::orderBy('Date', 'desc')->get();
         return view('communications.newsletters', compact('newsletters'));
     }
 }

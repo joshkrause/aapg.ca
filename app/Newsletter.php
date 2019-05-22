@@ -7,5 +7,6 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Newsletter extends Model
 {
+    protected $guarded = [];
     use SoftDeletes;
 }

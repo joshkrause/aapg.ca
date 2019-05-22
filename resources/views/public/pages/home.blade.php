@@ -44,6 +44,7 @@
 @section('content')
     <div class="spacer feature43">
         <div class="container">
+<<<<<<< Updated upstream
             <div class="row">
                 <div class="col-lg-5" data-aos="fade-right" data-aos-duration="1200">
                     <h3 class="title">2019 Annual AAPG Conference</h3>
@@ -55,6 +56,11 @@
                     </p>
                 </div>
             </div>
+=======
+            @if($page != null)
+            {!!$page->html!!}
+            @endif
+>>>>>>> Stashed changes
         </div>
     </div>
 {{--

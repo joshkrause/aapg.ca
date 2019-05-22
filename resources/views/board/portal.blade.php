@@ -3,7 +3,7 @@
 @section('title', 'Board Member Portal')
 
 @section('content')
-    <div class="bg-light spacer feature20 up">
+<div class="bg-light spacer feature3">
         <div class="container">
             <!-- Row  -->
             <div class="row justify-content-center">
@@ -12,28 +12,70 @@
                 </div>
             </div>
             <!-- Row  -->
-            <div class="row wrap-feature-20">
-                <!-- Column -->
-                @foreach($resources as $resource)
-                <div class="col-lg-6" data-aos="flip-left" data-aos-duration="1200">
-                    <div class="card">
-                        <div class="row">
-                            <div class="col-md-8">
-                                <div class="card-body d-flex no-block">
-                                    <div>
-                                        <h5 class="font-medium">{{$resource->name}}</h5>
-                                    </div>
-                                </div>
+            <div class="row m-t-40">
+                    <!-- Column -->
+                    <div class="col-md-6 wrap-feature3-box">
+                        <div class="card card-shadow" data-aos="fade-right" data-aos-duration="1200">
+                            <div class="card-header">
+                                <h3>Upcoming Meeting</h3>
                             </div>
-                            <div class="col-md-4 text-center">
-                                <a href="/storage/files/resources/{{$resource->file}}" class="text-white linking bg-success-gradiant">Download <i class="ti-arrow-right"></i></a>
+                            <div class="card-body d-flex">
+                                @if($resources->count())
+                                    <div class="align-self-center">
+                                        @foreach($resources as $resource)
+                                        <h5 class="font-medium">
+                                            <a
+                                                @if(! empty($resource->link))
+                                                    href="{{$resource->link}}" target="_NEW"
+                                                @elseif(!empty($resource->file))
+                                                    href="/storage/{{$resource->file}}"
+                                                @endif
+                                                class="linking">{{$resource->name}}
+                                            </a>
+                                        </h5>
+                                        <p class="m-t-20">{{$resource->description}}</p>
+                                        <hr>
+                                        @endforeach
+                                    </div>
+                                @else
+                                    <p class="m-t-20">Coming Soon</p>
+                                @endif
                             </div>
                         </div>
                     </div>
+
+                    <div class="col-md-6 wrap-feature3-box">
+                            <div class="card card-shadow" data-aos="fade-right" data-aos-duration="1200">
+                                <div class="card-header">
+                                    <h3>Archive</h3>
+                                </div>
+                                <div class="card-body d-flex">
+                                    @if($archive->count())
+                                        <div class="align-self-center">
+                                            @foreach($archive as $resource)
+                                            <h5 class="font-medium">
+                                                <a
+                                                    @if(! empty($resource->link))
+                                                        href="{{$resource->link}}" target="_NEW"
+                                                    @elseif(!empty($resource->file))
+                                                        href="/storage/{{$resource->file}}"
+                                                    @endif
+                                                    class="linking">{{$resource->name}}
+                                                </a>
+                                            </h5>
+                                            <p class="m-t-20">{{$resource->description}}</p>
+                                            <hr>
+                                            @endforeach
+                                            <a href="/portal/archive" class="btn waves-effect waves-light btn-primary btn-sm">View All</a>
+                                        </div>
+                                    @else
+                                        <p class="m-t-20">Coming Soon</p>
+                                    @endif
+                                </div>
+                            </div>
+                        </div>
+                    <!-- Column -->
                 </div>
-                @endforeach
-                <!-- Column -->
-            </div>
             <!-- Row  -->
         </div>
     </div>

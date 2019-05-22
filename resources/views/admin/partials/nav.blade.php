@@ -2,14 +2,20 @@
     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
         <li class="nav-item ">
             <a href="/admin" class="nav-link">
-                <i class="nav-icon fa fa-tachometer-alt"></i>
+                <i class="nav-icon fa fa-tachometer"></i>
                 <p>Dashboard</p>
             </a>
         </li>
         <li class="nav-item">
-            <a href="/admin/navigation" class="nav-link">
+            <a href="/admin/nav-buttons" class="nav-link">
                 <i class="nav-icon fa fa-th"></i>
                 <p>Navigation</p>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="/admin/pages" class="nav-link">
+                <i class="nav-icon fa fa-edit"></i>
+                <p>Pages</p>
             </a>
         </li>
         <li class="nav-item has-treeview">
@@ -22,12 +28,6 @@
                     <a href="/admin/board" class="nav-link">
                         <i class="fa fa-circle-o nav-icon"></i>
                         <p>Board Members</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="/admin/documents" class="nav-link">
-                        <i class="fa fa-circle-o nav-icon"></i>
-                        <p>Documents</p>
                     </a>
                 </li>
                 <li class="nav-item">
@@ -57,7 +57,7 @@
                     </a>
                 </li>
                 <li class="nav-item ">
-                    <a href="/admin/askmembers" class="nav-link">
+                    <a href="/admin/questions" class="nav-link">
                         <i class="fa fa-circle-o nav-icon"></i>
                         <p>Ask The Members</p>
                     </a>
@@ -65,32 +65,21 @@
             </ul>
         </li>
         <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="/admin/resources" class="nav-link">
                 <i class="nav-icon fa fa-edit"></i>
-                <p>
-                Resources
-                <i class="fa fa-angle-left right"></i>
-                </p>
+                <p>Resources</p>
             </a>
-            <ul class="nav nav-treeview">
-                <li class="nav-item">
-                    <a href="/admin/resources" class="nav-link">
-                        <i class="fa fa-circle-o nav-icon"></i>
-                        <p>Documents</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="/admin/links" class="nav-link">
-                        <i class="fa fa-circle-o nav-icon"></i>
-                        <p>Links</p>
-                    </a>
-                </li>
-            </ul>
         </li>
         <li class="nav-item ">
             <a href="/admin/sponsors" class="nav-link">
                 <i class="nav-icon fa fa-table"></i>
                 <p>Sponsors</p>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="/admin/portal" class="nav-link">
+                <i class="nav-icon fa fa-users"></i>
+                <p>Board Portal</p>
             </a>
         </li>
         <li class="nav-header">CONFERENCES</li>
@@ -125,7 +114,7 @@
             <a class="nav-link" href="{{ route('logout') }}"
                 onclick="event.preventDefault();
                     document.getElementById('logout-form').submit();">
-                <i class="nav-icon fa fa-sign-out-alt"></i>
+                <i class="nav-icon fa fa-sign-out"></i>
                 <p>{{ __('Logout') }}</p>
              </a>
              <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

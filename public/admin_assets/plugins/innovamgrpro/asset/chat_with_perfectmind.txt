@@ -1,0 +1,68 @@
+GoToAssist:
+Your representative, Ryan has arrived.
+
+Ryan (11:10:08):
+Hi there, how can I help you?
+
+City Of Medicine Hat (11:11:06):
+Hi Ryan, I'm doing some work with your API, and having trouble retrieving the Appointments using a GET request
+City Of Medicine Hat (11:13:01):
+I have all the login credentials and /api/2.0/Status said It was working, I also was able to call /api/2.0/Organizations/22482/Locations and it returned the data I expected
+
+Ryan (11:13:30):
+I see
+Ryan (11:14:05):
+What does your get request look like?
+
+City Of Medicine Hat (11:14:39):
+but when I call /api/2.0/Organizations/22482/Appointments , i get a message Message: "The requested resource does not support http method 'GET'."
+City Of Medicine Hat (11:15:22):
+here is the php code I am using
+City Of Medicine Hat (11:15:30):
+$ch = curl_init( 'https://cityofmedicinehat.perfectmind.com/api/2.0/Organizations/22482/Locations/07295a47-8b6c-42d8-a893-82dd997fb3e3/Appointments' );
+
+        curl_setopt( $ch, CURLOPT_RETURNTRANSFER, TRUE );
+        curl_setopt( $ch, CURLOPT_HTTPHEADER, array(
+        'X-Access-Key: 9A3um5i4svxVCSU5JKUvajB61A06goaq',
+        'X-Client-Number: 22482',
+        'X-Username: josh@tride.ca',
+        'X-Password: coolcool2',
+
+Ryan (11:17:14):
+This call should return public appointments - do you currently have appointments set to public visibility?
+
+City Of Medicine Hat (11:18:59):
+I actually don't have anything to do with making the appointments, so I'm not sure if they are public or not.
+
+Ryan (11:19:42):
+Hmm, let me check the DB to see if there are
+
+City Of Medicine Hat (11:21:25):
+Thanks
+
+Ryan (11:27:11):
+HI John,  I see nothing wrong with the auth token, nor the API call.  I also see  at least a few appointments labelled public.  There may be something wrong.
+Ryan (11:29:05):
+I am going to create a case and send it to our quality assurance team for review
+
+City Of Medicine Hat (11:30:49):
+ok thank you. could you get back to john@tride.ca after someone has a look at it?
+
+Ryan (11:31:31):
+Yes - I will send you an email with the case number as well
+
+City Of Medicine Hat (11:32:10):
+Awesome. Thanks for checking it out for me.
+
+Ryan (11:32:26):
+No problem John, anything else you wanted to bring up here?
+
+City Of Medicine Hat (11:36:29):
+just that GET '/api/2.0/Organizations/22482/Appointments' and GET '/api/2.0/Organizations/22482/Locations/{locationsId}/Appointments' are the ones I need and both are returning : Message: "The requested resource does not support http method 'GET'."
+
+Ryan (11:37:05):
+Roger that - I will find out what's going on wrong there.
+
+City Of Medicine Hat (11:37:28):
+Ok. Thanks Ryan.
+

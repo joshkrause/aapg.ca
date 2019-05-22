@@ -58,6 +58,12 @@
                                         </div>
                                         <input name="password_confirmation" type="password" class="form-control" placeholder="Password Again">
                                     </div>
+                                    <div class="form-group">
+                                        <select name="active" class="form-control" >
+                                            <option @if(old('board')=="0") selected="selected" @endif value="0">Administrator</option>
+                                            <option @if(old('board')=="1") selected="selected" @endif value="1">Board Access Only</option>
+                                        </select>
+                                    </div>
                                 </div>
                                 <div class="modal-footer">
                                     <a href="/admin/users" class="btn btn-danger">Cancel</a>

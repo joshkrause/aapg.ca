@@ -86,7 +86,7 @@ class UserController extends Controller
      */
     public function update(UserEditRequest $request, User $user)
     {
-        $user->update($request->all());
+        $user->update($request->except('password'));
         if(!empty($request->password))
         {
             $user->password=bcrypt($request->password);
