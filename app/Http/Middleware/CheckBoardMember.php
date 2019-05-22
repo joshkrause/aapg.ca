@@ -16,8 +16,8 @@ class CheckBoardMember
      */
     public function handle($request, Closure $next)
     {
-        if (! $request->user()->board == "1") {
-            abort(403);
+        if(! Auth::user()->board == "1") {
+            return abort(403);
         }
         return $next($request);
     }
