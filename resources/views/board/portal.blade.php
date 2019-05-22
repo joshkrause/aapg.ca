@@ -8,7 +8,7 @@
             <!-- Row  -->
             <div class="row justify-content-center">
                 <div class="col-md-7 text-center">
-                    <h2 class="title">Board Member Resources</h2>
+                    <h2 class="title">Board Member Meeting Package</h2>
                 </div>
             </div>
             <!-- Row  -->
