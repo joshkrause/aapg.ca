@@ -12,7 +12,7 @@ class ResourcesController extends Controller
         $samples = Resource::where('category', 'samples')->latest()->limit('4')->get();
         $information = Resource::where('category', 'information')->latest()->limit('4')->get();
         $powerpoints = Resource::where('category', 'powerpoint')->latest()->limit('4')->get();
-        $links = Resource::where('category', 'links')->latest()->limit('10')->get();
+        $links = Resource::where('category', 'link')->latest()->limit('10')->get();
         return view('resources.index', compact('samples', 'powerpoints', 'links', 'information'));
     }
 
