@@ -18,34 +18,6 @@
         </div>
         <div class="main-nav">
             <ul>
-<<<<<<< Updated upstream
-                <li class="nav-item"><a href="/" class="nav-link">About Us <i class="fa fa-angle-down m-l-5"></i></a>
-                    <ul class="animated fadeInUp">
-                        <li><a href="/board">Board Members</a></li>
-                        <li><a href="/resources/bylaws">Bylaws / Minutes / Police Act</a></li>
-                        <li><a href="/resources/goals">Strategic Goals / Business Plan</a></li>
-                        <li><a href="/members">Our Membership</a></li>
-                        <li class="nav-item"><a href="/portal" class="nav-link">Board Portal</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item"><a href="javascript:void(0)" class="nav-link">Communications <i class="fa fa-angle-down m-l-5"></i></a>
-                    <ul class="animated fadeInUp">
-                        <li><a href="/communications/topics">Hot Topics</a></li>
-                        <li><a href="/communications/newsletters">Newsletters</a></li>
-                        <li><a href="/communications/questions">Ask The Members</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item"><a href="/resources" class="nav-link">Resources</li>
-                <li class="nav-item"><a href="/conferences" class="nav-link">Conferences <i class="fa fa-angle-down m-l-5"></i></a>
-                <ul class="animated fadeInUp">
-                        <li><a href="/conferences">Past Conferences</a></li>
-                        <li><a href="/conferences/affiliate">Affiliate Conferences</a></li>
-                        <li><a href="/conferences/archive">Past AGM Resolutions & Minutes</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item"><a href="/members/apply" class="nav-link">Join AAPG</a></li>
-                <li class="nav-item"><a href="/alert" class="nav-link">Alert CAC</a></li>
-=======
                 @foreach($top as $button)
                     @if($button->children->count() > 0)
                     <li class="nav-item"><a href="{{$button->link}}" class="nav-link">{{$button->name}} <i class="fa fa-angle-down m-l-5"></i></a>
@@ -59,7 +31,6 @@
                     <li class="nav-item"><a href="{{$button->link}}" class="nav-link">{{$button->name}}</a></li>
                     @endif
                 @endforeach
->>>>>>> Stashed changes
             </ul>
         </div>
     </nav>

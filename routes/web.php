@@ -30,16 +30,7 @@ Route::get('/communications/topics/{post}', 'PostsController@show');
 Route::get('/portal', 'PortalController@index')->middleware(['auth', 'board', 'admin']);
 Route::get('/conferences/archive', 'PortalController@index');
 Route::get('/alert', 'AlertController@index');
-<<<<<<< Updated upstream
-Route::get('/alert/members', 'PortalController@index');
-Route::get('/alert/news', 'PortalController@index');
-Route::get('/alert/nominate', 'PortalController@index');
 Route::post('/newsletter', 'NewsletterController@store');
-=======
-Route::get('/alert/members', 'ALertController@members');
-Route::get('/alert/news', 'ALertController@news');
-Route::get('/alert/nominate', 'ALertController@nominate');
->>>>>>> Stashed changes
 
 Route::get('/conferences', 'ConferenceController@index')->name('conferences.home');
 Route::post('/conferences', 'ConferenceController@Order');
@@ -54,9 +45,6 @@ Route::group(['prefix'=>'admin', 'middleware'=> ['auth', 'admin']], function() {
     Route::resource('members', 'Admin\MembersController');
     Route::resource('posts', 'Admin\PostsController');
     Route::resource('newsletters', 'Admin\NewsletterController');
-<<<<<<< Updated upstream
-    Route::get('newsletters/subscribers', 'Admin\NewsletterController@subscribers');
-=======
     Route::resource('nav-buttons', 'Admin\NavButtonController');
     Route::get('pages/{page}/builder', 'Admin\PageController@builder');
     Route::post('pages/{page}/builder', 'Admin\PageController@saveHtml');
@@ -64,7 +52,7 @@ Route::group(['prefix'=>'admin', 'middleware'=> ['auth', 'admin']], function() {
     Route::resource('questions', 'Admin\QuestionController');
     Route::resource('portal', 'Admin\PortalController');
     Route::post('/nav-reorder', 'Admin\NavButtonController@reorder');
->>>>>>> Stashed changes
+
 
     Route::get('conferences/{conference}/builder', 'Admin\Conference\ConferenceController@builder');
     Route::post('conferences/{conference}/builder', 'Admin\Conference\ConferenceController@saveHtml');

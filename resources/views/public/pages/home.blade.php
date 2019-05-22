@@ -24,7 +24,7 @@
                         </div>
                     </div>
                     <!-- End of Slide -->
-                    
+
                     <!-- End of Wrapper For Slides -->
                     <!-- Slider Control -->
                     <div class="slider-control hide">
@@ -44,23 +44,11 @@
 @section('content')
     <div class="spacer feature43">
         <div class="container">
-<<<<<<< Updated upstream
-            <div class="row">
-                <div class="col-lg-5" data-aos="fade-right" data-aos-duration="1200">
-                    <h3 class="title">2019 Annual AAPG Conference</h3>
-                    <h6 class="subtitle">Our 2019 Annual Conference was in Medicine Hat, AB over April 5 & 6.  We had an incredible two days of learning and discussion, as well as some unique activities in the evenings.</h6> 
-                </div>
-                <div class="col-lg-6 ml-auto">
-                    <h3 class="title">What Is The Alberta Association of Police Governance?</h3>
-                    <p>The AAPG supports excellence in civilian governance and oversight of police services in Alberta.  Through the AAPG, members have access to educational opportunities, best practices, and forums for liaison with related agencies.  The AAPG is well positioned to advocate for effective police governance and oversight that is responsive to our changing environment.  In that regard, the AAPG provides input and feedback on potential changes to relevant legislation and policies.
-                    </p>
-                </div>
-            </div>
-=======
+
             @if($page != null)
             {!!$page->html!!}
             @endif
->>>>>>> Stashed changes
+
         </div>
     </div>
 {{--
