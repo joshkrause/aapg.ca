@@ -27,10 +27,10 @@ Route::get('/members', 'MembersController@index');
 Route::get('/members/apply', 'MembersController@apply');
 Route::get('/communications/topics', 'PostsController@index');
 Route::get('/communications/topics/{post}', 'PostsController@show');
-Route::get('/portal', 'PortalController@index')->middleware(['auth', 'board', 'admin']);
+Route::get('/portal', 'PortalController@index')->middleware(['auth', 'board']);
 Route::get('/conferences/archive', 'ConferenceController@archive');
 Route::get('/alert', 'AlertController@index');
-Route::post('/newsletter', 'NewsletterController@store');
+Route::post('/subscribe', 'SubscriberController@store');
 
 Route::get('/conferences', 'ConferenceController@index')->name('conferences.home');
 Route::post('/conferences', 'ConferenceController@Order');
