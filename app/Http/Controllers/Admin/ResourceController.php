@@ -13,7 +13,7 @@ class ResourceController extends Controller
 {
     public function index()
     {
-        $resources = Resource::all();
+        $resources = Resource::orderBy('category')->get();
         return view('admin.resources.index', compact('resources'));
     }
 
