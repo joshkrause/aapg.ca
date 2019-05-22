@@ -66,7 +66,7 @@
                                             <p class="m-t-20">{{$resource->description}}</p>
                                             <hr>
                                             @endforeach
-                                            <a href="/portal/archive" class="btn waves-effect waves-light btn-primary btn-sm">View All</a>
+                                            {{-- <a href="/portal/archive" class="btn waves-effect waves-light btn-primary btn-sm">View All</a> --}}
                                         </div>
                                     @else
                                         <p class="m-t-20">Coming Soon</p>
