@@ -6,7 +6,7 @@
                 <span class="text-white">© Alberta Association of Police Governance</span>  {{now()->format('Y')}} All rights reserved.
                 @php $sponsors = App\Sponsor::where('site', '1')->get(); @endphp
                 @foreach($sponsors as $sponsor)
-                    <a href="{{$sponsor->link}}" target="_NEW"> <img src="/storage/{{$sponsor->file}}" alt="{{$sponsor->name}}" /></a>
+                    <a href="{{$sponsor->link}}" target="_NEW"> <img src="/storage/{{$sponsor->file}}" alt="{{$sponsor->name}}" class="img-fluid"/></a>
                 @endforeach
             </div>
         </div>
