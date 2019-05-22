@@ -41,7 +41,7 @@ class UserController extends Controller
     public function store(UserCreateRequest $request)
     {
         $user = User::create( $request->all());
-        if( $user)
+        if($user)
         {
             $user->password = bcrypt($request->password);
             $user->save();

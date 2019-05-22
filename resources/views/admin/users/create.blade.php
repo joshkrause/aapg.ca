@@ -59,9 +59,15 @@
                                         <input name="password_confirmation" type="password" class="form-control" placeholder="Password Again">
                                     </div>
                                     <div class="form-group">
-                                        <select name="active" class="form-control" >
-                                            <option @if(old('board')=="0") selected="selected" @endif value="0">Administrator</option>
-                                            <option @if(old('board')=="1") selected="selected" @endif value="1">Board Access Only</option>
+                                        <select name="board" class="form-control" >
+                                            <option @if(old('board')=="0") selected="selected" @endif value="0">No Board Access</option>
+                                            <option @if(old('board')=="1") selected="selected" @endif value="1">Board Access</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <select name="admin" class="form-control" >
+                                            <option @if(old('admin')=="0") selected="selected" @endif value="0">No Admin Access</option>
+                                            <option @if(old('admin')=="1") selected="selected" @endif value="1">Admin Access</option>
                                         </select>
                                     </div>
                                 </div>
