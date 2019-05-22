@@ -16,10 +16,8 @@ class CheckAdmin
      */
     public function handle($request, Closure $next)
     {
-        if (! $request->user()->admin == "1") {
-            if($request->user()->board == "1") {
-                return redirect('/portal');
-            }
+        if(! $request->user()->admin == "1") {
+            return redirect('/portal');
         }
         return $next($request);
     }
