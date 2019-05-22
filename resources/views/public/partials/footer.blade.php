@@ -4,6 +4,10 @@
             <a href="/"><img src="/public/images/logos/footer-logo.png" class="img-responsive" alt="AAPG Logo" /></a>
             <div class="ml-auto align-self-center">
                 <span class="text-white">© Alberta Association of Police Governance</span>  {{now()->format('Y')}} All rights reserved.
+                @php $sponsors = App\Sponsor::where('site', '1')->get(); @endphp
+                @foreach($sponsors as $sponsor)
+                    <a href="{{$sponsor->link}}" target="_NEW"> <img src="{{$sponsor->file}}" alt="{{$sponsor->name}}" /></a>
+                @endforeach
             </div>
         </div>
     </div>
