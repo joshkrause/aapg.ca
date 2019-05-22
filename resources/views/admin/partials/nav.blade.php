@@ -89,12 +89,12 @@
                 <p>Conferences</p>
             </a>
         </li>
-        <li class="nav-item">
+        {{-- <li class="nav-item">
             <a href="/admin/conferences/schedules" class="nav-link">
                 <i class="nav-icon fas fa-calendar-week"></i>
                 <p>Schedules</p>
             </a>
-        </li>
+        </li> --}}
         <li class="nav-item">
             <a href="/admin/conferences/registration" class="nav-link">
                 <i class="nav-icon fas fa-ticket-alt"></i>

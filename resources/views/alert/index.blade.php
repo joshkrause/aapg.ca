@@ -26,7 +26,7 @@
                 <div class="card-deck">
                     <div class="card card-shadow" data-aos="fade-right" data-aos-duration="1200">
                         <div class="card-body">
-                            <h5 class="font-medium">CAC Members</h5>
+                            <h5 class="font-medium">Alert CAC Members</h5>
                             <p class="m-t-20">Find out who is involved with the Civilian Advisory Committee.</p>
                             <p><a class="btn btn-success" href="/alert/members">CAC Members</a></p>
                         </div>
@@ -34,14 +34,14 @@
                     <!-- Column -->
                     <div class="card card-shadow" data-aos="fade-up" data-aos-duration="1200">
                         <div class="card-body">
-                            <h5 class="font-medium">CAC News</h5>
+                            <h5 class="font-medium">Alert CAC Updates</h5>
                             <p class="m-t-20">Stay on top of everything happening with the Civilian Advisory Committee.</p>
                             <p><a class="btn btn-success" href="/alert/news">CAC News</a></p>
                         </div>
                     </div>
                     <div class="card card-shadow" data-aos="fade-left" data-aos-duration="1200">
                         <div class="card-body">
-                            <h5 class="font-medium">Nominate a CAC Member</h5>
+                            <h5 class="font-medium">Nominate an Alert CAC Member</h5>
                             <p class="m-t-20">Do you know someone who would be a great asset to the Civilian Advisory Committee? Nominate them now!</p>
                             <p><a class="btn btn-success" href="/alert/nominate">Nomination Form</a></p>
                         </div>
