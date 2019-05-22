@@ -26,7 +26,7 @@
                                 </div>
                             </div>
                             <div class="col-md-4 text-center">
-                                <a href="/storage/files/newsletters/{{$newsletter->file}}" class="text-white linking bg-success-gradiant">Download <i class="ti-arrow-right"></i></a>
+                                <a href="{{Storage::url($newsletter->file)}}" class="text-white linking bg-success-gradiant">Download <i class="ti-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
