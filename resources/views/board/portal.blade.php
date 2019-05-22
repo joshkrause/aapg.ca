@@ -58,7 +58,7 @@
                                                     @if(! empty($resource->link))
                                                         href="{{$resource->link}}" target="_NEW"
                                                     @elseif(!empty($resource->file))
-                                                        href="/storage/{{$resource->file}}"
+                                                        href="{{Storage::url($resource->file)}}"
                                                     @endif
                                                     class="linking">{{$resource->name}}
                                                 </a>

@@ -62,7 +62,7 @@
                                             @if(! empty($info->link))
                                                 href="{{$info->link}}" target="_NEW"
                                             @elseif(!empty($info->file))
-                                                href="/storage/{{$info->file}}"
+                                                href="{{Storage::url($info->file)}}"
                                             @endif
                                             class="linking">{{$info->name}}
                                             <i class="ti-arrow-right"></i>
@@ -90,7 +90,7 @@
                             @if($powerpoints->count())
                             <div class="align-self-center">
                                     @foreach($powerpoints as $powerpoint)
-                                    <h5 class="font-medium"><a href="/resources/samples/{{$powerpoint->id}}" class="linking">{{$powerpoint->name}} <i class="ti-arrow-right"></i></a></h5>
+                                    <h5 class="font-medium"><a href="{{Storage::url($powerpoint->file)}}" class="linking">{{$powerpoint->name}} <i class="ti-arrow-right"></i></a></h5>
                                     <p class="m-t-20">{{$powerpoint->description}}</p>
                                     @endforeach
                                     <hr>
