@@ -75,6 +75,9 @@ Route::group(['prefix'=>'admin', 'middleware'=> ['auth', 'admin']], function() {
     Route::post('/server/{file}', 'Admin\AssetManagerController@file');
 });
 Auth::routes();
+Route::get('/logout', function() {
+    Auth::logout(); return redirect('/');
+});
 
 Route::get('/mail/conference', function () {
     $order = App\Order::find(5);
