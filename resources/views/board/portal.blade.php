@@ -77,6 +77,11 @@
                     <!-- Column -->
                 </div>
             <!-- Row  -->
+                <div class="row">
+                    <div class="col-sm-12">
+                        <a href="/logout" class="btn btn-rounded btn-outline-danger">Log Out</a>
+                    </div>
+                </div>
         </div>
     </div>
 @stop
