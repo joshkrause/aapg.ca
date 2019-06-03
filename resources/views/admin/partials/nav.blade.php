@@ -111,15 +111,11 @@
 
         <li class="nav-header">My Account</li>
         <li class="nav-item">
-            <a class="nav-link" href="{{ route('logout') }}"
-                onclick="event.preventDefault();
-                    document.getElementById('logout-form').submit();">
+            <a class="nav-link" href="/logout">
+         
                 <i class="nav-icon fa fa-sign-out"></i>
-                <p>{{ __('Logout') }}</p>
+                <p>Logout</p>
              </a>
-             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                 @csrf
-             </form>
         </li>
     </ul>
 </nav>
