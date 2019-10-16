@@ -186,21 +186,19 @@ var data_basic = {
 		    'category': '120',
 		    'html':
 				'<div class="row clearfix">' +
-					'<div class="column full">' +
-						'<div class="column half">' +
-                            '<div class="list">' +
-                                '<i class="icon ion-checkmark"></i>' +
-                                '<h3>List Item</h3>' +
-                                '<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>' +
-                            '</div>' +
-                        '</div>' +
-                        '<div class="column half">' +
-                            '<div class="list">' +
-                                '<i class="icon ion-checkmark"></i>' +
-                                '<h3>List Item</h3>' +
-                                '<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>' +
-                            '</div>' +
-                        '</div>' +
+					'<div class="column half">' +
+						'<div class="list">' +
+							'<i class="icon ion-checkmark"></i>' +
+							'<h3>List Item</h3>' +
+							'<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>' +
+						'</div>' +
+					'</div>' +
+					'<div class="column half">' +
+						'<div class="list">' +
+							'<i class="icon ion-checkmark"></i>' +
+							'<h3>List Item</h3>' +
+							'<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>' +
+						'</div>' +
 					'</div>' +
 				'</div>'
 		},
@@ -1572,7 +1570,7 @@ var data_basic = {
 				'<div class="row clearfix">' +
 					'<div class="column full">' +
 						'<h3 class="size-21" style="letter-spacing: 3px;">THE LOOKBOOK</h3>' +
-						'\n<h1 class="size-64" style="letter-spacing: 5px;"><b>NEW </b>SUMMER <b>TRENDS.</b></h1>' +
+						'\n<h1 class="size-64" style="letter-spacing: 5px;"><b style="font-weight: 800;">NEW </b>SUMMER <b style="font-weight: 800;">TRENDS.</b></h1>' +
 					'</div>' +
 				'</div>'
 		},
@@ -9141,9 +9139,33 @@ var data_basic = {
 		            '</div>' +
 			    '</div>'
         },
-
         */
 
 	]
 
 };
+
+document.addEventListener("DOMContentLoaded", function (event) {
+    var bHideSliderSnippet = false;
+    if (typeof jQuery.contentbuilder == 'undefined') {
+        //content.js is on dialog (iframe)
+        if (typeof parent.jQuery.fn.slick == 'undefined') {
+            bHideSliderSnippet = true;
+        }
+
+    } else {
+        //content.js is on side panel
+        if (typeof jQuery.fn.slick == 'undefined') {
+            bHideSliderSnippet = true;
+        }
+    }
+
+    for (var nIndex = 0; nIndex < data_basic.snippets.length; nIndex++) {
+
+        if (data_basic.snippets[nIndex].thumbnail.indexOf('element-slider.png') != -1 && bHideSliderSnippet) {
+            data_basic.snippets.splice(nIndex, 1);
+            break;
+        }
+    }
+
+});

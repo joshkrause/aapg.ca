@@ -1,4 +1,4 @@
-﻿ContentBuilder.js ver. 3.2.15
+﻿ContentBuilder.js ver. 3.6.4
 
 
 *** USAGE ***
@@ -25,41 +25,108 @@
 See example1.html for a basic implementation.
 
 
-*** USING IN BOOTSTRAP FRAMEWORK ***
+*** USING IN CSS FRAMEWORKS ***
 
-TRY: example1-bootstrap.html
+If the framework has 12 columns grid system, specify row & columns classes using row & cols parameters. For example:
 
-Specify framework parameter as follows:
+Bootstrap Framework
 
-    var obj = $.contentbuilder({
-        container: '.container',
-		framework: 'bootstrap'
-    });
+	TRY: example1-bootstrap.html
+
+	Specify row & cols parameters as follows:
+
+		var obj = $.contentbuilder({
+			container: '.container',
+			row: 'row',
+			cols: ['col-md-1', 'col-md-2', 'col-md-3', 'col-md-4', 'col-md-5', 'col-md-6', 'col-md-7', 'col-md-8', 'col-md-9', 'col-md-10', 'col-md-11', 'col-md-12']            
+		});
 	
 
-*** USING IN FOUNDATION FRAMEWORK ***
+Foundation Framework
 
-TRY: example1-foundation.html
-
-Specify framework parameter as follows:
-
-    var obj = $.contentbuilder({
-        container: '.container',
-		framework: 'foundation'
-    });
+	TRY: example1-foundation.html
 	
+	Specify row & cols parameters as follows:
 
-*** USING IN OTHER CSS FRAMEWORKS (12 columns grid) ***
+        var obj = $.contentbuilder({
+            container: '.container',
+            snippetOpen: true,
+            row: 'row',
+            cols: ['large-1 columns', 'large-2 columns', 'large-3 columns', 'large-4 columns', 'large-5 columns', 'large-6 columns', 'large-7 columns', 'large-8 columns', 'large-9 columns', 'large-10 columns', 'large-11 columns', 'large-12 columns']
+        });
 
-TRY: example1-materializecss.html
+If the framework has grid system in which the column size increment is not constant, you'll need to specify two additional parameters:
 
-Specify row & cols parameters. For example, to work with Materializecss (https://materializecss.com/grid.html):
+	colequal: list of all class combinations that have same width
 
-	var obj = $.contentbuilder({
-		container: '.container',
-		row: 'row',
-		cols: ['col s1', 'col s2', 'col s3', 'col s4', 'col s5', 'col s6', 'col s7', 'col s8', 'col s9', 'col s10', 'col s11', 'col s12']
-	});
+	colsizes: list of all class combinations in increment order
+
+Here is an example:
+
+UIKit Framework
+
+	TRY: example1-uikit.html
+
+	Specify row, cols, colequal & colsizes parameters as follows:
+
+        var obj = $.contentbuilder({
+            container: '.container',
+            row: 'uk-grid',
+            cols: ['uk-width-1-6@m', 'uk-width-1-5@m', 'uk-width-1-4@m', 'uk-width-1-3@m', 'uk-width-2-5@m', 'uk-width-1-2@m', 'uk-width-3-5@m', 'uk-width-2-3@m', 'uk-width-3-4@m', 'uk-width-4-5@m', 'uk-width-5-6@m', 'uk-width-1-1@m'],
+            
+            //the following parameters are needed for grid system in which the column size increment is not constant.
+            colequal: [
+	                ['uk-width-1-4@m', 'uk-width-1-4@m', 'uk-width-1-4@m', 'uk-width-1-4@m'],
+	                ['uk-width-1-3@m', 'uk-width-1-3@m', 'uk-width-1-3@m'],
+	                ['uk-width-1-2@m', 'uk-width-1-2@m']
+            ],
+            colsizes: [ 
+                [   //increment for 3 columns
+	                ['uk-width-1-5@m', 'uk-width-2-5@m', 'uk-width-2-5@m'],
+	                ['uk-width-1-3@m', 'uk-width-1-3@m', 'uk-width-1-3@m'],
+	                ['uk-width-2-5@m', 'uk-width-2-5@m', 'uk-width-1-5@m'],
+	                ['uk-width-1-2@m', 'uk-width-1-4@m', 'uk-width-1-4@m'],
+	                ['uk-width-3-5@m', 'uk-width-1-5@m', 'uk-width-1-5@m']
+                ],
+                [   //increment for 2 columns
+	                ['uk-width-1-6@m', 'uk-width-5-6@m'],
+	                ['uk-width-1-5@m', 'uk-width-4-5@m'],
+	                ['uk-width-1-4@m', 'uk-width-3-4@m'],
+	                ['uk-width-1-3@m', 'uk-width-2-3@m'],
+	                ['uk-width-2-5@m', 'uk-width-3-5@m'],
+	                ['uk-width-1-2@m', 'uk-width-1-2@m'],
+	                ['uk-width-3-5@m', 'uk-width-2-5@m'],
+	                ['uk-width-2-3@m', 'uk-width-1-3@m'],
+	                ['uk-width-3-4@m', 'uk-width-1-4@m'],
+	                ['uk-width-4-5@m', 'uk-width-1-5@m'],
+	                ['uk-width-5-6@m', 'uk-width-1-6@m']
+                ],
+            ]            
+        });
+
+Note: 
+- With the configuration explained above, all snippets/blocks are automatically converted into the framework's grid system.
+  So there is no modification needed on the snippets.
+- ContentBuilder.js may not always work on certain framework.
+- Here are some examples on using in various css frameworks:
+
+	- demo.html (without framework / use built in basic css)
+	- example1-bootstrap.html (Bootstrap Example)
+	- example1-foundation.html (Foundation Example)
+	- example1-foundationxy.html (Foundation XY Grid Example)
+	- example1-materializecss.html (Materialize Example)
+	- example1-bulma.html (Bulma Example)
+	- example1-uikit.html (UIKit Example)
+	- example1-milligram.html (Milligram Example)
+	- example1-material.html (Material Design Lite Example)
+	- example1-skeleton.html (Skeleton Example)
+	- example1-w3css.html (W3.CSS Example)
+	- example1-spectre.html (Spectre.css Example)
+	- example1-primer.html (Primer Example)
+	- example1-purecss.html (Pure Css Example)
+	- example1-mustardui.html (Mustard UI Example)
+	- example1-minicss.html (Mini.css Example)
+
 
 
 *** HOW TOs ***
@@ -310,43 +377,47 @@ INCLUDE LANGUAGE FILE
 
 - sidePanel: 'right' | 'left'
 	Default value: 'right'
-	Placement of sidebar (snippets sidebar, element styles editor sidebar).
+	Placement of sidebar (snippet sidebar, element styles editor sidebar).
 
-- snippetHandle
+- snippetHandle: true | false
 	Default value: true
-	To show/hide snippets sidebar handle.
+	To show/hide snippet sidebar handle.
 
-- snippetOpen
+- snippetOpen: true | false
 	Default value: false
-	To show/hide snippets sidebar on first page load.
+	To show/hide snippet sidebar on first page load.
 	
-- snippetPageSliding
+- snippetPageSliding: true | false
 	Default value: false
-	To enable/disable page sliding during snippets sidebar opening.
+	To enable/disable page sliding during snippet sidebar opening.
+
+- columnTool: true | false
+	Default value: true
+	To show/hide column tool.
+
+- elementTool: true | false
+	Default value: true
+	To show/hide element tool.
 
 - modulePath
 	Default value: 'assets/modules/'
 	Path of module related files. At the moment, included is a slider (image slideshow) module.
 
-- imageEmbed
+- imageEmbed: true | false
 	Default value: true
 	To enable/disable image embed feature.
 	
-- elementEditor
+- elementEditor: true | false
 	Default value: true
 	To enable/disable element styles editing feature.
 
-- sourceEditor
+- sourceEditor: true | false
 	Default value: true
 	To enable/disable HTML source editing.
 
 - iconselect
 	Default value: 'assets/ionicons/icons.html'
 	To specify icon selection dialog.
-
-- buttons
-	Default value: ["bold", "italic", "createLink", "align", "formatPara", "color", "formatting", "list", "textsettings", "font", "icon", "tags", "removeFormat"]
-	To configure rich text editor buttons.
 
 - colors
 	Default value: ["#ff8f00", "#ef6c00", "#d84315", "#c62828", "#58362f", "#37474f", "#353535",
@@ -365,7 +436,7 @@ INCLUDE LANGUAGE FILE
 			...
 		});
 
-- animateModal
+- animateModal: true | false
 	Default value: true
 	To enable/disable animation when a modal dialog displayed.
 
@@ -378,7 +449,158 @@ INCLUDE LANGUAGE FILE
 - imageQuality
 	Default value: 0.92
 	To specify image embed quality.
+	
+- columnHtmlEditor: true | false
+	Default value: true
+	To show/hide HTML button on column tool
 
+- rowHtmlEditor: true | false
+	Default value: false
+	To show/hide HTML button on row tool
+
+- rowMoveButtons: true | false
+	Default value: true
+	To show/hide move up/down buttons on row tool (if you enable drag & drop, there will be a drag handle to move block up or down, so up/down buttons may not be needed)
+
+- htmlSyntaxHighlighting: true | false
+	Default value: false
+	To enable/disable syntax highlighting HTML editor
+
+- scrollableEditingToolbar: true | false
+	Default value: true
+	To enable/disable scroll on the editing toolbar. If disabled (set false), all buttons will be visible on the toolbar (no scrolling needed).
+
+- toolbar: 'top' | 'left' | 'right'
+	Default value: 'top'
+	To specify the editing toolbar placement
+
+- toolbarDisplay: 'auto' | 'always'
+	Default value: 'auto'
+	To set editing toolbar visibility
+
+- toolbarAddSnippetButton: true | false
+	Default value: false
+	To show/hide 'Add Snippet' button on the editing toolbar
+
+- buttons
+	Default value: ["bold", "italic", "createLink", "align", "color", "formatPara", "font", "formatting", "list", "textSettings", "image", "tags", "removeFormat"]
+	To configure rich text editor buttons.
+
+- buttonsMore
+	Default value: ["icon", "gridTool", "html", "preferences"]
+	To configure buttons on 'More' popup. 
+
+	The "More" button will be displayed only if it has popup with buttons.
+
+	You can move some buttons from the toolbar into the popup. However, not all buttons can be moved. Only the non popup buttons, such as: 
+	"createLink", "icon", "image", "removeFormat", "html", "addSnippet", "html" & "preferences"
+	
+	If you don't want to use the "More" button:
+
+		var obj = $.contentbuilder({
+			container: '.container',
+			buttonsMore: []
+		});
+
+	and make sure that there is no buttons from installed plugins, by editing the config.js:
+
+		_cb.settings.plugins = [];
+
+- builderMode: '' | 'minimal' | 'clean'
+	Default value: ''
+	To set builder mode. 
+	Minimal and clean mode simplify the builder interface (less visible buttons).
+
+- rowcolOutline: true | false
+	Default value: true
+	Show/hide active row/column outline.
+	
+- elementSelection: true | false
+	Default value: true.
+	When enabled (set true), Pressing CTRL-A will select current element (not all elements).
+
+- animatedSorting: true | false
+	Default value: false
+	Enable/disable animation on sorting.
+
+- dragWithoutHandle: true | false
+	Default value: false
+	Enable/disable drag without handle.
+
+- addButtonPlacement: '' | 'between-blocks-left' | 'between-blocks-center'
+	Default value: ''
+	To configure placement for add (+) snippet button.
+
+- snippetCategories: 
+	Default value: [
+        [120,"Basic"],
+        [118,"Article"],
+        [101,"Headline"],
+        [119,"Buttons"],
+        [102,"Photos"],
+        [103,"Profile"],
+        [116,"Contact"],
+        [104,"Products"],
+        [105,"Features"],
+        [106,"Process"],
+        [107,"Pricing"],
+        [108,"Skills"],
+        [109,"Achievements"],
+        [110,"Quotes"],
+        [111,"Partners"],
+        [112,"As Featured On"],
+        [113,"Page Not Found"],
+        [114,"Coming Soon"],
+        [115,"Help, FAQ"]
+        ]
+	To configure snippets' categories.
+
+- defaultSnippetCategory: 
+	Default value: 120
+	To specify default snippet category.
+	
+- emailSnippetCategories: 
+	Default value: [
+        [1,"Logo"],
+        [14,"Call to Action"],
+        [2,"Title"],
+        [3,"Title, Subtitle"],
+        [4,"Info, Title"],
+        [7,"Paragraph"],
+        [6,"Heading"],
+        [8,"Buttons"],
+        [9,"Callouts"],
+        [10,"Images + Caption"],
+        [12,"Images"],
+        [13,"List"],
+        [15,"Pricing"],
+        [16,"Quotes"],
+        [17,"Profile"],
+        [18,"Contact Info"],
+        [19,"Footer"],
+        [20,"Separator"]
+        ]
+	To configure snippets' categories for email mode.
+		
+- defaultEmailSnippetCategory:
+	Default value: 14
+	To specify default snippet category for email mode. 
+
+- outlineMode: '' | 'row'
+	Default value: '' (outline will be applied on both row and column).
+	If set 'row', outline will be applied on row only.
+	 
+- elementHighlight: true | false
+	Default value: true
+	To enable/disable active element highlight.
+	
+- rowTool: 'right' | 'left'
+	Default value: 'right'
+	To specify Row Tool position.
+	
+- clearPreferences: true | false
+	Default value: false
+	If set true, will clear the editing Preferences on page load.
 
 *** EVENTS ***
 
@@ -403,12 +625,30 @@ INCLUDE LANGUAGE FILE
 	Triggered when custom file select button is clicked.
 	If onFileSelectClick event is used, custom file select button will be displayed on the link dialog.
 
+- onAdd(html)
+	Triggered when a snippet (block) is added or dropped into content.
+	You can use it to modify the snippet's HTML before it is added or dropped into content. Set the modified html as a return, for example:
+
+        var obj = $.contentbuilder({
+            container: '.container',
+            onAdd: function (html) {
+                html = html.replace('{custom tag}', 'your content');
+                return html;
+            }
+        });
+
+- onContentClick(event)
+	Triggered when content is clicked.
+
 
 *** METHODS ***
 
 
 - viewHtml()
-	To view HTML
+	To view HTML source dialog
+
+- viewConfig()
+	To view preferences (editor configuration) dialog
 	
 - loadHtml(html)
 	To load HTML at runtime.
@@ -422,6 +662,9 @@ INCLUDE LANGUAGE FILE
 
 - destroy()
 	To disable/destroy the plugin.
+
+- pasteHtmlAtCaret(html)
+	To insert HTML at cursor position.
 
 
 *** EXAMPLES ***
@@ -438,7 +681,6 @@ INCLUDE LANGUAGE FILE
 	On the link dialog, you will see ... icon to open your custom image/file select dialog).
 	
 - example5.php and example5.aspx (complete example, showing how to add a simple lightbox JQuery plugin and how to make slider snippet works)
-
 
 
 *** USING IN EMAIL BUILDING ***

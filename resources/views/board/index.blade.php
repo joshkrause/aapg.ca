@@ -25,7 +25,7 @@
                                     <h5 class="card-title">{{$b->position}}</h5>
                                     <h5 class="card-title">{{$b->community}}</h5>
                                     <p class="card-text collapse" id="bio{{$b->id}}">{{$b->bio}}</p>
-                                    <p><a data-toggle="collapse" href="#bio{{$b->id}}" role="button" aria-expanded="false" aria-controls="#bio{{$b->id}}">View bio &raquo;</a></p>
+                                    <p><a data-toggle="collapse" href="#bio{{$b->id}}" role="button" aria-expanded="false" aria-controls="bio{{$b->id}}">View bio &raquo;</a></p>
                                 </div>
                             </div>
                         @endforeach

@@ -94,7 +94,8 @@
                         }
 
                         //Submit form
-                        jQuery('#form-' + count).attr('action', handler + '?count=' + count);
+                        //jQuery('#form-' + count).attr('action', handler + '?count=' + count);
+                        jQuery('#form-' + count).attr('action', handler + (handler.indexOf('?') >= 0 ? '&' : '?') + 'count=' + count);
                         jQuery('#form-' + count).submit();
 
                         //Note: the submitted image will be saved on the server 

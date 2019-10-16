@@ -7,7 +7,7 @@
     <style>
         body {margin:0;overflow-x:hidden;overflow-y:auto;}
         .container {}
-        .container > div {text-align:center;font-size:24px;cursor:pointer;margin: 0;display:inline-block;float:left;width:80px;height:80px;line-height:80px;border:#eee 1px solid;box-sizing:border-box;}
+        .container > div {text-align:center;font-size:19px;cursor:pointer;margin: 0;display:inline-block;float:left;width:76px;height:76px;line-height:76px;border:#eee 1px solid;box-sizing:border-box;}
         .clearfix:before, .clearfix:after {content: " ";display: table;}
         .clearfix:after {clear: both;}
         .clearfix {*zoom: 1;}
@@ -15,28 +15,30 @@
 
         .is-tabs  {
             white-space:nowrap;
-            padding:0 30px;
+            padding:20px;padding-bottom:5px;padding-top: 10px;
             box-sizing:border-box;
             font-family: sans-serif;
             font-size: 12px;
             text-transform: uppercase;
-            letter-spacing: 2px;    
-            background:#f7f7f7;        
+            letter-spacing: 2px;  
+            background:#f9f9f9;
         }
         .is-tabs a {
             display: inline-block;
-            padding: 7px 3px;
-            color: #000;
-            margin: 3px 25px 8px 10px;
+            float:left;
+            padding: 3px 3px 0;
+            color: #4a4a4a;
+            border-bottom: transparent 1px solid;
+            
+            margin: 0 16px 16px 0;
             text-decoration: none;
             transition: box-shadow ease 0.3s;
         }
         .is-tabs a:hover {
-            color: #000;
+
         }
         .is-tabs a.active {
             background: transparent;
-            color: #000;
             box-shadow: none;
             cursor:default;
             border-bottom: rgba(103, 103, 103, 0.72) 1px solid;
@@ -45,7 +47,7 @@
 </head>
 <body>
 
-<div class="is-tabs" style="display:none;position:fixed;top:0;left:0;right:0;height:84px;padding-top:22px;box-sizing:border-box;">
+<div class="is-tabs" style="display:none;position:fixed;top:0;left:0;right:0;height:84px;padding-top:50px;box-sizing:border-box;">
     <a href="" data-content="divIcons" class="active">Icons</a>
     <a href="" data-content="divSettings">Size</a>
 </div>
@@ -64,7 +66,7 @@
     <div data-cmd="size">&nbsp;<i class="+">+</i>&nbsp;</div>
     <div data-cmd="size">&nbsp;<i class="">clear</i>&nbsp;</div>
 </div>
-<div id="divIcons" class="tab-content container clearfix" style="position:fixed;width:100%;height:100%;top:0;left:0;overflow-x:hidden;overflow-y:auto;">
+<div id="divIcons" class="tab-content container clearfix" style="position:fixed;width:100%;height:100%;top:0;left:0;overflow-x:hidden;overflow-y:auto;box-sizing:border-box;">
 <div>&nbsp;<i class="icon ion-alert"> </i>&nbsp;</div>
 <div>&nbsp;<i class="icon ion-alert-circled"> </i>&nbsp;</div>
 <div>&nbsp;<i class="icon ion-android-add"> </i>&nbsp;</div>
@@ -812,6 +814,7 @@
             jQuery('#divIcons').css('top', '84px');
         } else {
             jQuery('.is-tabs').css('display', 'none');
+            jQuery('#divIcons').css('border-top', '#f9f9f9 38px solid');
         }
 
         jQuery('.is-tabs a').click(function () {
@@ -834,6 +837,11 @@
                 parent.changeIcon(jQuery(this).find('i').attr('class'));
             } else {
                 parent.insertIcon(jQuery(this).find('i').attr('class'));
+            }
+
+            var _screenwidth = jQuery(parent.window).width();
+            if(_screenwidth <= 640) {
+                parent._cb.hideSidePanel();
             }
         });
     });

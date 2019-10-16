@@ -1,4 +1,140 @@
-﻿What's New in ver.3.2.15
+﻿What's New in 3.6.4
+- New param: clearPreferences (see readme.txt)
+- Update language file
+- Fixes
+
+What's New in 3.6.3
+- Fix add snippet icon position after embedding image
+- Fix view HTML on multiple instance (to show html from active instance)
+- Fix plugin's buttons ordering on toolbar
+- Fix email blocks
+- Minor fixes
+
+What's New in 3.6.2
+- Fix drag & drop outline not displayed
+
+What's New in 3.6.1
+- New Insert Symbol plugin
+- New Search & Replace plugin
+- Fixes
+
+What's New in 3.6
+- Improved editing on iPad
+- Fixes
+
+What's New in ver.3.5.6
+- Fix snippet handler problem
+
+What's New in ver.3.5.5
+- Updated language file
+- Fixes
+
+What's New in ver.3.5.4
+- New 'Outline Mode': Row & column | Row only
+- New 'Hide element highlight' option
+- New 'Row tool position' option
+- New parameters: (see readme.txt)
+        - outlineMode
+        - elementHighlight
+        - rowTool
+- Change Preferences & Grid Tool icons
+- Change Increase & Decrease Column icons
+- Re-arrange drag handler on Row tool (move upper)
+- Add Grid Tool button on the toolbar (click the 'More' button).
+- Auto convert pasted video link (from Youtube or Vimeo) into video embed
+- Fix hidden element tool still showing (shortly) during snippet sliding
+- Fix/clean copied background-color from element highlight
+- Fix iframe's link tool position during snippet sliding
+- Fix drag/sorting problem in email mode
+- Fixes & adjustments
+
+What's New in ver.3.5.3
+- Fixes (Add button position fix and minor css adjustment)
+
+What's New in ver.3.5.2
+- Adjust element tool dimenstion (make smaller)
+- Add Element Tool button on Grid Editor
+- Fix duplicate row outline (remove previous outline)
+- Fix button text editing
+- Fix scrollhelper in email mode
+- New Parameter: snippetCategories, defaultSnippetCategory, emailSnippetCategories, defaultEmailSnippetCategory (see readme.txt)
+- New Word Count plugin (pre-installed)
+
+What's New in ver.3.5.1
+- New Add (+) button placement option in Preferences
+- Fixes
+
+What's New in ver.3.5
+- Remove parameters: toolbarViewHtmlButton & toolbarPreferencesButton.
+  View Html & Preferences buttons are displayed on the toolbar by default.
+  To configure View Html & Preferences buttons, please use buttonsMore parameter (see readme.txt)
+- New Builder Mode in Preferences dialog: Default, Minimal & Clean
+- New Grid Tool on Minimal & Clean mode
+- New 'Draggable blocks without handle' option (in Preferences dialog)
+- New 'Animated drag to sort' option (in Preferences dialog)
+- Fix Button editor on email mode
+- Fix Responsive Preview plugin (container width is different from the actual)
+- Fix 'A' key problem
+- Other fixes 
+
+What's New in ver.3.4
+- New Button Editor plugin
+- New Responsive Preview plugin
+- Make button text easier to edit
+- Add button snippet on quick add snippet popup
+- New duplicate & delete icon on button toolbar
+- Colorpicker fix & adjustments
+- Full screen button (on top right) for syntax highlighting source dialog
+- Scroll helper for snippets sidebar on iOS/mobile
+- Undo/redo for element styles editing
+- Add border none option on element styles editor
+- Fixes
+
+What's New in ver.3.3
+- New image resize handle
+- CTRL-A to quickly select active element
+- Same size image preview on image crop dialog 
+- Fixes (problem embedding transparent PNG, icons not displayed, etc)
+
+What's New in ver.3.2.20
+- New parameters: buttonsMore (See readme.txt) 
+- Mew method: pasteHtmlAtCaret (See readme.txt) 
+- Css adjustment for slider on small screen
+- Improve Icons panel
+- Improve Font Sizes panel
+- Fix link on slider that makes module settings icon is not displayed
+- Fix editing error if no selection (when the toolbar is set 'always visible')
+- Updated language file
+
+What's New in ver.3.2.19
+- Important fix (empty content generates unwanted code)
+- New parameters: toolbarAddSnippetButton, toolbarViewHtmlButton, toolbarPreferencesButton (See readme.txt)
+- Updated language file
+
+What's New in ver.3.2.18
+- New 'Preferences' button on editing toolbar
+- View HTML Source on row level
+- New Paste options
+- New parameters: columnHtmlEditor, rowHtmlEditor, rowMoveButtons, htmlSyntaxHighlighting, scrollableEditingToolbar, toolbar, toolbarDisplay, onAdd, paste (See readme.txt)
+- More options on Preferences dialog
+- Fix cell move up/down problem when next row has >=4 columns
+- Fix cleanup Word (sometimes not executed)
+- Improve paste from Word
+- Fix paste location
+- Updated language file
+
+What's New in ver.3.2.17
+- New parameters: columnTool, elementTool (see readme.txt)
+- New method: viewConfig() (see readme.txt)
+- Important fix on basic grid editing
+- Updated language file
+
+What's New in ver.3.2.16
+- More flexibility to use in more css frameworks (see readme.txt)
+- More examples on using in various css frameworks (see readme.txt)
+- Make slider snippet hidden if slider script include is not found
+
+What's New in ver.3.2.15
 - New parameters: sidePanel, snippetHandle, snippetOpen, snippetPageSliding, elementEditor (see readme.txt)
 - Clean editing (removes unwanted <span> during editing)
 - Css fixes for frameworks compatibility (Foundation & Materializecss)

@@ -2,73 +2,118 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <title>Conference Builder</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-    <link rel="shortcut icon" href="#" />
+	<meta charset="utf-8">
+	<title>Conference Builder</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="csrf-token" content="{{ csrf_token() }}">
+	<link rel="shortcut icon" href="#" />
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+		integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-    <link href="/admin_assets/plugins/ContentBuilder/assets/minimalist-blocks/content.css" rel="stylesheet" type="text/css" />
-    <link href="/admin_assets/plugins/ContentBuilder/contentbuilder/contentbuilder.css" rel="stylesheet" type="text/css" />
-    <link href="/admin_assets/plugins/ContentBuilder/assets/scripts/simplelightbox/simplelightbox.css" rel="stylesheet"
-        type="text/css" />
-    <link href="/admin_assets/plugins/ContentBuilder/assets/scripts/slick/slick.css" rel="stylesheet" type="text/css" />
-    <link href="/admin_assets/plugins/ContentBuilder/assets/scripts/slick/slick-theme.css" rel="stylesheet" type="text/css" />
+	<link href="/admin_assets/plugins/ContentBuilder/assets/minimalist-blocks/content.css" rel="stylesheet"
+		type="text/css" />
+	<link href="/admin_assets/plugins/ContentBuilder/contentbuilder/contentbuilder.css" rel="stylesheet"
+		type="text/css" />
+	<link href="/admin_assets/plugins/ContentBuilder/assets/scripts/simplelightbox/simplelightbox.css" rel="stylesheet"
+		type="text/css" />
+	<link href="/admin_assets/plugins/ContentBuilder/assets/scripts/slick/slick.css" rel="stylesheet" type="text/css" />
+	<link href="/admin_assets/plugins/ContentBuilder/assets/scripts/slick/slick-theme.css" rel="stylesheet"
+		type="text/css" />
 
-    <link rel="stylesheet" href="/admin_assets/plugins/innovamgrpro/css/xprofiledialog.css" />
+	<link rel="stylesheet" href="/admin_assets/plugins/innovamgrpro/css/xprofiledialog.css" />
 
-    <style>
-        .container {
-            margin: 120px auto;
-            max-width: 800px;
-            width: 100%;
-            padding: 0 35px;
-            box-sizing: border-box;
-        }
-    </style>
+	<style>
+		.container {
+			margin: 150px auto;
+			max-width: 800px;
+			width: 100%;
+			padding: 0 35px;
+			box-sizing: border-box;
+		}
+
+		/* Page Menu */
+		.info {
+			position: fixed;
+			top: 8px;
+			left: 30px;
+			margin: 0;
+			font-weight: 400;
+			color: #999;
+			text-align: left;
+			transition: all ease 0.6s;
+		}
+
+		.info2 {
+			position: fixed;
+			top: 90px;
+			width: 280px;
+			height: 50px;
+			border: none;
+			bottom: auto;
+			right: auto;
+			left: 30px;
+			text-align: left;
+			display: block;
+			transition: all ease 0.6s;
+		}
+
+		.info a,
+		.examples a {
+			text-decoration: none
+		}
+
+		.examples {
+			padding: 10px 25px;
+			flex-direction: column;
+			transition: none;
+		}
+	</style>
 </head>
 
 <body>
 
-    <div class="container">
-    {!!$conference->description !!}
-    </div>
-    <!-- Hidden Form Fields to post content -->
-    <form id="form1" method="post" style="display:none" action="/admin/conferences/{{$conference->id}}/builder">
-        <input type="hidden" id="inpHtml" name="inpHtml" />
-        <input type="submit" id="btnPost" value="submit" />
-        @csrf
-    </form>
+	<div class="container">
+		{!!$conference->description !!}
+	</div>
+	<!-- Hidden Form Fields to post content -->
+	<form id="form1" method="post" style="display:none" action="/admin/conferences/{{$conference->id}}/builder">
+		<input type="hidden" id="inpHtml" name="inpHtml" />
+		<input type="submit" id="btnPost" value="submit" />
+		@csrf
+	</form>
 
-    <div class="is-tool"
-        style="position:fixed;width:210px;height:50px;border:none;top:30px;bottom:auto;left:auto;right:30px;text-align:right;display:block">
-        <button id="btnViewSnippets" class="classic" style="width:70px;height:50px;">+ Add</button>
-        <button id="btnViewHtml" class="classic" style="width:70px;height:50px;">HTML</button>
-        <button id="btnSave" class="classic" style="width:70px;height:50px;">SAVE</button>
-    </div>
+	<div class="info2 is-tool">
+		<button id="btnViewSnippets" class="classic" style="width:70px;height:50px;">+ Add</button>
+		<button id="btnViewHtml" class="classic" style="width:70px;height:50px;">HTML</button>
+		<button id="btnConfig" class="classic" style="width:70px;height:50px;">Config</button>
+		<button id="btnSave" class="classic" style="width:70px;height:50px;">SAVE</button>
+	</div>
 
-    <script src="/admin_assets/plugins/ContentBuilder/contentbuilder/jquery.min.js" type="text/javascript"></script>
-    <script src="/admin_assets/plugins/ContentBuilder/assets/scripts/simplelightbox/simple-lightbox.min.js"
-        type="text/javascript"></script>
-    <script src="/admin_assets/plugins/ContentBuilder/assets/scripts/slick/slick.min.js" type="text/javascript"></script>
+	<script src="/admin_assets/plugins/ContentBuilder/contentbuilder/jquery.min.js" type="text/javascript"></script>
+	<script src="/admin_assets/plugins/ContentBuilder/assets/scripts/simplelightbox/simple-lightbox.min.js"
+		type="text/javascript"></script>
+	<script src="/admin_assets/plugins/ContentBuilder/assets/scripts/slick/slick.min.js" type="text/javascript">
+	</script>
 
-    <script src="/admin_assets/plugins/ContentBuilder/contentbuilder/contentbuilder.min.js" type="text/javascript"></script>
-    <script src="/admin_assets/plugins/ContentBuilder/contentbuilder/saveimages.js" type="text/javascript"></script>
+	<script src="/admin_assets/plugins/ContentBuilder/contentbuilder/contentbuilder.min.js" type="text/javascript">
+	</script>
+	<script src="/admin_assets/plugins/ContentBuilder/contentbuilder/saveimages.js" type="text/javascript"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" type="text/javascript"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js" type="text/javascript"></script>
-    <script src="/admin_assets/plugins/ContentBuilder/assets/minimalist-blocks/content.js" type="text/javascript"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" type="text/javascript">
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"
+		type="text/javascript"></script>
+	<script src="/admin_assets/plugins/ContentBuilder/assets/minimalist-blocks/content.js" type="text/javascript">
+	</script>
 
-    <script src="/admin_assets/plugins/innovamgrpro/xprofile_lang.js" type="text/javascript"></script>
-    <script src="/admin_assets/plugins/innovamgrpro/xprofiledialog.js" type="text/javascript"></script>
+	<script src="/admin_assets/plugins/innovamgrpro/xprofile_lang.js" type="text/javascript"></script>
+	<script src="/admin_assets/plugins/innovamgrpro/xprofiledialog.js" type="text/javascript"></script>
 
 
-    <script type="text/javascript">
-        $(document).ready(function() {
+	<script type="text/javascript">
+		$(document).ready(function() {
 
             var obj = $.contentbuilder({
                 container: '.container',
@@ -99,12 +144,16 @@
             });
 
             $('#btnViewSnippets').on('click', function () {
-                obj.viewSnippets();
-            });
+				obj.viewSnippets();
+			});
 
-            $('#btnViewHtml').on('click', function () {
-                obj.viewHtml();
-            });
+			$('#btnViewHtml').on('click', function () {
+				obj.viewHtml();
+			});
+
+			$('#btnConfig').on('click', function () {
+				obj.viewConfig();
+			});
 
             $('#btnSave').on('click', function () {
                 save(obj);
@@ -136,12 +185,23 @@
             $(".container").data('saveimages').save();
 
             $("html").fadeOut(1000);
-        }
+		}
 
-    </script>
+		$(window).scroll(function () {
+			var scrolltop = $(window).scrollTop();
+			if (scrolltop > 70) {
+				$('.info').css('top', '-100px');
+				$('.info2').css('top', '18px');
+			} else {
+				$('.info').css('top', '8px');
+				$('.info2').css('top', '90px');
+			}
+		});
 
-    <script type="text/javascript">
-        function showAssetManager(selEv)
+	</script>
+
+	<script type="text/javascript">
+		function showAssetManager(selEv)
         {
             dlg = new XPROFileDialog({
                 url: "/admin/asset-manager",
@@ -160,9 +220,9 @@
             var sHTML = $('.container').data('contentbuilder').viewHtml();
         }
 
-    </script>
-    <script src="/admin_assets/plugins/ContentBuilder/assets/scripts/sweetalert.min.js"></script>
-    @include('sweet::alert')
+	</script>
+	{{-- <script src="/admin_assets/plugins/ContentBuilder/assets/scripts/sweetalert.min.js"></script> --}}
+	@include('sweet::alert')
 </body>
 
 </html>

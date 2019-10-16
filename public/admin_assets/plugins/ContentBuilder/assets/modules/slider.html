@@ -87,7 +87,7 @@
         <input id="chkFade" type="checkbox" checked="checked" /> Fade
     </label><br /><br />
     
-    <label id="divHeight" for="txtHeight" style="display:none">Height: <input id="txtHeight" class="inptext" type="text" style="width:50px;right:-400px;" value="500" /> px</label>
+    <label id="divHeight" for="txtHeight" style="display:none">Height: <input id="txtHeight" class="inptext" type="text" style="width:50px;" value="" /> px</label>
     
     <div id="divCaption">        
         <label id="lblCaption" for="txtCaption">
@@ -392,7 +392,11 @@
                 html = '<div id="{id}" class="slider-on-box" style="width:100%;height:100%;display:none;">';
             } else {
                 //Slider on Content
-                html = '<div id="{id}" class="slider-on-content" style="width:100%;height:' + jQuery("#txtHeight").val() + 'px;display:none;">';
+                if (jQuery("#txtHeight").val() == '') {
+                    html = '<div id="{id}" class="slider-on-content" style="width:100%;display:none;">';
+                } else {
+                    html = '<div id="{id}" class="slider-on-content" style="width:100%;height:' + jQuery("#txtHeight").val() + 'px;display:none;">';
+                }
             }
 
             var imglist = '';
@@ -412,13 +416,13 @@
 
                 var sV = '';
                 if (position.indexOf('top') != -1) {
-                    sV = 'vertical-align:top;';
+                    sV = 'display:flex;align-items:flex-start;position:absolute;top:0;left:0;width:100%;height:100%;'; //'vertical-align:top;';
                 }
                 if (position.indexOf('middle') != -1) {
-                    sV = 'vertical-align:middle;';
+                    sV = 'display:flex;align-items:center;position:absolute;top:0;left:0;width:100%;height:100%;'; //'vertical-align:middle;';
                 }
                 if (position.indexOf('bottom') != -1) {
-                    sV = 'vertical-align:bottom;';
+                    sV = 'display:flex;align-items:flex-end;position:absolute;top:0;left:0;width:100%;height:100%;'; // 'vertical-align:bottom;';
                 }
 
                 var sH = '';
@@ -442,15 +446,33 @@
                 var sliderContent = '';
                 if (encodedCaption != '') {
                     if (link != '') {
-                        sliderContent = '<a href="' + link + '" title="" class="is-box-centered is-content-bottom slider-content" style="' + sV + '"><div style="' + sH + '">' + decodeURIComponent(encodedCaption) + '</div></a>';
+                        sliderContent = '<a href="' + link + '" title="" class="is-box-centered is-content-bottom slider-content" style="' + sV + '">' +
+                        '<div style="' + sH + '">' + decodeURIComponent(encodedCaption) + '</div>' +
+                            '</a>';
                     } else {
-                        sliderContent = '<div class="is-box-centered is-content-bottom slider-content" style="' + sV + '"><div style="' + sH + '">' + decodeURIComponent(encodedCaption) + '</div></div>';
+                        sliderContent = '<div class="is-box-centered is-content-bottom slider-content" style="' + sV + '">' +
+                        '<div style="' + sH + '">' + decodeURIComponent(encodedCaption) + '</div>' +
+                            '</div>';
                     }
                 }
 
-                html += '<div class="is-boxes slider-image" style="background-image: url(\'' + imgSrc + '\');">' +
-                    sliderContent +
+                if (isModuleInBox()) {
+                    html += '<div class="is-boxes slider-image" style="background-image: url(\'' + imgSrc + '\');position:relative;">' +
+                        sliderContent +
+                        '</div>';
+                } else {
+                    if (jQuery("#txtHeight").val() == '') {
+                        html += '<div class="is-boxes slider-image" style="background-image: url(\'' + imgSrc + '\');position:relative;">' +
+                        '<img src="' + imgSrc + '" style="visibility:hidden">' +
+                        sliderContent +
                     '</div>';
+                    } else {
+                        html += '<div class="is-boxes slider-image" style="background-image: url(\'' + imgSrc + '\');position:relative;">' +
+                        sliderContent +
+                        '</div>';
+                    }
+                }
+
 
                 //sSlideContent = "<a href=""" & sLink2 & """ style=""display: table-cell; vertical-align:" & sVAlign2 & ";text-align:" & sHAlign2 & ";color:#fff;padding:20px 40px;" & IIf(sImagesPerSlide = "1", "padding-bottom:60px;", "padding-bottom:20px;") & "letter-spacing:1px;font-size:1.2em;text-decoration:none;text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);"">" & sCaption2 & "</a>"
                 if (imglist == '') {

@@ -12,9 +12,9 @@
             font-size:100%; 
             line-height:1.7;
         }
-        #divFontList {margin:0;padding:7px;height:100%;overflow-y:scroll !important;box-sizing:border-box;}
+        #divFontList {margin:0;padding:7px 9px 7px 7px;height:100%;overflow-y:scroll !important;box-sizing:border-box;}
         #divFontList div {width:100%;border:transparent 1px solid;cursor:pointer;overflow:hidden;text-align:center}
-        #divFontList div img {margin:7px 3px 0px 5px;height:21px}
+        #divFontList div img {margin:7px 5px 0px 5px;max-width: 170px;max-height: 21px;}
         #divFontList div:hover {
              border: rgba(228, 156, 90, 0.6) solid 1px; 
             /*border: rgba(0,0,0,0.7) solid 1px;*/
@@ -177,7 +177,7 @@
         }
 
         $("#divFontList div").click(function () {
-            window.parent.focus();
+            //window.parent.focus();
             if ($(this).hasClass('on')) {//toggle
                 $('.cell-fontfamily-options', window.parent.document).attr('data-font-family', '');
                 $('.cell-fontfamily-options', window.parent.document).attr('data-font-style', '');

@@ -4,7 +4,9 @@
     <meta charset="utf-8">
     <title>Example</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">    
+    <meta name="description" content=""> 
+    <link rel="shortcut icon" href="#" />
+
     <!--<link href="assets/frameworks/foundation-emails/css/foundation-emails.css" rel="stylesheet" type="text/css" />-->
     <link href="assets/frameworks/foundation-emails/css/app.css" rel="stylesheet" type="text/css" />
     <link href="assets/email-blocks/content.css" rel="stylesheet" type="text/css" />
@@ -16,6 +18,8 @@
     </style>
 </head>
 <body>
+
+<div style="margin:0;font-weight:400;color:#8d8d8d;padding-top:8px;padding-left:30px;text-align:left;">This is an online demo of <a href="https://innovastudio.com/content-builder.aspx" style="font-weight:600">ContentBuilder.js</a> (Email Mode)</div>
 
 <table class="body" data-made-with-foundation="">
 <tr>
@@ -130,7 +134,7 @@
 </table>
 
 
-<div class="is-tool" style="position:fixed;width:210px;height:50px;border:none;top:30px;bottom:auto;left:auto;right:30px;text-align:right;display:block">
+<div class="is-tool" style="position:fixed;width:210px;height:50px;border:none;top:40px;bottom:auto;left:30px;right:auto;text-align:right;display:block">
     <button id="btnViewSnippets" class="classic" style="width:70px;height:50px;">+ Add</button>
     <button id="btnViewHtml" class="classic" style="width:70px;height:50px;">HTML</button>
 	<button id="btnSave" class="classic" style="width:70px;height:50px;">SAVE</button>
@@ -165,7 +169,8 @@
                 ["Last Name", "{%last_name%}"],
                 ["Email", "{%email%}"]],
             emailMode: true,
-            absolutePath:true
+            absolutePath: true,
+            snippetOpen: true
         });
 
         $('#btnViewSnippets').on('click', function () {

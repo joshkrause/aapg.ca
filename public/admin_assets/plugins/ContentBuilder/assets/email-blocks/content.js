@@ -510,8 +510,8 @@ var data_basic = {
 												'<table>' +
 													'<tbody>' +
 													'<tr>' +
-														'<th><img src="assets/email-blocks/images/016.jpg"></th>>' +
-													'</tr>>' +
+														'<th><img src="assets/email-blocks/images/016.jpg"></th>' +
+													'</tr>' +
 													'</tbody>' +
 												'</table>' +
 											'</th>' +
@@ -1365,7 +1365,7 @@ var data_basic = {
 																			'<td>' +
 																				'<table>' +
 																					'<tbody>' +
-																					'<tr' +
+																					'<tr>' +
 																						'<td><a href="#">Sign Up</a></td>' +
 																					'</tr>' +
 																					'</tbody>' +
@@ -2847,7 +2847,7 @@ var data_basic = {
 		
 		{
 		    'thumbnail': 'preview/060.png',
-		    'category': '',
+		    'category': '19',
 		    'html':
 				'<div>' +
 					'<table align="center" class="container float-center">' +

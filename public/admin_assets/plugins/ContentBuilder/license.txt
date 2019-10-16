@@ -1,4 +1,4 @@
-InnovaStudio CONTENT Builder (ContentBuilder.js) ver. 3.2.15
+InnovaStudio CONTENT Builder (ContentBuilder.js) ver. 3.6.4
 ____________________________________________________________________
 
 

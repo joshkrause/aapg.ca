@@ -69,10 +69,10 @@
                     <div class="subscribe-box">
                         <div class="display-4 text-white"><i class="icon-Mail-3"></i></div>
                         <p>Join our newsletter for regular information and notices. </p>
-                        <form method="post" action="newsletter">
+                        <form method="post" action="subscribe">
                             @csrf
                             <div class="m-b-20">
-                                <input class="form-control" name="name" type="text placeholder="First and Last Name">
+                                <input class="form-control" name="name" type="text" placeholder="First and Last Name">
                             </div>
                             <div class="m-b-20">
                                 <input class="form-control" name="email" type="text" placeholder="Email Address">
