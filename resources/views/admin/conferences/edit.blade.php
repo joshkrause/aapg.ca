@@ -56,11 +56,6 @@
                                                 <input name="end" type="text" class="form-control" placeholder="End Date" value="{{old('end', $conference->end->format('Y-m-d'))}}">
                                             </div>
                                         </div>
-                                        <div class="col-sm-12">
-                                            <div class="form-group">
-                                                <textarea name="description" class="form-control redactor-textarea" placeholder="Conference Description">{{old('description', $conference->description)}}</textarea>
-                                            </div>
-                                        </div>
                                         <div class="col-sm-6">
                                             <div class="form-group">
                                                 <select name="affiliate" class="form-control" >
@@ -86,7 +81,7 @@
                                 </div>
                                 <div class="modal-footer">
                                     <a href="/admin/conferences" class="btn btn-danger">Cancel</a>
-                                    <button type="submit" class="btn btn-success">Edit Conference</button>
+                                    <button type="submit" class="btn btn-success">Save Changes</button>
                                 </div>
                             </form>
                         </div>

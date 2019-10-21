@@ -37,31 +37,83 @@
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <div class="form-group">
+												<label for="form-label">Conference Title</label>
                                                 <input name="title" type="text" class="form-control" placeholder="Conference Title" value="{{old('title')}}">
                                             </div>
-                                        </div>
+										</div>
+										<div class="col-sm-6">
+											<div class="form-group">
+												<label for="form-label">Header image</label>
+												<input name="header_image" type="file" class="form-control" placeholder="Header Image" value="{{old('header_image')}}">
+											</div>
+										</div>
                                         <div class="col-sm-6">
                                             <div class="form-group">
+												<label for="form-label">Registration / Early Bird Start</label>
                                                 <input name="live" type="text" class="form-control" placeholder="Registration Start Date" value="{{old('live')}}">
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="form-group">
+												<label for="form-label">Conference Start Date</label>
                                                 <input name="start" type="text" class="form-control" placeholder="Start Date" value="{{old('start')}}">
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="form-group">
+												<label for="form-label">Conference End Date</label>
                                                 <input name="end" type="text" class="form-control" placeholder="End Date" value="{{old('end')}}">
                                             </div>
-                                        </div>
-                                        <div class="col-sm-12">
-                                            <div class="form-group">
-                                                <textarea name="description" class="form-control redactor-textarea" placeholder="Conference Description">{{old('description')}}</textarea>
-                                            </div>
-                                        </div>
+										</div>
+										<div class="col-sm-6">
+											<div class="form-group">
+												<label for="form-label">Member Ticket Price</label>
+												<input name="member_ticket" type="text" class="form-control" placeholder="Member Ticket" value="{{old('member_ticket')}}">
+											</div>
+										</div>
+										<div class="col-sm-6">
+											<div class="form-group">
+												<label for="form-label">Member Ticket Early Bird Price</label>
+												<input name="member_ticket_early" type="text" class="form-control" placeholder="Early Bird Member" value="{{old('member_ticket_early')}}">
+											</div>
+										</div>
+										<div class="col-sm-6">
+											<div class="form-group">
+												<label for="form-label">Regular Ticket Price</label>
+												<input name="regular_ticket" type="text" class="form-control" placeholder="Regular Ticket" value="{{old('regular_ticket')}}">
+											</div>
+										</div>
+										<div class="col-sm-6">
+											<div class="form-group">
+												<label for="form-label">Regular Ticket Early Bird Price</label>
+												<input name="regular_ticket_early" type="text" class="form-control" placeholder="Early Bird Regular" value="{{old('regular_ticket_early')}}">
+											</div>
+										</div>
+										<div class="col-sm-6">
+											<div class="form-group">
+												<label for="form-label">Guest Ticket Price</label>
+												<input name="guest_ticket" type="text" class="form-control" placeholder="Guest Ticket"
+													value="{{old('guest_ticket')}}">
+											</div>
+										</div>
+										<div class="col-sm-6">
+											<div class="form-group">
+												<label for="form-label">Guest Ticket Early Bird Price</label>
+												<input name="guest_ticket_early" type="text" class="form-control" placeholder="Early Bird Guest"
+													value="{{old('guest_ticket_early')}}">
+											</div>
+										</div>
+										<div class="col-sm-6">
+											<div class="form-group">
+												<label for="form-label">Early Bird End Date</label>
+												<input name="early_bird_end_date" type="text" class="form-control" placeholder="Early Bird End Date" value="{{old('early_bird_end_date')}}">
+											</div>
+										</div>
+									</div>
+									<div class="row">
                                         <div class="col-sm-6">
                                             <div class="form-group">
+												<label for="form-label">Conference Type</label>
                                                 <select name="affiliate" class="form-control" >
                                                     <option @if(old('affiliate')=="0") selected="selected" @endif value="0">AAPG Conference</option>
                                                     <option @if(old('affiliate')=="1") selected="selected" @endif value="1">Affiliate Conference</option>
@@ -70,11 +122,13 @@
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="form-group">
+												<label for="form-label">Link to Affiliate Conference</label>
                                                 <input name="link" type="text" class="form-control" placeholder="Link To Affiliate Conference" value="{{old('link')}}">
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="form-group">
+												<label for="form-label">Conference Status</label>
                                                 <select name="active" class="form-control" >
                                                     <option @if(old('active')=="0") selected="selected" @endif value="0">Draft</option>
                                                     <option @if(old('active')=="1") selected="selected" @endif value="1">Published</option>
