@@ -40,9 +40,9 @@
 					@php
 						$days = $conference->events->sortBy('start')->map(function($item, $key) {
 							return ['date' => $item->start,'string' => "<strong>" . $item->start->format('l') . "</strong> <span> - " . $item->start->format('F j') . "</span>"];
-						})->unique();
+						});
 					@endphp
-					@foreach($days as $day)
+					@foreach($days->unique() as $day)
 					<li class=""><i class="far fa-calendar-alt"></i> {!!$day['string']!!} </li>
 					@endforeach
 				</ul>
@@ -61,7 +61,7 @@
 							<i class="far fa-calendar-alt"></i> <strong>{{$event->start->format('l')}}</strong> <span>-	{{$event->start->format('F d, Y')}}</span>
 						</div>
 						<div class="block-detail">
-							<span class="time">{{$event->start->format('h:i a')}} - {{$event->start->format('h:i a')}}</span>
+							<span class="time">{{$event->start->format('h:i a')}} - {{$event->end->format('h:i a')}}</span>
 							<span class="topic">{{$event->title}}</span>
 							<div class="block-text">
 								<p>{{$event->description}}</p>
@@ -261,13 +261,13 @@
 	<h2 class="sub-title-1 mb-30">Register For The AAPG Annual Conference 2019</h2>
 	<div class="row">
 		<div class="col-sm-6 col-md-3">
-			<input placeholder="Your Name" value="" id="name" name="name" type="text" required>
+			<input placeholder="Contact Name" value="" id="name" name="name" type="text" required>
 		</div>
 		<div class="col-sm-6 col-md-3">
-			<input placeholder="Your Email" value="" id="email" name="email" type="text" required>
+			<input placeholder="Contact Email" value="" id="email" name="email" type="text" required>
 		</div>
 		<div class="col-sm-6 col-md-3">
-			<input placeholder="Phone number" value="" id="phone" name="phone" type="text">
+			<input placeholder="Contact Phone number" value="" id="phone" name="phone" type="text">
 		</div>
 		<div class="col-sm-6 col-md-3">
 			<input placeholder="Community" value="" id="company" name="company" type="text">
