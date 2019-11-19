@@ -80,7 +80,7 @@ class ConferenceMealSelectionController extends Controller
     public function update(Request $request, ConferenceMealSelection $conferenceMealSelection)
     {
 		$meal = ConferenceMealSelection::findOrFail($id);
-		$meal->update($request->all())
+		$meal->update($request->all());
         SweetAlert::success('Meal option updated successfully', 'Option Updated');
 		return Redirect('admin/conferences/'.$conference->id.'/meal');
     }
