@@ -15,7 +15,17 @@ class CreateConferenceSchedulesTable extends Migration
     {
         Schema::create('conference_schedules', function (Blueprint $table) {
             $table->increments('id');
-            $table->timestamps();
+			$table->timestamps();
+			$table->integer('conference_id')->unsigned();
+			$table->string('title')->nullable();
+			$table->string('speaker')->nullable();
+			$table->text('description')->nullable();
+			$table->dateTime('start')->nullable();
+			$table->dateTime('end')->nullable();
+			$table->string('location')->nullable();
+			$table->string('sponsor')->nullable();
+
+
         });
     }
 
