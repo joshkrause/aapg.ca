@@ -102,7 +102,7 @@ class ConferenceController extends Controller
 			'regular_guest_ticket_price' => $request->regular_guest_ticket_price * 100,
 		];
 
-        if($conference->update($data) && $conference->options()->update($options))
+        if($conference->update($data) && $conference->options()->updateOrCreate($options))
         {
 			;
             Alert::success('Conference was updated successfully.', 'Conference Updated');
