@@ -59,6 +59,7 @@ Route::group(['prefix'=>'admin', 'middleware'=> ['auth', 'admin']], function() {
 	Route::post('conferences/{conference}/builder', 'Admin\Conference\ConferenceController@saveHtml');
 	Route::resource('conferences/{conference}/schedule', 'Admin\Conference\ConferenceScheduleController');
 	Route::resource('conferences/{conference}/ticket-packages', 'Admin\Conference\ConferenceTicketPackageController');
+	Route::resource('conferences/{conference}/meal', 'Admin\Conference\ConferenceMealSelectionController');
 	Route::resource('conferences', 'Admin\Conference\ConferenceController');
     Route::group(['prefix' => 'conferences'], function() {
         Route::resource('registration', 'Admin\Conference\RegistrationController');

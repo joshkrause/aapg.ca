@@ -100,7 +100,9 @@ class ConferenceTicketPackageController extends Controller
      */
     public function destroy($conferenceTicketPackage)
     {
-        $package = ConferenceTicketPackage::find($conferenceTicketPackage);
+        $package = ConferenceTicketPackage::findOrFail($conferenceTicketPackage);
 		$package->delete();
+		SweetAlert::success('Package deleted successfully', 'Package Deleted');
+		return back();
     }
 }

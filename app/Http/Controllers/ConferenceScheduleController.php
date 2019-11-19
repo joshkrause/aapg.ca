@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 class ConferenceScheduleController extends Controller
 {
+	protected $guarded = [''];
     /**
      * Display a listing of the resource.
      *

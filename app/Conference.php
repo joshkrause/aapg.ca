@@ -38,4 +38,14 @@ class Conference extends Model
 	{
 		return $this->hasMany('App\ConferenceMealSelection');
 	}
+
+	public function events()
+	{
+		return $this->hasMany('App\ConferenceSchedule');
+	}
+
+	public function meals()
+	{
+		return $this->hasMany('App\ConferenceMealSelection');
+	}
 }

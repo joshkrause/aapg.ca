@@ -3,8 +3,10 @@
 
 namespace App\Http\Controllers\Admin\Conference;
 
+use App\Conference;
 use Illuminate\Http\Request;
 use App\ConferenceMealSelection;
+use UxWeb\SweetAlert\SweetAlert;
 use App\Http\Controllers\Controller;
 
 class ConferenceMealSelectionController extends Controller
@@ -14,9 +16,10 @@ class ConferenceMealSelectionController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Conference $conference)
     {
-        //
+        return view('admin.conferences.meal.index', compact('conference'));
+
     }
 
     /**
@@ -24,9 +27,9 @@ class ConferenceMealSelectionController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Conference $conference)
     {
-        //
+		return view('admin.conferences.meal.create', compact('conference'));
     }
 
     /**
@@ -35,9 +38,12 @@ class ConferenceMealSelectionController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, Conference $conference)
     {
-        //
+        $conference->meals()->create($request->all());
+
+		SweetAlert::success('Meal option created successfully', 'Option Created');
+		return Redirect('admin/conferences/'.$conference->id.'/meal');
     }
 
     /**
@@ -57,9 +63,11 @@ class ConferenceMealSelectionController extends Controller
      * @param  \App\ConferenceMealSelection  $conferenceMealSelection
      * @return \Illuminate\Http\Response
      */
-    public function edit(ConferenceMealSelection $conferenceMealSelection)
+    public function edit(Conference $conference, $id)
     {
-        //
+		$meal = ConferenceMealSelection::findOrFail($id);
+        return view('admin.conferences.meal.edit', compact('conference', $meal));
+
     }
 
     /**
@@ -71,7 +79,10 @@ class ConferenceMealSelectionController extends Controller
      */
     public function update(Request $request, ConferenceMealSelection $conferenceMealSelection)
     {
-        //
+		$meal = ConferenceMealSelection::findOrFail($id);
+		$meal->update($request->all())
+        SweetAlert::success('Meal option updated successfully', 'Option Updated');
+		return Redirect('admin/conferences/'.$conference->id.'/meal');
     }
 
     /**
@@ -80,8 +91,11 @@ class ConferenceMealSelectionController extends Controller
      * @param  \App\ConferenceMealSelection  $conferenceMealSelection
      * @return \Illuminate\Http\Response
      */
-    public function destroy(ConferenceMealSelection $conferenceMealSelection)
+    public function destroy(Conference $conference, $id)
     {
-        //
+		$meal = ConferenceMealSelection::findOrFail($id);
+		$meal->delete();
+		SweetAlert::success('Meal option deleted successfully', 'Option Deleted');
+		return back();
     }
 }

@@ -10,5 +10,10 @@ class Schedule extends Model
 {
     use SoftDeletes;
     protected $dates = ['start', 'end'];
-    protected $guarded = [];
+	protected $guarded = [];
+
+	public function conference()
+	{
+		return $this->belongsTo('App\Conference');
+	}
 }

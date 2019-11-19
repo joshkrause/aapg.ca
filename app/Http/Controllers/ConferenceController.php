@@ -21,7 +21,7 @@ class ConferenceController extends Controller
 
 	public function show(Conference $conference)
 	{
-		$conference->load('options', 'mealSelections', 'ticketPackages');
+		$conference->load('options', 'mealSelections', 'ticketPackages', 'events');
 		return view('public.conference.show', compact('conference'));
 	}
 
