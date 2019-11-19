@@ -8,8 +8,8 @@ use App\Attendant;
 use Carbon\Carbon;
 use App\Conference;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Mail;
 use App\Mail\ConferenceRegistration;
+use Illuminate\Support\Facades\Mail;
 use Cartalyst\Stripe\Laravel\Facades\Stripe;
 
 class ConferenceController extends Controller
@@ -17,7 +17,13 @@ class ConferenceController extends Controller
     public function index()
     {
         return view('public.conference.index');
-    }
+	}
+
+	public function show(Conference $conference)
+	{
+		$conference->load('options', 'mealSelections', 'ticketPackages');
+		return view('public.conference.show', compact('conference'));
+	}
 
     public function affiliate()
     {

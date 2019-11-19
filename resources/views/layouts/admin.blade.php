@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="/admin_assets/dist/css/adminlte.min.css">
   <link rel="stylesheet" href="/admin_assets/plugins/nestable/nestable.css">
   <link rel="stylesheet" href="/admin_assets/plugins/select2/select2.min.css">
+  <link rel="stylesheet" href="/admin_assets/plugins/daterangepicker/daterangepicker.css">
   <link rel="stylesheet" href="/admin_assets/plugins/redactor/redactor.css">
   <link rel="stylesheet" href="/admin_assets/plugins/redactor/plugins/filemanager/filemanager.css">
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
@@ -72,10 +73,12 @@
 <!-- ./wrapper -->
 
 <script src="/admin_assets/plugins/jquery/jquery.min.js"></script>
+<script src="/admin_assets/plugins/daterangepicker/moment.min.js"></script>
 <script src="/admin_assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="/admin_assets/plugins/slimScroll/jquery.slimscroll.min.js"></script>
 <script src="/admin_assets/plugins/fastclick/fastclick.js"></script>
 <script src="/admin_assets/plugins/select2/select2.full.min.js"></script>
+<script src="/admin_assets/plugins/daterangepicker/daterangepicker.js"></script>
 <script src="/admin_assets/dist/js/adminlte.min.js"></script>
 <script src="/conference/js/sweetalert2.all.min.js" type="text/javascript"></script>
 <!-- Redactor -->

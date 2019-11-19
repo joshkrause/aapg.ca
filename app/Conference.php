@@ -2,6 +2,7 @@
 
 namespace App;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
@@ -9,14 +10,32 @@ class Conference extends Model
 {
     use SoftDeletes;
 
-    protected $fillable = [
-        'title', 'start', 'end', 'active', 'live'
+    protected $guarded = [''];
+	protected $dates = ['start', 'end', 'live'];
+	protected $casts = [
+		'meal_selection_required' => 'boolean',
+		'affiliate' => 'boolean',
+		'active' => 'boolean',
     ];
-    protected $dates = ['start', 'end', 'live'];
 
     public function scopeUpcoming($query)
     {
         $now = now()->format('Y-m-d');
         return $query->where('end', '>', $now)->orderBy('start');
-    }
+	}
+
+	public function options()
+	{
+		return $this->hasOne('App\ConferenceOption')->withDefault();
+	}
+
+	public function ticketPackages()
+	{
+		return $this->hasMany('App\ConferenceTicketPackage');
+	}
+
+	public function mealSelections()
+	{
+		return $this->hasMany('App\ConferenceMealSelection');
+	}
 }

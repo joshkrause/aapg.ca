@@ -18,8 +18,35 @@
         </div>
         <div class="main-nav">
             <ul>
-                @foreach($top as $button)
-                    @if($button->children->count() > 0)
+				@foreach($top as $button)
+					@if($button->name == "Conferences")
+					@php
+						$conf = App\ConferenceOption::whereDate('registration_start', '<=', Carbon\Carbon::now())
+							->whereDate('registration_end','>=', Carbon\Carbon::now())
+							->with('conference')
+							->get();
+					@endphp
+					<li class="nav-item">
+						<a href="{{$button->link}}" class="nav-link">{{$button->name}} <i class="fa fa-angle-down m-l-5"></i></a>
+						<ul class="animated fadeInUp">
+							@if( $conf->count() > "0")
+							@foreach($conf as $c)
+								<li><a href="/conferences/{{$c->conference->id}}">{{$c->conference->title}}</a></li>
+							@endforeach
+							@endif
+							@if( App\Conference::where('active', '1')->where('affiliate', '0')->whereDate('live', '<=', Carbon\Carbon::now())->whereDate('end', '>=', Carbon\Carbon::now())->get()->count() > "0")
+								<li><a href="/conferences/upcoming">Upcoming Conferences</a></li>
+							@endif
+							@if( App\Conference::where('active', '1')->where('affiliate', '0')->whereDate('live', '<=', Carbon\Carbon::now())->whereDate('end', '<' ,
+								Carbon\Carbon::now())->get()->count() > "0")
+								<li><a href="/conferences/archive">Past Conferences</a></li>
+							@endif
+							@foreach($button->children as $child)
+							<li><a href="{{$child->link}}">{{$child->name}}</a></li>
+							@endforeach
+						</ul>
+					</li>
+                    @elseif($button->children->count() > 0)
                     <li class="nav-item"><a href="{{$button->link}}" class="nav-link">{{$button->name}} <i class="fa fa-angle-down m-l-5"></i></a>
                         <ul class="animated fadeInUp">
                             @foreach($button->children as $child)

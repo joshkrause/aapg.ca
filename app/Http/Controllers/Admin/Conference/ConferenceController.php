@@ -64,6 +64,8 @@ class ConferenceController extends Controller
      */
     public function edit(Conference $conference)
     {
+		$conference->load('options', 'mealSelections', 'ticketPackages');
+
         return view('admin.conferences.edit', compact('conference'));
     }
 
@@ -76,8 +78,33 @@ class ConferenceController extends Controller
      */
     public function update(Request $request, Conference $conference)
     {
-        if($conference->update($request->all()))
+		$data = [
+			'title' => $request->title,
+			'active' => $request->active,
+			'affiliate' => $request->affiliate,
+			'link' => $request->link,
+			'live' => $request->live,
+			'start' => $request->start,
+			'end' => $request->end,
+			'meal_selection_required' => $request->meal_selection_required,
+		];
+
+		$options = [
+			'registration_start' => $request->registration_start,
+			'registration_end' => $request->registration_end,
+			'early_bird_registration_start' => $request->early_bird_registration_start,
+			'early_bird_registration_end' => $request->early_bird_registration_end,
+			'early_bird_member_ticket_price' => $request->early_bird_member_ticket_price * 100,
+			'early_bird_non_member_ticket_price' => $request->early_bird_non_member_ticket_price * 100,
+			'early_bird_guest_ticket_price' => $request->early_bird_guest_ticket_price * 100,
+			'regular_member_ticket_price' => $request->regular_member_ticket_price * 100,
+			'regular_non_member_ticket_price' => $request->regular_non_member_ticket_price * 100,
+			'regular_guest_ticket_price' => $request->regular_guest_ticket_price * 100,
+		];
+
+        if($conference->update($data) && $conference->options()->update($options))
         {
+			;
             Alert::success('Conference was updated successfully.', 'Conference Updated');
             return redirect('admin/conferences');
         }

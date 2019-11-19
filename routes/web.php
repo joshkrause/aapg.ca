@@ -33,6 +33,7 @@ Route::get('/alert', 'AlertController@index');
 Route::post('/subscribe', 'SubscriberController@store');
 
 Route::get('/conferences', 'ConferenceController@index')->name('conferences.home');
+Route::get('/conferences/{conference}', 'ConferenceController@show')->name('conferences.show');
 Route::post('/conferences', 'ConferenceController@Order');
 Route::get('/conferences/affiliate', 'ConferenceController@affiliate')->name('conferences.affiliate');
 
@@ -55,8 +56,10 @@ Route::group(['prefix'=>'admin', 'middleware'=> ['auth', 'admin']], function() {
 
 
     Route::get('conferences/{conference}/builder', 'Admin\Conference\ConferenceController@builder');
-    Route::post('conferences/{conference}/builder', 'Admin\Conference\ConferenceController@saveHtml');
-    Route::resource('conferences', 'Admin\Conference\ConferenceController');
+	Route::post('conferences/{conference}/builder', 'Admin\Conference\ConferenceController@saveHtml');
+	Route::resource('conferences/{conference}/schedule', 'Admin\Conference\ConferenceScheduleController');
+	Route::resource('conferences/{conference}/ticket-packages', 'Admin\Conference\ConferenceTicketPackageController');
+	Route::resource('conferences', 'Admin\Conference\ConferenceController');
     Route::group(['prefix' => 'conferences'], function() {
         Route::resource('registration', 'Admin\Conference\RegistrationController');
     });
@@ -84,5 +87,3 @@ Route::get('/mail/conference', function () {
 
     return new App\Mail\ConferenceRegistration($order);
 });
-
-

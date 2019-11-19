@@ -28,7 +28,7 @@ function setActive($tab_name)
 }
 
 /*
-* Show a red border around a form element that was filled out incorrectly last time 
+* Show a red border around a form element that was filled out incorrectly last time
 */
 function errorBorder($name, $errors)
 {
@@ -85,7 +85,7 @@ function ynLabel($bool)
 */
 function c2d($cents)
 {
-	return '$' . number_format($cents/100, 2);
+	return number_format($cents/100, 2);
 }
 
 /**
@@ -125,6 +125,17 @@ function setCarbonOrNull($date)
     }
 }
 
+function setFormattedDateOrNull($date, $format)
+{
+	if(!empty($date))
+    {
+        return $date->format($format);
+    }
+    else
+    {
+        return;
+    }
+}
 /**
  * Return an integer if a date was entered, return null otherwise
  *
