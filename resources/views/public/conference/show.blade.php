@@ -39,10 +39,16 @@
 				<ul class="block-tabs">
 					@php
 						$days = $conference->events->sortBy('start')->map(function($item, $key) {
-							return ['date' => $item->start,'string' => "<strong>" . $item->start->format('l') . "</strong> <span> - " . $item->start->format('F j') . "</span>"];
+							return [
+								'date' => $item->start,
+								'string' => "<strong>" . $item->start->format('l') . "</strong> <span> - " . $item->start->format('F j') . "</span>",
+								'day' => $item->start->format('z'),
+								'begin' => $item->start->format('Y-m-d') . ' 00:00:00',
+								'end' => $item->start->format('Y-m-d') . ' 23:59:59',
+							];
 						});
 					@endphp
-					@foreach($days->unique() as $day)
+					@foreach($days->unique('day') as $day)
 					<li class=""><i class="far fa-calendar-alt"></i> {!!$day['string']!!} </li>
 					@endforeach
 				</ul>
@@ -50,18 +56,20 @@
 			</div>
 			<div class="col-sm-8 ">
 				<ul class="block-tab">
-					@foreach($days as $day)
+					@foreach($days->unique('day') as $day)
 					@php
-						$events = $conference->events->sortBy('start')->where('start', $day['date']);
+						$events = $conference->events->where('start', '>=', $day['begin'])->where('start', '<=', $day['end'])->sortBy('start');
 					@endphp
 					<li @if($loop->first) class="active" @endif>
 						@foreach($events as $event)
-						<!-- Thursday -->
+
+						@if($loop->first)
 						<div class="block-date">
 							<i class="far fa-calendar-alt"></i> <strong>{{$event->start->format('l')}}</strong> <span>-	{{$event->start->format('F d, Y')}}</span>
 						</div>
+						@endif
 						<div class="block-detail">
-							<span class="time">{{$event->start->format('h:i a')}} - {{$event->end->format('h:i a')}}</span>
+							<span class="time">{{$event->start->format('g:i a')}} - {{$event->end->format('g:i a')}}</span>
 							<span class="topic">{{$event->title}}</span>
 							<div class="block-text">
 								<p>{{$event->description}}</p>

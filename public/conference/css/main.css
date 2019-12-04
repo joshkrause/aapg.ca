@@ -553,7 +553,7 @@ ul.block-topic li {
 }
 .block-tab .block-detail:hover .block-text {
     padding-top: 20px;
-    max-height: 300px;
+    max-height: 800px;
     opacity: 1;
 }
 .block-tab li .block-detail:last-child {
