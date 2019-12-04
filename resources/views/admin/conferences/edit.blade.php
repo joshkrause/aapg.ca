@@ -181,6 +181,20 @@
 									</div>
 									<div class="col-sm-6">
 										<div class="form-group">
+											<label>New Member Early Bird Ticket Price</label>
+											<input name="early_bird_new_member_ticket_price" type="text" class="form-control" placeholder="0.00"
+												value="{{old('early_bird_new_member_ticket_price', $conference->options->early_bird_new_member_ticket_price/100)}}">
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<div class="form-group">
+											<label>New Member Ticket Regular Price</label>
+											<input name="regular_new_member_ticket_price" type="text" class="form-control" placeholder="0.00"
+												value="{{old('regular_new_member_ticket_price', $conference->options->regular_new_member_ticket_price/100)}}">
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<div class="form-group">
 											<label>Guest Ticket Early Bird Price</label>
 											<input name="early_bird_guest_ticket_price" type="text" class="form-control"
 												placeholder="0.00"

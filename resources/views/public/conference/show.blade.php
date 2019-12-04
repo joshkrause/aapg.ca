@@ -144,6 +144,7 @@
 			</div>
 			@endif
 			<div class="col-sm-8 ">
+				@if(!empty($conference->options->regular_member_ticket_price))
 				<div class="col-sm-4">
 					<ul class="block-tickets ">
 						<li>
@@ -179,6 +180,8 @@
 						</li>
 					</ul>
 				</div>
+				@endif
+				@if(!empty($conference->options->regular_new_member_ticket_price))
 				<div class="col-sm-4">
 					<ul class="block-tickets ">
 						<li>
@@ -188,14 +191,14 @@
 											&& $conference->options->early_bird_registration_end >=Carbon\Carbon::now())
 											@php
 											$price = explode('.',
-											number_format($conference->options->early_bird_member_ticket_price/100, 2));
+											number_format($conference->options->early_bird_new_member_ticket_price/100, 2));
 											@endphp
 											{{ $price[0] }}<span style="font-size:12px">.{{$price[1]}}</span>
 											@elseif($conference->options->registration_start <= Carbon\Carbon::now() &&
 												$conference->options->registration_end >=Carbon\Carbon::now())
 												@php
 												$price = explode('.',
-												number_format($conference->options->regular_member_ticket_price/100,
+												number_format($conference->options->regular_new_member_ticket_price/100,
 												2));
 												@endphp
 												{{ $price[0] }}<span style="font-size:12px">.{{$price[1]}}</span>
@@ -215,6 +218,8 @@
 						</li>
 					</ul>
 				</div>
+				@endif
+				@if(!empty($conference->options->regular_non_member_ticket_price))
 				<div class="col-sm-4">
 					<ul class="block-tickets ">
 						<li>
@@ -252,6 +257,7 @@
 						</li>
 					</ul>
 				</div>
+				@endif
 			</div>
 		</div>
 		<!--End row-->
@@ -268,36 +274,60 @@
 	@csrf
 	<h2 class="sub-title-1 mb-30">Register For The AAPG Annual Conference 2019</h2>
 	<div class="row">
-		<div class="col-sm-6 col-md-3">
+		<div class="col-sm-12 col-md-6 col-lg-3">
 			<input placeholder="Contact Name" value="" id="name" name="name" type="text" required>
 		</div>
-		<div class="col-sm-6 col-md-3">
+		<div class="col-sm-12 col-md-6 col-lg-3">
 			<input placeholder="Contact Email" value="" id="email" name="email" type="text" required>
 		</div>
-		<div class="col-sm-6 col-md-3">
+		<div class="col-sm-12 col-md-6 col-lg-3">
 			<input placeholder="Contact Phone number" value="" id="phone" name="phone" type="text">
 		</div>
-		<div class="col-sm-6 col-md-3">
+		<div class="col-sm-12 col-md-6 col-lg-3">
 			<input placeholder="Community" value="" id="company" name="company" type="text">
 		</div>
 	</div>
-	<div id="registrant">
-	<div class="row">
-		<div class="col-sm-6 col-md-3">
+	<hr>
+	<div class="row" id="registration_row">
+		<div class="col-sm-12 col-lg-4">
+			<input placeholder="Name On Ticket" value="" name="registrant[]" type="text">
+		</div>
+		<div class="col-sm-12 col-md-6 col-lg-4">
 			<div class="block-select">
 				<select required name="ticket[]">
 					<option value="">Choose Ticket Type</option>
-					<option value="{{$conference->options->regular_member_ticket_price/100}}">Member Ticket ( ${{c2d($conference->options->regular_member_ticket_price)}} )</option>
-					<option value="{{$conference->options->regular_non_member_ticket_price/100}}">Non Member Ticket ( ${{c2d($conference->options->regular_non_member_ticket_price)}} )</option>
-					<option value="{{$conference->options->regular_guest_ticket_price/100}}">Guest Ticket ( ${{c2d($conference->options->regular_guest_ticket_price)}} )</option>
+					@if($conference->options->early_bird_registration_start <= Carbon\Carbon::now() && $conference->options->early_bird_registration_end >=Carbon\Carbon::now())
+						@if(!empty($conference->options->early_bird_member_ticket_price))
+						<option value="{{$conference->options->early_bird_member_ticket_price/100}}">Early Bird Member Ticket ( ${{c2d($conference->options->early_bird_member_ticket_price)}} )</option>
+						@endif
+						@if(!empty($conference->options->early_bird_non_member_ticket_price))
+						<option value="{{$conference->options->early_bird_non_member_ticket_price/100}}">Early Bird Non Member Ticket ( ${{c2d($conference->options->early_bird_non_member_ticket_price)}} )</option>
+						@endif
+						@if(!empty($conference->options->early_bird_new_member_ticket_price))
+						<option value="{{$conference->options->early_bird_new_member_ticket_price/100}}">Early Bird New Member Ticket ( ${{c2d($conference->options->early_bird_new_member_ticket_price)}} )</option>
+						@endif
+						@if(!empty($conference->options->early_bird_guest_ticket_price))
+						<option value="{{$conference->options->early_bird_guest_ticket_price/100}}">Early Bird Guest Ticket ( ${{c2d($conference->options->early_bird_guest_ticket_price)}} )</option>
+						@endif
+					@elseif($conference->options->registration_start <= Carbon\Carbon::now() && $conference->options->registration_end >=Carbon\Carbon::now())
+						@if(!empty($conference->options->regular_member_ticket_price))
+						<option value="{{$conference->options->regular_member_ticket_price/100}}">Member Ticket ( ${{c2d($conference->options->regular_member_ticket_price)}} )</option>
+						@endif
+						@if(!empty($conference->options->regular_non_member_ticket_price))
+						<option value="{{$conference->options->regular_non_member_ticket_price/100}}">Non Member Ticket ( ${{c2d($conference->options->regular_non_member_ticket_price)}} )</option>
+						@endif
+						@if(!empty($conference->options->regular_new_member_ticket_price))
+						<option value="{{$conference->options->regular_new_member_ticket_price/100}}">New Member Ticket ( ${{c2d($conference->options->regular_new_member_ticket_price)}} )</option>
+						@endif
+						@if(!empty($conference->options->regular_guest_ticket_price))
+						<option value="{{$conference->options->regular_guest_ticket_price/100}}">Guest Ticket ( ${{c2d($conference->options->regular_guest_ticket_price)}} )</option>
+						@endif
+					@endif
 				</select>
 			</div>
 		</div>
-		<div class="col-sm-6 col-md-3">
-			<input placeholder="Name On Ticket" value="" name="registrant[]" type="text">
-		</div>
 		@if($conference->meal_selection_required)
-		<div class="col-sm-6 col-md-3">
+		<div class="col-sm-12 col-md-6 col-lg-4">
 			<div class="block-select">
 				<select required name="meal[]">
 					<option value="">Meal Selection</option>
@@ -308,13 +338,18 @@
 			</div>
 		</div>
 		@endif
-		<div class="col-sm-6 col-md-3">
-			<button type="button" id="add_registrant" class="but">Add Registrant</button>
-		</div>
 	</div>
+	<div class="row" id="added_registrants">
+
 	</div>
 	<div class="row">
-		<div class="col-sm-6 col-md-3">
+		<div class="col-sm-12 col-md-6 col-lg-4">
+			<button type="button" id="add_registrant" class="but submit">Add Another Registrant</button>
+		</div>
+	</div>
+	<hr>
+	<div class="row">
+		<div class="col-sm-12 col-md-6">
 			<div class="block-select">
 				<select required name="payment">
 					<option value="cc">Pay Now Via Credit Card</option>
@@ -323,16 +358,16 @@
 			</div>
 		</div>
 
-		<div class="col-sm-6 col-md-3">
+		<div class="col-sm-12 col-md-6">
 			<input placeholder="Credit Card Number" value="" id="cc" name="cc" type="text">
 		</div>
-		<div class="col-sm-6 col-md-2">
+		<div class="col-sm-12 col-md-4">
 			<input placeholder="Expiry Month MM" value="" id="month" name="month" type="text">
 		</div>
-		<div class="col-sm-6 col-md-2">
+		<div class="col-sm-6 col-md-4">
 			<input placeholder="Expiry Year YY" value="" id="year" name="year" type="text">
 		</div>
-		<div class="col-sm-6 col-md-2">
+		<div class="col-sm-6 col-md-4">
 			<input placeholder="Security Code" value="" id="security" name="security" type="text">
 		</div>
 	</div>
@@ -351,10 +386,39 @@
 
 @section('js')
 	<script>
-	$(document).ready(function() {
-		$('#add_registrant').on('click', function() {
-			alert('clicked');
+		$(document).ready(function () {
+
+			var htmStr = '<div class="col-sm-12 col-lg-4">' +
+				'<input placeholder="Name On Ticket" value="" name="registrant[]" type="text">' +
+			'</div>' +
+			'<div class="col-sm-12 col-md-6 col-lg-4">' +
+				'<div class="block-select">' +
+					'<select required="" name="ticket[]">' +
+						'<option value="">Choose Ticket Type</option>' +
+						'<option value="250">Early Bird Member Ticket ( $250.00 )</option>' +
+						'<option value="325">Early Bird Non Member Ticket ( $325.00 )</option>' +
+						'<option value="75">Early Bird Guest Ticket ( $75.00 )</option>' +
+					'</select>' +
+				'</div>' +
+			'</div>' +
+			'<div class="col-sm-12 col-md-6 col-lg-4">' +
+				'<div class="block-select">' +
+					'<select required="" name="meal[]">' +
+						'<option value="">Meal Selection</option>' +
+						'<option value="1">Baked Salmon Fillet with White Wine Dill Sauce</option>' +
+						'<option value="2">Chicken Cordon Bleu</option>' +
+						'<option value="3">Vegetarian Stir-fry</option>' +
+					'</select>' +
+				'</div>' +
+			'</div>';
+
+			$(document).on("click", '#add_registrant', function() {
+				// console.log(htmStr);
+				var regrow = $("#added_registrants").html();
+				var mixHtml = regrow + htmStr;
+				$("#added_registrants").html(mixHtml);
+				console.log(mixHtml);
+			});
 		});
-	});
 	</script>
 @endsection

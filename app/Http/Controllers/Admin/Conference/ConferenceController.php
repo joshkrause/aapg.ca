@@ -39,7 +39,34 @@ class ConferenceController extends Controller
      */
     public function store(Request $request)
     {
-        $conference = Conference::create($request->all());
+        $data = [
+			'title' => $request->title,
+			'active' => $request->active,
+			'affiliate' => $request->affiliate,
+			'link' => $request->link,
+			'live' => $request->live,
+			'start' => $request->start,
+			'end' => $request->end,
+			'meal_selection_required' => $request->meal_selection_required,
+		];
+
+		$options = [
+			'registration_start' => $request->registration_start,
+			'registration_end' => $request->registration_end,
+			'early_bird_registration_start' => $request->early_bird_registration_start,
+			'early_bird_registration_end' => $request->early_bird_registration_end,
+			'early_bird_member_ticket_price' => $request->early_bird_member_ticket_price * 100,
+			'early_bird_non_member_ticket_price' => $request->early_bird_non_member_ticket_price * 100,
+			'early_bird_new_member_ticket_price' => $request->early_bird_new_member_ticket_price * 100,
+			'early_bird_guest_ticket_price' => $request->early_bird_guest_ticket_price * 100,
+			'regular_member_ticket_price' => $request->regular_member_ticket_price * 100,
+			'regular_non_member_ticket_price' => $request->regular_non_member_ticket_price * 100,
+			'regular_new_member_ticket_price' => $request->regular_new_member_ticket_price * 100,
+			'regular_guest_ticket_price' => $request->regular_guest_ticket_price * 100,
+		];
+		$conference = Conference::create($data);
+		$conference->options()->updateOrCreate($options);
+
         Alert::success('Conference was created successfully.', 'Conference Created');
         return redirect('admin/conferences');
 
@@ -96,15 +123,16 @@ class ConferenceController extends Controller
 			'early_bird_registration_end' => $request->early_bird_registration_end,
 			'early_bird_member_ticket_price' => $request->early_bird_member_ticket_price * 100,
 			'early_bird_non_member_ticket_price' => $request->early_bird_non_member_ticket_price * 100,
+			'early_bird_new_member_ticket_price' => $request->early_bird_new_member_ticket_price * 100,
 			'early_bird_guest_ticket_price' => $request->early_bird_guest_ticket_price * 100,
 			'regular_member_ticket_price' => $request->regular_member_ticket_price * 100,
 			'regular_non_member_ticket_price' => $request->regular_non_member_ticket_price * 100,
+			'regular_new_member_ticket_price' => $request->regular_new_member_ticket_price * 100,
 			'regular_guest_ticket_price' => $request->regular_guest_ticket_price * 100,
 		];
 
         if($conference->update($data) && $conference->options()->updateOrCreate($options))
         {
-			;
             Alert::success('Conference was updated successfully.', 'Conference Updated');
             return redirect('admin/conferences');
         }

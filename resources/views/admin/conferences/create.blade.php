@@ -34,7 +34,6 @@
 						<form action="/admin/conferences" method="post"
 							enctype="multipart/form-data">
 							@csrf
-							@method('patch')
 							<div class="card-body">
 								<div class="form-row">
 									<div class="col-sm-6">
@@ -165,17 +164,31 @@
 									</div>
 									<div class="col-sm-6">
 										<div class="form-group">
-											<label>Non-Member Early Bird Ticket Price</label>
-											<input name="early_bird_non_member_ticket_price" type="text"
+											<label>New Member Early Bird Ticket Price</label>
+											<input name="early_bird_new_member_ticket_price" type="text"
 												class="form-control" placeholder="0.00"
+												value="{{old('early_bird_new_member_ticket_price')}}">
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<div class="form-group">
+											<label>New Member Ticket Regular Price</label>
+											<input name="regular_new_member_ticket_price" type="text"
+												class="form-control" placeholder="0.00"
+												value="{{old('regular_new_member_ticket_price')}}">
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<div class="form-group">
+											<label>Non-Member Early Bird Ticket Price</label>
+											<input name="early_bird_non_member_ticket_price" type="text" class="form-control" placeholder="0.00"
 												value="{{old('early_bird_non_member_ticket_price')}}">
 										</div>
 									</div>
 									<div class="col-sm-6">
 										<div class="form-group">
 											<label>Non-Member Ticket Regular Price</label>
-											<input name="regular_non_member_ticket_price" type="text"
-												class="form-control" placeholder="0.00"
+											<input name="regular_non_member_ticket_price" type="text" class="form-control" placeholder="0.00"
 												value="{{old('regular_non_member_ticket_price')}}">
 										</div>
 									</div>

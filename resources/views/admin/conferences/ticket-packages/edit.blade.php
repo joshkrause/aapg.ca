@@ -85,7 +85,14 @@
 									</div>
 									<div class="col-sm-6">
 										<div class="form-group">
-											<label>Number of Gues Tickets</label>
+											<label>Number of New Member Tickets</label>
+											<input name="new_member_tickets" type="text" class="form-control" placeholder="ie) 4"
+												value="{{old('new_member_tickets', $package->new_member_tickets)}}">
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<div class="form-group">
+											<label>Number of Guest Tickets</label>
 											<input name="guest_tickets" type="text" class="form-control"
 												placeholder="ie) 4" value="{{old('guest_tickets', $package->guest_tickets)}}">
 										</div>

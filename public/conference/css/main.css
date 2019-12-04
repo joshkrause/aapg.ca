@@ -954,6 +954,17 @@ select.error {
 }
 /* End fat footer section*/
 
+.registry-form .but {
+	margin-bottom: 20px;
+}
+.registry-form hr {
+	margin-top: 0;
+	margin-bottom: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	color: #444444;
+	width: 50%;
+}
 
 /*Media queries*/
 
@@ -991,7 +1002,8 @@ select.error {
     }
     .but {
         padding: 11px 25px;
-    }
+	}
+
     .block-speaker .block-img {
         height: 300px;
     }
@@ -1152,7 +1164,7 @@ select.error {
     .sub-title-0 {
         font-size: 22px;
     }
-    .registry-form input[type="text"] {
+    .registry-form input[type="text"], .registry-form input["select"] {
         width: 100%
     }
     .block-sponsor img {
@@ -1261,7 +1273,7 @@ select.error {
         margin-bottom: 25px;
     }
     .registry-form .submit{width: 100%;}
-    input[type="text"], .registry-form .block-select{max-width: 100%;}
+    input[type="text"], .registry-form .block-select{width: 100%;}
     .block-speaker .block-img::after {
         content: none;
     }

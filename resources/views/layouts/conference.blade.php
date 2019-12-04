@@ -142,7 +142,7 @@
       <script src="/conference/js/script.js" type="text/javascript"></script>
 	  <script src="/conference/js/sweetalert2.all.min.js" type="text/javascript"></script>
 	  @yield('js')
-      <script src="https://maps.googleapis.com/maps/api/js?key={{env('GOOGLE_MAPS_API_KEY')}}&callback=initializeMap"></script>
+      {{-- <script src="https://maps.googleapis.com/maps/api/js?key={{env('GOOGLE_MAPS_API_KEY')}}&callback=initializeMap"></script> --}}
       @include('sweet::alert')
 
       <!-- Google analytics -->
