@@ -17,7 +17,7 @@ class ConferenceController extends Controller
      */
     public function index()
     {
-        $conferences = Conference::all();
+        $conferences = Conference::latest()->with('tickets')->get();
         return view('admin.conferences.index', compact('conferences'));
     }
 

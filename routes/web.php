@@ -33,8 +33,8 @@ Route::get('/alert', 'AlertController@index');
 Route::post('/subscribe', 'SubscriberController@store');
 
 Route::get('/conferences', 'ConferenceController@index')->name('conferences.home');
+Route::post('/conferences/{conference}/register', 'ConferenceController@Order');
 Route::get('/conferences/{conference}', 'ConferenceController@show')->name('conferences.show');
-Route::post('/conferences', 'ConferenceController@Order');
 Route::get('/conferences/affiliate', 'ConferenceController@affiliate')->name('conferences.affiliate');
 
 Route::group(['prefix'=>'admin', 'middleware'=> ['auth', 'admin']], function() {
@@ -60,10 +60,9 @@ Route::group(['prefix'=>'admin', 'middleware'=> ['auth', 'admin']], function() {
 	Route::resource('conferences/{conference}/schedule', 'Admin\Conference\ConferenceScheduleController');
 	Route::resource('conferences/{conference}/ticket-packages', 'Admin\Conference\ConferenceTicketPackageController');
 	Route::resource('conferences/{conference}/meal', 'Admin\Conference\ConferenceMealSelectionController');
+	Route::resource('conferences/{conference}/tickets', 'Admin\Conference\RegistrationController');
 	Route::resource('conferences', 'Admin\Conference\ConferenceController');
-    Route::group(['prefix' => 'conferences'], function() {
-        Route::resource('registration', 'Admin\Conference\RegistrationController');
-    });
+
 
     Route::group(['prefix' => 'redactor'], function () {
         Route::post('/images', 'RedactorController@uploadImage');

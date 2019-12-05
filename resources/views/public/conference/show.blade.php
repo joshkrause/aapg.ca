@@ -145,7 +145,7 @@
 			@endif
 			<div class="col-sm-8 ">
 				@if(!empty($conference->options->regular_member_ticket_price))
-				<div class="col-sm-4">
+				<div class="col-sm-12 col-md-6 col-lg-4">
 					<ul class="block-tickets ">
 						<li>
 							<ul class="block-ticket active">
@@ -182,7 +182,7 @@
 				</div>
 				@endif
 				@if(!empty($conference->options->regular_new_member_ticket_price))
-				<div class="col-sm-4">
+				<div class="col-sm-12 col-md-6 col-lg-4">
 					<ul class="block-tickets ">
 						<li>
 							<ul class="block-ticket">
@@ -220,7 +220,7 @@
 				</div>
 				@endif
 				@if(!empty($conference->options->regular_non_member_ticket_price))
-				<div class="col-sm-4">
+				<div class="col-sm-12 col-md-6 col-lg-4">
 					<ul class="block-tickets ">
 						<li>
 							<ul class="block-ticket">
@@ -269,28 +269,28 @@
 @endsection
 
 @section('registration')
-<form class="registry-form form" id="checkout-form" method="post" action="/conferences" autocomplete="off"
+<form class="registry-form form" id="checkout-form" method="post" action="/conferences/{{$conference->id}}/register" autocomplete="off"
 	{{-- onSubmit="process(event);" --}}>
 	@csrf
 	<h2 class="sub-title-1 mb-30">Register For The AAPG Annual Conference 2019</h2>
 	<div class="row">
 		<div class="col-sm-12 col-md-6 col-lg-3">
-			<input placeholder="Contact Name" value="" id="name" name="name" type="text" required>
+			<input placeholder="Contact Name" value="{{old('name')}}" id="name" name="name" type="text" required>
 		</div>
 		<div class="col-sm-12 col-md-6 col-lg-3">
-			<input placeholder="Contact Email" value="" id="email" name="email" type="text" required>
+			<input placeholder="Contact Email" value="{{old('email')}}" id="email" name="email" type="text" required>
 		</div>
 		<div class="col-sm-12 col-md-6 col-lg-3">
-			<input placeholder="Contact Phone number" value="" id="phone" name="phone" type="text">
+			<input placeholder="Contact Phone number" value="{{old('phone')}}" id="phone" name="phone" type="text">
 		</div>
 		<div class="col-sm-12 col-md-6 col-lg-3">
-			<input placeholder="Community" value="" id="company" name="company" type="text">
+			<input placeholder="Community" value="{{old('company')}}" id="company" name="company" type="text">
 		</div>
 	</div>
 	<hr>
 	<div class="row" id="registration_row">
 		<div class="col-sm-12 col-lg-4">
-			<input placeholder="Name On Ticket" value="" name="registrant[]" type="text">
+			<input placeholder="Name On Ticket" value="{{old('registrant[0]')}}" name="registrant[]" type="text">
 		</div>
 		<div class="col-sm-12 col-md-6 col-lg-4">
 			<div class="block-select">
@@ -298,29 +298,37 @@
 					<option value="">Choose Ticket Type</option>
 					@if($conference->options->early_bird_registration_start <= Carbon\Carbon::now() && $conference->options->early_bird_registration_end >=Carbon\Carbon::now())
 						@if(!empty($conference->options->early_bird_member_ticket_price))
-						<option value="{{$conference->options->early_bird_member_ticket_price/100}}">Early Bird Member Ticket ( ${{c2d($conference->options->early_bird_member_ticket_price)}} )</option>
+							<option @if(old('ticket[0]') == "Early Bird Member Ticket") selected="selected" @endif
+							value="Early Bird Member Ticket">Early Bird Member Ticket ( ${{c2d($conference->options->early_bird_member_ticket_price)}} )</option>
 						@endif
 						@if(!empty($conference->options->early_bird_non_member_ticket_price))
-						<option value="{{$conference->options->early_bird_non_member_ticket_price/100}}">Early Bird Non Member Ticket ( ${{c2d($conference->options->early_bird_non_member_ticket_price)}} )</option>
+						<option @if(old('ticket[0]')=="Early Bird Non Member Ticket" ) selected="selected" @endif
+							value="Early Bird Non Member Ticket">Early Bird Non Member Ticket ( ${{c2d($conference->options->early_bird_non_member_ticket_price)}} )</option>
 						@endif
 						@if(!empty($conference->options->early_bird_new_member_ticket_price))
-						<option value="{{$conference->options->early_bird_new_member_ticket_price/100}}">Early Bird New Member Ticket ( ${{c2d($conference->options->early_bird_new_member_ticket_price)}} )</option>
+						<option @if(old('ticket[0]')=="Early Bird New Member Ticket" ) selected="selected" @endif
+							value="Early Bird New Member Ticket">Early Bird New Member Ticket ( ${{c2d($conference->options->early_bird_new_member_ticket_price)}} )</option>
 						@endif
 						@if(!empty($conference->options->early_bird_guest_ticket_price))
-						<option value="{{$conference->options->early_bird_guest_ticket_price/100}}">Early Bird Guest Ticket ( ${{c2d($conference->options->early_bird_guest_ticket_price)}} )</option>
+						<option @if(old('ticket[0]')=="Early Bird Guest Ticket" ) selected="selected" @endif
+							value="Early Bird Guest Ticket">Early Bird Guest Ticket ( ${{c2d($conference->options->early_bird_guest_ticket_price)}} )</option>
 						@endif
 					@elseif($conference->options->registration_start <= Carbon\Carbon::now() && $conference->options->registration_end >=Carbon\Carbon::now())
 						@if(!empty($conference->options->regular_member_ticket_price))
-						<option value="{{$conference->options->regular_member_ticket_price/100}}">Member Ticket ( ${{c2d($conference->options->regular_member_ticket_price)}} )</option>
+						<option @if(old('ticket[0]')=="Member Ticket" ) selected="selected" @endif
+							value="Member Ticket">Member Ticket ( ${{c2d($conference->options->regular_member_ticket_price)}} )</option>
 						@endif
 						@if(!empty($conference->options->regular_non_member_ticket_price))
-						<option value="{{$conference->options->regular_non_member_ticket_price/100}}">Non Member Ticket ( ${{c2d($conference->options->regular_non_member_ticket_price)}} )</option>
+						<option @if(old('ticket[0]')=="Non Member Ticket" ) selected="selected" @endif
+							value="Non Member Ticket">Non Member Ticket ( ${{c2d($conference->options->regular_non_member_ticket_price)}} )</option>
 						@endif
 						@if(!empty($conference->options->regular_new_member_ticket_price))
-						<option value="{{$conference->options->regular_new_member_ticket_price/100}}">New Member Ticket ( ${{c2d($conference->options->regular_new_member_ticket_price)}} )</option>
+						<option @if(old('ticket[0]')=="New Member Ticket" ) selected="selected" @endif
+							value="New Member Ticket">New Member Ticket ( ${{c2d($conference->options->regular_new_member_ticket_price)}} )</option>
 						@endif
 						@if(!empty($conference->options->regular_guest_ticket_price))
-						<option value="{{$conference->options->regular_guest_ticket_price/100}}">Guest Ticket ( ${{c2d($conference->options->regular_guest_ticket_price)}} )</option>
+						<option @if(old('ticket[0]')=="Guest Ticket" ) selected="selected" @endif
+							value="Guest Ticket">Guest Ticket ( ${{c2d($conference->options->regular_guest_ticket_price)}} )</option>
 						@endif
 					@endif
 				</select>
@@ -332,7 +340,8 @@
 				<select required name="meal[]">
 					<option value="">Meal Selection</option>
 					@foreach($conference->meals as $meal)
-					<option value="{{$meal->id}}">{{$meal->option}}</option>
+					<option @if(old('meal[0]')== $meal->id ) selected="selected" @endif
+						value="{{$meal->id}}">{{$meal->option}}</option>
 					@endforeach
 				</select>
 			</div>
@@ -386,39 +395,11 @@
 
 @section('js')
 	<script>
-		$(document).ready(function () {
+		var regrow = $("#registration_row").html();
 
-			var htmStr = '<div class="col-sm-12 col-lg-4">' +
-				'<input placeholder="Name On Ticket" value="" name="registrant[]" type="text">' +
-			'</div>' +
-			'<div class="col-sm-12 col-md-6 col-lg-4">' +
-				'<div class="block-select">' +
-					'<select required="" name="ticket[]">' +
-						'<option value="">Choose Ticket Type</option>' +
-						'<option value="250">Early Bird Member Ticket ( $250.00 )</option>' +
-						'<option value="325">Early Bird Non Member Ticket ( $325.00 )</option>' +
-						'<option value="75">Early Bird Guest Ticket ( $75.00 )</option>' +
-					'</select>' +
-				'</div>' +
-			'</div>' +
-			'<div class="col-sm-12 col-md-6 col-lg-4">' +
-				'<div class="block-select">' +
-					'<select required="" name="meal[]">' +
-						'<option value="">Meal Selection</option>' +
-						'<option value="1">Baked Salmon Fillet with White Wine Dill Sauce</option>' +
-						'<option value="2">Chicken Cordon Bleu</option>' +
-						'<option value="3">Vegetarian Stir-fry</option>' +
-					'</select>' +
-				'</div>' +
-			'</div>';
-
-			$(document).on("click", '#add_registrant', function() {
-				// console.log(htmStr);
-				var regrow = $("#added_registrants").html();
-				var mixHtml = regrow + htmStr;
-				$("#added_registrants").html(mixHtml);
-				console.log(mixHtml);
-			});
+		$(document).on("click", '#add_registrant', function() {
+			// console.log(htmStr);
+			$("form #added_registrants").append(regrow);
 		});
 	</script>
 @endsection

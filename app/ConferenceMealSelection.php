@@ -12,4 +12,9 @@ class ConferenceMealSelection extends Model
 	{
 		return $this->belongsTo('App\Conference');
 	}
+
+	public function ticket()
+	{
+		return $this->belongsTo('App\ConferenceRegistration', 'id', 'meal_selection_id');
+	}
 }

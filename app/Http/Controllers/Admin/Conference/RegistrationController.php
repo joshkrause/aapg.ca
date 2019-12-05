@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin\Conference;
 
 use App\Order;
+use App\Conference;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -13,10 +14,10 @@ class RegistrationController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Conference $conference)
     {
-        $registrants = Order::all();
-        return view('admin.conferences.registration.index', compact('registrants'));
+		$conference->load('orders.tickets');
+        return view('admin.conferences.registration.index', compact('conference'));
     }
 
     /**

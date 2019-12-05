@@ -39,7 +39,8 @@
                                     <tr>
                                         <th>ID</th>
                                         <th>Title</th>
-                                        <th>Date</th>
+										<th>Date</th>
+										<th>Tickets</th>
                                         <th>Afilliate</th>
                                         <th>Modify</th>
                                     </tr>
@@ -47,8 +48,9 @@
                                     <tr>
                                         <td>{{$conference->id}}</td>
                                         <td>{{$conference->title}}</td>
-                                        <td>{{$conference->date}}</td>
-                                        <td>{{$conference->affiliate}}</td>
+										<td>{{$conference->start->format('F d, Y')}}</td>
+										<td>@if(!$conference->affiliate) <a href="/admin/conferences/{{$conference->id}}/tickets">{{$conference->tickets()->count()}} Tickets</a> @endif</td>
+                                        <td>{{b2yn($conference->affiliate)}}</td>
                                         <td>
                                             <form action="/admin/conferences/{{$conference->id}}" method="POST">
                                                 @csrf

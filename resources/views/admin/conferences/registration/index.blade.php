@@ -26,40 +26,34 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <h3 class="card-title">All Attendants</h3>
-                            <div class="card-tools">
+                            <h3 class="card-title">{{$conference->title}} Attendants</h3>
+                            {{-- <div class="card-tools">
                                 <a href="/admin/conferences/registration/create" class="btn btn-primary">
                                     Add Attendants <i class="fa fa-file-user-plus fw"></i>
                                 </a>
-                            </div>
+                            </div> --}}
                         </div>
                         <!-- /.card-header -->
                         <div class="card-body table-responsive p-0">
                             <table class="table table-hover">
                                 <tbody>
                                     <tr>
-                                        <th>ID</th>
+										<th>Order ID</th>
                                         <th>Name</th>
-                                        <th>Type</th>
+                                        <th>Tickets</th>
                                         <th>Cost</th>
-                                        <th>Details</th>
-                                        <th>Modify</th>
                                     </tr>
-                                    @foreach($registrants as $member)
+                                    @foreach($conference->orders->reverse() as $order)
                                     <tr>
-                                        <td>{{$member->id}}</td>
-                                        <td>{{$member->name}}</td>
-                                        <td>{{$member->ticket_type}}</td>
-                                        <td>${{number_format($member->total/100, 2)}} @if(!empty($member->stripe_id))<br/> Paid Online @endif </td>
-                                        <td>{{$member->description}}</td>
-                                        <td>
-                                            <form action="/admin/conferences/registration/{{$member->id}}" method="POST">
-                                                @csrf
-                                                @method('delete')
-                                                <a href="/admin/conferences/registration/{{$member->id}}/edit" class="btn btn-success btn-sm">Edit</a>
-                                                <button type="submit" class="btn btn-danger btn-sm">Delete</button>
-                                            </form>
-                                        </td>
+                                        <td>{{$order->id}}</td>
+                                        <td>{{$order->name}}</td>
+                                        <td>@foreach($order->tickets as $ticket)
+											{{$ticket->ticket}} - {{$ticket->name}}<br />
+											@if( !empty($ticket->meal)) Meal Choice: {{$ticket->meal->option}}<br /> @endif
+											@endforeach
+										</td>
+                                        <td>${{number_format($order->total/100, 2)}} @if(!empty($order->stripe_id))<br/> Paid Online @endif </td>
+
                                     </tr>
                                     @endforeach
                                 </tbody>

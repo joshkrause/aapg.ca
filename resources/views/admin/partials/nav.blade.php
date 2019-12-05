@@ -95,12 +95,12 @@
                 <p>Schedules</p>
             </a>
         </li> --}}
-        <li class="nav-item">
-            <a href="/admin/conferences/registration" class="nav-link">
+        {{-- <li class="nav-item">
+            <a href="/admin/conferences/tickets" class="nav-link">
                 <i class="nav-icon fas fa-ticket-alt"></i>
-                <p>Registration</p>
+                <p>Tickets Sold</p>
             </a>
-        </li>
+        </li> --}}
         <li class="nav-header">Administration</li>
         <li class="nav-item">
             <a href="/admin/users" class="nav-link">
@@ -112,7 +112,7 @@
         <li class="nav-header">My Account</li>
         <li class="nav-item">
             <a class="nav-link" href="/logout">
-         
+
                 <i class="nav-icon fa fa-sign-out"></i>
                 <p>Logout</p>
              </a>

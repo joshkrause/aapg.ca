@@ -8,9 +8,11 @@ use App\Attendant;
 use Carbon\Carbon;
 use App\Conference;
 use Illuminate\Http\Request;
-use App\Mail\ConferenceRegistration;
+use App\ConferenceRegistration;
 use Illuminate\Support\Facades\Mail;
+use App\Mail\ConferenceRegistrationMail;
 use Cartalyst\Stripe\Laravel\Facades\Stripe;
+use App\Http\Requests\ConferenceRegistrationRequest;
 
 class ConferenceController extends Controller
 {
@@ -33,8 +35,9 @@ class ConferenceController extends Controller
         return view('public.conference.affiliate', compact('conferences'));
     }
 
-    public function order(Request $request)
+    public function order(ConferenceRegistrationRequest $request, Conference $conference)
     {
+		// dd($request->all());
         // try {
         //     $this->validate($request, [
         //         'name' => 'required|string',
@@ -53,48 +56,85 @@ class ConferenceController extends Controller
         //     ], 422);
         // }
 
-        $ticket_subtotal = 0;
-        $guest_subtotal = 0;
-        $ticket_subtotal = $request->quantity * $request->ticket * 100;
-        $guest_subtotal = $request->guest * 7500;
-        if($request->quantity > 3 && $request->quantity < 8 && $request->ticket=="275")
-        {
-            $ticket_subtotal = $ticket_subtotal - 10000;
-        }
-        elseif($request->quantity > 7 && $request->quantity < 12  && $request->ticket=="275")
-        {
-            $ticket_subtotal = $ticket_subtotal - 20000;
-        }
-        elseif($request->quantity > 11 && $request->quantity < 16  && $request->ticket=="275")
-        {
-            $ticket_subtotal = $ticket_subtotal - 30000;
-        }
-        $subtotal = $ticket_subtotal + $guest_subtotal;
-        $total = $subtotal;
+		$ticket_subtotal = 0;
+		$memb_t = 0;
+		$non_memb_t = 0;
+		$new_memb_t = 0;
+		$guest_t = 0;
 
-        if($request->ticket == 275)
-        {
-            $ticket_type = "Member";
-        }
-        else {
-            $ticket_type = "Non Member";
-        }
-        $charge_description = "AAPG Annual Conference. " . $request->quantity . " tickets and " . $request->guest . " guest tickets. Customer " . $request->name . ". Community " . $request->company;
-        $notes = "Member Names: " . $request->member_names . ". Guest Names: " . $request->guest_names;
-        $order = new Order([
-            'name' => $request->name,
-            'email' => $request->email,
-            'company' => $request->company,
-            'phone' => $request->phone,
-            'ticket_type' => $ticket_type,
-            'quantity' => $request->quantity,
-            'subtotal' => $subtotal,
-            'tax' => '0',
-            'total' => $total,
-            'description' => $charge_description,
-            'notes' => $notes,
-            'guests' => $request->guest,
-        ]);
+
+		foreach($request->registrant as $key=>$reg)
+		{
+			$ticket[$key]['name'] = $reg;
+		}
+		foreach($request->ticket as $key=>$tic)
+		{
+			if($tic == "Early Bird Member Ticket")
+			{
+				$memb_t ++;
+				$p = $conference->options->early_bird_member_ticket_price;
+			}
+			elseif($tic == "Early Bird Non Member Ticket")
+			{
+				$non_memb_t++;
+				$p = $conference->options->early_bird_non_member_ticket_price;
+			}
+			elseif($tic == "Early Bird New Member Ticket")
+			{
+				$new_memb_t++;
+				$p = $conference->options->early_bird_new_member_ticket_price;
+			}
+			elseif($tic == "Early Bird Guest Ticket")
+			{
+				$guest_t++;
+				$p = $conference->options->early_bird_guest_ticket_price;
+			}
+			if($tic == "Member Ticket")
+			{
+				$memb_t++;
+				$p = $conference->options->regular_member_ticket_price;
+			}
+			elseif($tic == "Non Member Ticket")
+			{
+				$non_memb_t++;
+				$p = $conference->options->regular_non_member_ticket_price;
+			}
+			elseif($tic == "New Member Ticket")
+			{
+				$new_memb_t++;
+				$p = $conference->options->regular_new_member_ticket_price;
+			}
+			elseif($tic == "Guest Ticket")
+			{
+				$guest_t++;
+
+				$p = $conference->options->regular_guest_ticket_price;
+			}
+			$ticket_subtotal += $p;
+			$ticket[$key]['ticket_price'] = $p;
+			$ticket[$key]['ticket'] = $tic;
+		}
+		if($request->has('meal'))
+		{
+			foreach($request->meal as $key=>$meal)
+			{
+				$ticket[$key]['meal_selection_id'] = $meal;
+			}
+		}
+		$order = new Order;
+		$order->conference_id = $conference->id;
+		$order->payment = $request->payment;
+		$order->name = $request->name;
+		$order->company = $request->company;
+		$order->email = $request->email;
+		$order->phone = $request->phone;
+        $order->subtotal = $ticket_subtotal;
+        $order->tax = 0;
+        $order->total = $ticket_subtotal;
+
+        $charge_description = "AAPG Annual Conference. " . count($request->ticket) . " tickets. Customer " . $request->name . ". Community " . $request->company;
+
+		$order->description = $charge_description;
 
         if($request->payment == "cc")
         {
@@ -117,22 +157,22 @@ class ConferenceController extends Controller
                     ],
                 ]);
             } catch (Cartalyst\Stripe\Exception\BadRequestException $e) {
-                Alert::error($e, 'Uh Oh!');
+                Alert::error($e->getMessage(), 'Uh Oh!');
                 return back();
             } catch (Cartalyst\Stripe\Exception\UnauthorizedException $e) {
-                Alert::error($e, 'Uh Oh!');
+                Alert::error($e->getMessage(), 'Uh Oh!');
                 return back();
             } catch (Cartalyst\Stripe\Exception\InvalidRequestException $e) {
-                Alert::error($e, 'Uh Oh!');
+                Alert::error($e->getMessage(), 'Uh Oh!');
                 return back();
             } catch (Cartalyst\Stripe\Exception\NotFoundException $e) {
-                Alert::error($e, 'Uh Oh!');
+                Alert::error($e->getMessage(), 'Uh Oh!');
                 return back();
             } catch (Cartalyst\Stripe\Exception\CardErrorException $e) {
-                Alert::error($e, 'Uh Oh!');
+                Alert::error($e->getMessage(), 'Uh Oh!');
                 return back();
             } catch (Cartalyst\Stripe\Exception\ServerErrorException $e) {
-                Alert::error($e, 'Uh Oh!');
+                Alert::error($e->getMessage(), 'Uh Oh!');
                 return back();
             } catch (\Exception $e) {
                 Alert::error($e->getMessage(), 'Uh Oh!')->persistent('OK');
@@ -143,42 +183,48 @@ class ConferenceController extends Controller
                 $charge = Stripe::charges()->create([
                     'source' => $token['id'],
                     'currency' => 'CAD',
-                    'amount'   => $total / 100,
+                    'amount'   => $ticket_subtotal / 100,
                     'description' => $charge_description,
                     'receipt_email' => $request->email,
                     // 'metadata' => $charge_meta,
-                ]);
+				]);
 
             } catch (Cartalyst\Stripe\Exception\BadRequestException $e) {
-                Alert::error($e, 'Uh Oh!');
+                Alert::error($e->getMessage(), 'Uh Oh!');
                 return back();
             } catch (Cartalyst\Stripe\Exception\UnauthorizedException $e) {
-                Alert::error($e, 'Uh Oh!');
+                Alert::error($e->getMessage(), 'Uh Oh!');
                 return back();
             } catch (Cartalyst\Stripe\Exception\InvalidRequestException $e) {
-                Alert::error($e, 'Uh Oh!');
+                Alert::error($e->getMessage(), 'Uh Oh!');
                 return back();
             } catch (Cartalyst\Stripe\Exception\NotFoundException $e) {
-                Alert::error($e, 'Uh Oh!');
+                Alert::error($e->getMessage(), 'Uh Oh!');
                 return back();
-            } catch (\Cartalyst\Stripe\Exception\CardErrorException $e) {
-                Alert::error($e, 'Uh Oh!');
+            } catch (Cartalyst\Stripe\Exception\CardErrorException $e) {
+                Alert::error($e->getMessage(), 'Uh Oh!');
                 return back();
             } catch (Cartalyst\Stripe\Exception\ServerErrorException $e) {
-                Alert::error($e, 'Uh Oh!');
+                Alert::error($e->getMessage(), 'Uh Oh!');
                 return back();
             } catch (\Exception $e) {
                 Alert::error($e->getMessage(), 'Uh Oh!')->persistent('OK');
                 return back();
             }
 
-
-            $order['stripe_id'] = $charge['id'];
+			$order->stripe_id = $charge['id'];
 
         }
-
-        $order->save();
-        Mail::to('admin@aapg.ca')->send(new ConferenceRegistration($order));
+		$order->save();
+		$tickets = [];
+		foreach($ticket as $t)
+		{
+			$t['conference_id'] = $conference->id;
+			$t['order_id'] = $order->id;
+			$tic = ConferenceRegistration::create($t);
+			array_push(	$tickets,  $tic);
+		}
+        Mail::to('admin@aapg.ca')->send(new ConferenceRegistrationMail($order, $tickets));
 
         Alert::success('Your order has been completed! If you paid via credit card you will receive a credit card invoice shortly. If you requested to pay by cash or cheque we will contact you ASAP.', 'Registration Received')->persistent('Ok');
 
