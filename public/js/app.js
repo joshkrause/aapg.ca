@@ -41656,7 +41656,7 @@ module.exports = Vue;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(142);
-module.exports = __webpack_require__(209);
+module.exports = __webpack_require__(212);
 
 
 /***/ }),
@@ -41734,7 +41734,7 @@ Vue.component('v-select', __WEBPACK_IMPORTED_MODULE_5_vue_select___default.a);
 // Vue Router
 
 Vue.use(__WEBPACK_IMPORTED_MODULE_6_vue_router__["a" /* default */]);
-var routes = [{ path: '/admin', component: __webpack_require__(190) }, { path: '/admin/profile', component: __webpack_require__(193) }, { path: '/admin/users', component: __webpack_require__(196) }, { path: '/admin/developers', component: __webpack_require__(199) }, { path: '/admin/conferences', component: __webpack_require__(231) }, { path: '/admin/conferences/schedules', component: __webpack_require__(234) }, { path: '/admin/conferences/registration', component: __webpack_require__(237) }];
+var routes = [{ path: '/admin', component: __webpack_require__(190) }, { path: '/admin/profile', component: __webpack_require__(193) }, { path: '/admin/users', component: __webpack_require__(196) }, { path: '/admin/developers', component: __webpack_require__(199) }, { path: '/admin/conferences', component: __webpack_require__(202) }, { path: '/admin/conferences/schedules', component: __webpack_require__(206) }, { path: '/admin/conferences/registration', component: __webpack_require__(209) }];
 var router = new __WEBPACK_IMPORTED_MODULE_6_vue_router__["a" /* default */]({
     mode: 'history',
     routes: routes
@@ -41818,7 +41818,7 @@ if (token) {
 /* WEBPACK VAR INJECTION */(function(global, module) {var __WEBPACK_AMD_DEFINE_RESULT__;/**
  * @license
  * Lodash <https://lodash.com/>
- * Copyright JS Foundation and other contributors <https://js.foundation/>
+ * Copyright OpenJS Foundation and other contributors <https://openjsf.org/>
  * Released under MIT license <https://lodash.com/license>
  * Based on Underscore.js 1.8.3 <http://underscorejs.org/LICENSE>
  * Copyright Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
@@ -41829,7 +41829,7 @@ if (token) {
   var undefined;
 
   /** Used as the semantic version number. */
-  var VERSION = '4.17.11';
+  var VERSION = '4.17.13';
 
   /** Used as the size to enable large array optimizations. */
   var LARGE_ARRAY_SIZE = 200;
@@ -44488,16 +44488,10 @@ if (token) {
         value.forEach(function(subValue) {
           result.add(baseClone(subValue, bitmask, customizer, subValue, value, stack));
         });
-
-        return result;
-      }
-
-      if (isMap(value)) {
+      } else if (isMap(value)) {
         value.forEach(function(subValue, key) {
           result.set(key, baseClone(subValue, bitmask, customizer, key, value, stack));
         });
-
-        return result;
       }
 
       var keysFunc = isFull
@@ -45421,8 +45415,8 @@ if (token) {
         return;
       }
       baseFor(source, function(srcValue, key) {
+        stack || (stack = new Stack);
         if (isObject(srcValue)) {
-          stack || (stack = new Stack);
           baseMergeDeep(object, source, key, srcIndex, baseMerge, customizer, stack);
         }
         else {
@@ -47239,7 +47233,7 @@ if (token) {
       return function(number, precision) {
         number = toNumber(number);
         precision = precision == null ? 0 : nativeMin(toInteger(precision), 292);
-        if (precision) {
+        if (precision && nativeIsFinite(number)) {
           // Shift with exponential notation to avoid floating-point issues.
           // See [MDN](https://mdn.io/round#Examples) for more details.
           var pair = (toString(number) + 'e').split('e'),
@@ -48422,7 +48416,7 @@ if (token) {
     }
 
     /**
-     * Gets the value at `key`, unless `key` is "__proto__".
+     * Gets the value at `key`, unless `key` is "__proto__" or "constructor".
      *
      * @private
      * @param {Object} object The object to query.
@@ -48430,6 +48424,10 @@ if (token) {
      * @returns {*} Returns the property value.
      */
     function safeGet(object, key) {
+      if (key === 'constructor' && typeof object[key] === 'function') {
+        return;
+      }
+
       if (key == '__proto__') {
         return;
       }
@@ -52230,6 +52228,7 @@ if (token) {
           }
           if (maxing) {
             // Handle invocations in a tight loop.
+            clearTimeout(timerId);
             timerId = setTimeout(timerExpired, wait);
             return invokeFunc(lastCallTime);
           }
@@ -56616,9 +56615,12 @@ if (token) {
       , 'g');
 
       // Use a sourceURL for easier debugging.
+      // The sourceURL gets injected into the source that's eval-ed, so be careful
+      // with lookup (in case of e.g. prototype pollution), and strip newlines if any.
+      // A newline wouldn't be a valid sourceURL anyway, and it'd enable code injection.
       var sourceURL = '//# sourceURL=' +
-        ('sourceURL' in options
-          ? options.sourceURL
+        (hasOwnProperty.call(options, 'sourceURL')
+          ? (options.sourceURL + '').replace(/[\r\n]/g, ' ')
           : ('lodash.templateSources[' + (++templateCounter) + ']')
         ) + '\n';
 
@@ -56651,7 +56653,9 @@ if (token) {
 
       // If `variable` is not specified wrap a with-statement around the generated
       // code to add the data object to the top of the scope chain.
-      var variable = options.variable;
+      // Like with sourceURL, we take care to not check the option's prototype,
+      // as this configuration is a code injection vector.
+      var variable = hasOwnProperty.call(options, 'variable') && options.variable;
       if (!variable) {
         source = 'with (obj) {\n' + source + '\n}\n';
       }
@@ -58856,10 +58860,11 @@ if (token) {
     baseForOwn(LazyWrapper.prototype, function(func, methodName) {
       var lodashFunc = lodash[methodName];
       if (lodashFunc) {
-        var key = (lodashFunc.name + ''),
-            names = realNames[key] || (realNames[key] = []);
-
-        names.push({ 'name': methodName, 'func': lodashFunc });
+        var key = lodashFunc.name + '';
+        if (!hasOwnProperty.call(realNames, key)) {
+          realNames[key] = [];
+        }
+        realNames[key].push({ 'name': methodName, 'func': lodashFunc });
       }
     });
 
@@ -75025,8 +75030,290 @@ if (false) {
 }
 
 /***/ }),
-/* 202 */,
-/* 203 */,
+/* 202 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(2)
+/* script */
+var __vue_script__ = __webpack_require__(203)
+/* template */
+var __vue_template__ = __webpack_require__(205)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/js/components/admin/conference/Conferences.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-57780662", Component.options)
+  } else {
+    hotAPI.reload("data-v-57780662", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 203 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vuejs_datepicker__ = __webpack_require__(204);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    data: function data() {
+        return {
+            editMode: false,
+            conferences: {},
+            form: new Form({
+                id: '',
+                title: '',
+                active: '',
+                live: '',
+                start: '',
+                end: '',
+                remember: false
+            }),
+            format: "yyyy-MM-dd"
+        };
+    },
+
+    components: {
+        Datepicker: __WEBPACK_IMPORTED_MODULE_0_vuejs_datepicker__["a" /* default */]
+    },
+    methods: {
+        updateConference: function updateConference() {
+            var _this = this;
+
+            this.form.put('/api/conference/' + this.form.id).then(function () {
+                $('#addNew').modal('hide');
+                toast({
+                    type: 'success',
+                    title: 'Conference Updated Successfully'
+                });
+                _this.$Progress.finish();
+                Fire.$emit('AfterModify');
+            }).catch(function () {
+                _this.$Progress.fail();
+                swal('Failed!', 'There was an error.', 'error');
+            });
+        },
+        editConference: function editConference(conference) {
+            this.editMode = true;
+            this.form.reset();
+            this.form.clear();
+            this.form.fill(conference);
+            $('#addNew').modal('show');
+        },
+        deleteConference: function deleteConference(id) {
+            var _this2 = this;
+
+            swal({
+                title: 'Are you sure?',
+                text: "This conference will be removed from the admin area.",
+                type: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, delete it!'
+            }).then(function (result) {
+                if (result.value) {
+                    _this2.form.delete('/api/conference/' + id).then(function () {
+                        swal('Deleted!', 'The conference has been deleted.', 'success');
+                        Fire.$emit('AfterModify');
+                    }).catch(function () {
+                        swal('Failed!', 'There was an error.', 'error');
+                    });
+                }
+            });
+        },
+        createConference: function createConference() {
+            var _this3 = this;
+
+            this.$Progress.start();
+            this.form.post('/api/conference').then(function () {
+                $('#addNew').modal('hide');
+                toast({
+                    type: 'success',
+                    title: 'Conference Created Successfully'
+                });
+                _this3.$Progress.finish();
+                Fire.$emit('AfterModify');
+            }).catch(function () {
+                _this3.$Progress.fail();
+                toast({
+                    type: 'error',
+                    title: 'Conference Not Created! Please correct your errors.'
+                });
+            });
+        },
+        loadConferences: function loadConferences() {
+            var _this4 = this;
+
+            axios.get('/api/conference').then(function (_ref) {
+                var data = _ref.data;
+                return _this4.conferences = data;
+            });
+            // axios.get('/api/conference').then(({data})=> (console.log(data)));
+        },
+        newModal: function newModal() {
+            this.editMode = false;
+            this.form.reset();
+            this.form.clear();
+            $('#addNew').modal('show');
+        },
+        editModal: function editModal(conference) {
+            this.editMode = true;
+            this.form.reset();
+            this.form.clear();
+            $('#addNew').modal('show');
+            this.form.fill(conference);
+        }
+    },
+    created: function created() {
+        var _this5 = this;
+
+        this.loadConferences();
+        Fire.$on('AfterModify', function () {
+            _this5.loadConferences();
+        });
+    }
+});
+
+/***/ }),
 /* 204 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -76517,322 +76804,7 @@ var Datepicker = {render: function(){var _vm=this;var _h=_vm.$createElement;var 
 
 
 /***/ }),
-/* 205 */,
-/* 206 */,
-/* 207 */,
-/* 208 */,
-/* 209 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 210 */,
-/* 211 */,
-/* 212 */,
-/* 213 */,
-/* 214 */,
-/* 215 */,
-/* 216 */,
-/* 217 */,
-/* 218 */,
-/* 219 */,
-/* 220 */,
-/* 221 */,
-/* 222 */,
-/* 223 */,
-/* 224 */,
-/* 225 */,
-/* 226 */,
-/* 227 */,
-/* 228 */,
-/* 229 */,
-/* 230 */,
-/* 231 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var disposed = false
-var normalizeComponent = __webpack_require__(2)
-/* script */
-var __vue_script__ = __webpack_require__(232)
-/* template */
-var __vue_template__ = __webpack_require__(233)
-/* template functional */
-var __vue_template_functional__ = false
-/* styles */
-var __vue_styles__ = null
-/* scopeId */
-var __vue_scopeId__ = null
-/* moduleIdentifier (server only) */
-var __vue_module_identifier__ = null
-var Component = normalizeComponent(
-  __vue_script__,
-  __vue_template__,
-  __vue_template_functional__,
-  __vue_styles__,
-  __vue_scopeId__,
-  __vue_module_identifier__
-)
-Component.options.__file = "resources/js/components/admin/conference/Conferences.vue"
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-57780662", Component.options)
-  } else {
-    hotAPI.reload("data-v-57780662", Component.options)
-  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 232 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vuejs_datepicker__ = __webpack_require__(204);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-    data: function data() {
-        return {
-            editMode: false,
-            conferences: {},
-            form: new Form({
-                id: '',
-                title: '',
-                active: '',
-                live: '',
-                start: '',
-                end: '',
-                remember: false
-            }),
-            format: "yyyy-MM-dd"
-        };
-    },
-
-    components: {
-        Datepicker: __WEBPACK_IMPORTED_MODULE_0_vuejs_datepicker__["a" /* default */]
-    },
-    methods: {
-        updateConference: function updateConference() {
-            var _this = this;
-
-            this.form.put('/api/conference/' + this.form.id).then(function () {
-                $('#addNew').modal('hide');
-                toast({
-                    type: 'success',
-                    title: 'Conference Updated Successfully'
-                });
-                _this.$Progress.finish();
-                Fire.$emit('AfterModify');
-            }).catch(function () {
-                _this.$Progress.fail();
-                swal('Failed!', 'There was an error.', 'error');
-            });
-        },
-        editConference: function editConference(conference) {
-            this.editMode = true;
-            this.form.reset();
-            this.form.clear();
-            this.form.fill(conference);
-            $('#addNew').modal('show');
-        },
-        deleteConference: function deleteConference(id) {
-            var _this2 = this;
-
-            swal({
-                title: 'Are you sure?',
-                text: "This conference will be removed from the admin area.",
-                type: 'warning',
-                showCancelButton: true,
-                confirmButtonColor: '#3085d6',
-                cancelButtonColor: '#d33',
-                confirmButtonText: 'Yes, delete it!'
-            }).then(function (result) {
-                if (result.value) {
-                    _this2.form.delete('/api/conference/' + id).then(function () {
-                        swal('Deleted!', 'The conference has been deleted.', 'success');
-                        Fire.$emit('AfterModify');
-                    }).catch(function () {
-                        swal('Failed!', 'There was an error.', 'error');
-                    });
-                }
-            });
-        },
-        createConference: function createConference() {
-            var _this3 = this;
-
-            this.$Progress.start();
-            this.form.post('/api/conference').then(function () {
-                $('#addNew').modal('hide');
-                toast({
-                    type: 'success',
-                    title: 'Conference Created Successfully'
-                });
-                _this3.$Progress.finish();
-                Fire.$emit('AfterModify');
-            }).catch(function () {
-                _this3.$Progress.fail();
-                toast({
-                    type: 'error',
-                    title: 'Conference Not Created! Please correct your errors.'
-                });
-            });
-        },
-        loadConferences: function loadConferences() {
-            var _this4 = this;
-
-            axios.get('/api/conference').then(function (_ref) {
-                var data = _ref.data;
-                return _this4.conferences = data;
-            });
-            // axios.get('/api/conference').then(({data})=> (console.log(data)));
-        },
-        newModal: function newModal() {
-            this.editMode = false;
-            this.form.reset();
-            this.form.clear();
-            $('#addNew').modal('show');
-        },
-        editModal: function editModal(conference) {
-            this.editMode = true;
-            this.form.reset();
-            this.form.clear();
-            $('#addNew').modal('show');
-            this.form.fill(conference);
-        }
-    },
-    created: function created() {
-        var _this5 = this;
-
-        this.loadConferences();
-        Fire.$on('AfterModify', function () {
-            _this5.loadConferences();
-        });
-    }
-});
-
-/***/ }),
-/* 233 */
+/* 205 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -77314,15 +77286,15 @@ if (false) {
 }
 
 /***/ }),
-/* 234 */
+/* 206 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(2)
 /* script */
-var __vue_script__ = __webpack_require__(235)
+var __vue_script__ = __webpack_require__(207)
 /* template */
-var __vue_template__ = __webpack_require__(236)
+var __vue_template__ = __webpack_require__(208)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -77361,7 +77333,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 235 */
+/* 207 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -77639,7 +77611,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 236 */
+/* 208 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -78145,15 +78117,15 @@ if (false) {
 }
 
 /***/ }),
-/* 237 */
+/* 209 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(2)
 /* script */
-var __vue_script__ = __webpack_require__(238)
+var __vue_script__ = __webpack_require__(210)
 /* template */
-var __vue_template__ = __webpack_require__(239)
+var __vue_template__ = __webpack_require__(211)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -78192,7 +78164,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 238 */
+/* 210 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -78496,7 +78468,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 239 */
+/* 211 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -79085,6 +79057,12 @@ if (false) {
     require("vue-hot-reload-api")      .rerender("data-v-338e43f1", module.exports)
   }
 }
+
+/***/ }),
+/* 212 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);

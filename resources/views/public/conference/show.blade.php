@@ -371,10 +371,10 @@
 			<input placeholder="Credit Card Number" value="" id="cc" name="cc" type="text">
 		</div>
 		<div class="col-sm-12 col-md-4">
-			<input placeholder="Expiry Month MM" value="" id="month" name="month" type="text">
+			<input placeholder="Expiry Month (2 digits)" value="" id="month" name="month" type="text">
 		</div>
 		<div class="col-sm-6 col-md-4">
-			<input placeholder="Expiry Year YY" value="" id="year" name="year" type="text">
+			<input placeholder="Expiry Year (2 digits)" value="" id="year" name="year" type="text">
 		</div>
 		<div class="col-sm-6 col-md-4">
 			<input placeholder="Security Code" value="" id="security" name="security" type="text">
